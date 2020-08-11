@@ -1,0 +1,4 @@
+name: hexentials
+recipe: drupal9
+config:
+  webroot: www
