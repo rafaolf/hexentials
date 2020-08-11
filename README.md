@@ -1,4 +1,4 @@
-![stronghold logo](img/Drupal-Logos_3/druplicon-logos/druplicon-large.png)
+![stronghold logo](img/logos/druplicon-small.png)
 
 [![Downloads](http://pepy.tech/badge/stronghold)](http://pepy.tech/count/stronghold)
 
