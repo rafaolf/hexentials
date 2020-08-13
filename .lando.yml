@@ -2,6 +2,16 @@ name: hexentials
 recipe: drupal9
 config:
   webroot: www/web
+  php: 7.4
+  drush: 10
+
+proxy:
+  appserver:
+    - hexentials.lndo.site
+  solr:
+    - solr.hexentials.lndo.site:8983
+  mailhog:
+    - mailhog.hexentials.lndo.site
 
 services:
   database:
@@ -10,4 +20,13 @@ services:
 
   mailhog:
     type: mailhog
+    hogfrom:
+      - appserver
     portforward: true
+
+  # solr:
+    # type: solr:8.4
+    # portforward: 8983
+    # core: freedom
+    # config:
+      # dir: www/sites/all/modules/contrib/search_api_solr/solr-conf/7.x
