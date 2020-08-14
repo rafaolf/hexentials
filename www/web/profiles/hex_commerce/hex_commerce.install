@@ -40,5 +40,5 @@ function hex_commerce_install_tasks(&$install_state) {
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_install_content() {
-  ...
+
 }

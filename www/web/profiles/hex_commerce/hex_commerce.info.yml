@@ -1,6 +1,6 @@
 name: Hexentials E-Commerce
 type: profile
-description: 'Project to provide e-commerce functionality for any kind of company.'
+description: 'Build an e-commerce site to display/shop the company products.'
 core_version_requirement: '^8.8 || ^9'
 
 # Optional: Declare your installation profile as a distribution
