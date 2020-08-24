@@ -8,8 +8,8 @@ config:
 proxy:
   appserver:
     - hexentials.lndo.site
-  solr:
-    - solr.hexentials.lndo.site:8983
+  # solr:
+    # - solr.hexentials.lndo.site:8983
   mailhog:
     - mailhog.hexentials.lndo.site
 
