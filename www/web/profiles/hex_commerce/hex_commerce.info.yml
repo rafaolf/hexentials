@@ -7,8 +7,8 @@ core_version_requirement: '^8.8 || ^9'
 # This will make the installer auto-select this installation profile.
 # The distribution_name property is used in the installer and other places as
 # a label for the software being installed.
-# distribution:
-  # name: Distribution Name
+distribution:
+  name: Hexentials Project
   # If you want your distribution to pre-select a language you can specify
   # the language code, as well. This will prevent the user from selecting
   # a language code in the user interface. While not recommended for generic
@@ -22,7 +22,7 @@ core_version_requirement: '^8.8 || ^9'
   #
   # install:
   #   theme: my_theme
-  # langcode: de
+  langcode: pt-br
 
 # Modules to install to support the profile.
 install:
@@ -62,8 +62,8 @@ install:
   - pathauto
   - redirect
   - seckit
-# Custom modules
-  - hex_default_content
+# Profile modules
+  - hex_commerce_default_content
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
