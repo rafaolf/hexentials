@@ -7,5 +7,5 @@ dependencies:
   - default_content
 default_content:
   node:
-    - c0d174a1-bee0-4510-bc3a-e04835868e32
     - a9feab47-ec13-4462-9d00-f9493019fc27
+    - c0d174a1-bee0-4510-bc3a-e04835868e32

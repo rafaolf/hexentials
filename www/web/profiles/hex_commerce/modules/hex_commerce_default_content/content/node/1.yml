@@ -1,8 +1,8 @@
 _meta:
   version: '1.0'
   entity_type: node
-  uuid: c0d174a1-bee0-4510-bc3a-e04835868e32
-  bundle: article
+  uuid: a9feab47-ec13-4462-9d00-f9493019fc27
+  bundle: page
   default_langcode: pt-br
 default:
   revision_uid:
@@ -16,10 +16,10 @@ default:
       target_id: 1
   title:
     -
-      value: Título do artigo
+      value: 'Página inicial'
   created:
     -
-      value: 1598302139
+      value: 1598303134
   promote:
     -
       value: true
@@ -36,14 +36,6 @@ default:
       pathauto: 0
   body:
     -
-      value: "<p>Primeiro artigo</p>\r\n"
+      value: "<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n"
       format: basic_html
       summary: ''
-  comment:
-    -
-      status: 2
-      cid: 0
-      last_comment_timestamp: 1598302149
-      last_comment_name: ''
-      last_comment_uid: 1
-      comment_count: 0
