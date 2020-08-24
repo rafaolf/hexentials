@@ -51,7 +51,9 @@ install:
   - views_ui
   - editor
   - ckeditor
-# Custom modules
+  - hal
+  - serialization
+# Contrib modules
   - admin_toolbar
   - config_split
   - default_content
@@ -60,6 +62,8 @@ install:
   - pathauto
   - redirect
   - seckit
+# Custom modules
+  - hex_default_content
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
