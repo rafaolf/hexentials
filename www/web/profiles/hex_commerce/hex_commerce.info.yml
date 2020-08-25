@@ -64,6 +64,18 @@ install:
   - seckit
 # Profile modules
   - hex_commerce_default_content
+# Theme-related modules - required
+  # - bootstrap
+  - views_bootstrap
+  - commerce
+  - commerce_wishlist
+  - fontawesome
+  - block_class
+  - page_manager
+  - panels
+# Theme-related modules - recommended
+  - colorbox
+  - bootstrap_layouts
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -77,3 +89,4 @@ dependencies:
 themes:
   - bartik
   - seven
+  - estore

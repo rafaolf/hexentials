@@ -24,6 +24,10 @@ function hex_commerce_install() {
  */
 function hex_commerce_install_tasks(&$install_state) {
   $tasks = [
+    'hex_commerce_define_theme' => [
+      'display_name' => t('Enable the default theme'),
+      'type' => 'normal',
+    ],
     'hex_commerce_install_content' => [
       'display_name' => t('Install default content'),
       'type' => 'normal',
@@ -33,6 +37,17 @@ function hex_commerce_install_tasks(&$install_state) {
   return $tasks;
 }
 
+/**
+ * Callback function to enable the default theme.
+ *
+ * @see hex_commerce_install_tasks()
+ */
+function hex_commerce_define_theme() {
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'estore')
+    ->save();
+}
 
 /**
  * Callback function to install default profile content.
