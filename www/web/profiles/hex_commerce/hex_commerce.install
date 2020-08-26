@@ -28,6 +28,10 @@ function hex_commerce_install_tasks(&$install_state) {
       'display_name' => t('Enable the default theme'),
       'type' => 'normal',
     ],
+    'hex_commerce_prepare_theme_structure' => [
+      'display_name' => t('Prepare the theme structure'),
+      'type' => 'normal',
+    ],
     'hex_commerce_install_content' => [
       'display_name' => t('Install default content'),
       'type' => 'normal',
@@ -56,4 +60,12 @@ function hex_commerce_define_theme() {
  */
 function hex_commerce_install_content() {
   \Drupal::service('default_content.importer')->importContent('hex_commerce_default_content');
+}
+
+/** Callback function to prepare the theme structure.
+ *
+ * @see hex_commerce_install_tasks()
+ */
+function hex_commerce_prepare_theme_structure() {
+  \Drupal::service('module_installer')->install(['estore_homepage_feature']);
 }
