@@ -76,6 +76,8 @@ install:
 # Theme-related modules - recommended
   - colorbox
   - bootstrap_layouts
+# Theme-related modules - structure
+  - estore_homepage_feature
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
