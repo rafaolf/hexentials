@@ -15,8 +15,6 @@ function hex_commerce_install() {
   // First, do everything in standard profile.
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
-
-  // Can add code in here to make nodes, terms, etc.
 }
 
 /**
@@ -32,7 +30,11 @@ function hex_commerce_install_tasks(&$install_state) {
       'display_name' => t('Prepare the theme structure'),
       'type' => 'normal',
     ],
-    'hex_commerce_install_content' => [
+    'hex_commerce_prepare_menu_structure' => [
+      'display_name' => t('Prepare the menu structure'),
+      'type' => 'normal',
+    ],
+    'hex_commerce_install_default_content' => [
       'display_name' => t('Install default content'),
       'type' => 'normal',
     ]
@@ -53,19 +55,28 @@ function hex_commerce_define_theme() {
     ->save();
 }
 
-/**
- * Callback function to install default profile content.
+/** Callback function to prepare the theme structure.
  *
  * @see hex_commerce_install_tasks()
  */
-function hex_commerce_install_content() {
-  \Drupal::service('default_content.importer')->importContent('hex_commerce_default_content');
+function hex_commerce_prepare_theme_structure() {
+  \Drupal::service('module_installer')->install(['estore_homepage_feature'], TRUE);
 }
 
 /** Callback function to prepare the theme structure.
  *
  * @see hex_commerce_install_tasks()
  */
-function hex_commerce_prepare_theme_structure() {
-  \Drupal::service('module_installer')->install(['estore_homepage_feature']);
+function hex_commerce_prepare_menu_structure() {
+  // @TODO: add the menu here or as part of default content.
+  \Drupal::service('router.builder')->rebuildIfNeeded();
+}
+
+/**
+ * Callback function to install default profile content.
+ *
+ * @see hex_commerce_install_tasks()
+ */
+function hex_commerce_install_default_content() {
+  \Drupal::service('default_content.importer')->importContent('hex_commerce_default_content');
 }
