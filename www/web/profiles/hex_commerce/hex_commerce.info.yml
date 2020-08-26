@@ -89,4 +89,5 @@ dependencies:
 themes:
   - bartik
   - seven
+  - bootstrap
   - estore
