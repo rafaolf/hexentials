@@ -108,16 +108,27 @@ class ClientSettingsForm extends FormBase {
       $file->setPermanent();
       $file->save();
 
-      \Drupal::configFactory()->getEditable('estore.settings')->set('logo.path', (string) $file->getFileUri())->save();
-      \Drupal::configFactory()->getEditable('estore.settings')->set('logo.use_default', FALSE)->save();
+      \Drupal::configFactory()->getEditable('estore.settings')
+        ->set('logo.path', (string) $file->getFileUri())
+        ->set('logo.use_default', FALSE)
+        ->save();
     }
 
-    \Drupal::configFactory()->getEditable('system.settings')->set('slogan', (string) $form_state->getValue('slogan'))->save();
+    $this->updateConfiguration($form_state);
+  }
 
-    \Drupal::configFactory()->getEditable('estore.settings')->set('header_email', (string) $form_state->getValue('email'))->save();
-    \Drupal::configFactory()->getEditable('estore.settings')->set('header_phone', (string) $form_state->getValue('phone_number'))->save();
-    \Drupal::configFactory()->getEditable('estore.settings')->set('header_location', (string) $form_state->getValue('location'))->save();
-    \Drupal::configFactory()->getEditable('estore.settings')->set('header_shop_opens', (string) $form_state->getValue('shop_opens'))->save();
+  /**
+   * Update the configuration values per installation data.
+   */
+  public function updateConfiguration(FormStateInterface $form_state) {
+    \Drupal::configFactory()
+      ->getEditable('system.site')
+      ->set('slogan', (string) $form_state->getValue('slogan'))
+      ->set('header_email', (string) $form_state->getValue('email'))
+      ->set('header_phone', (string) $form_state->getValue('phone_number'))
+      ->set('header_location', (string) $form_state->getValue('location'))
+      ->set('header_shop_opens', (string) $form_state->getValue('shop_opens'))
+      ->save();
   }
 
 }
