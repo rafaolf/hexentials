@@ -1,0 +1,9 @@
+name: Hexentials E-Commerce
+type: theme
+description: This is a theme complementing the profile
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: estore
+
+dependencies:
+  - drupal:estore

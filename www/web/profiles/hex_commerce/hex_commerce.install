@@ -88,38 +88,3 @@ function hex_commerce_prepare_menu_structure() {
 function hex_commerce_install_default_content() {
   \Drupal::service('default_content.importer')->importContent('hex_commerce_default_content');
 }
-
-/**
- * Callback function to define client settings.
- *
- * @see hex_commerce_install_tasks()
- */
-function hex_commerce_settings_form() {
-  die;
-  $form = \Drupal::formBuilder()->getForm('Drupal\hex_commerce\Form\ClientSettingsForm');
-
-  $form['phone_number'] = [
-    '#type' => 'tel',
-    '#title' => t('Your phone number'),
-  ];
-
-  $form['email'] = array(
-    '#type' => 'email',
-    '#title' => t('Your email'),
-    '#pattern' => '*@example.com',
-  );
-
-  $form['location'] = [
-    '#type' => 'textfield',
-    '#title' => t('Your location'),
-  ];
-
-  $form['actions']['#type'] = 'actions';
-  $form['actions']['submit'] = [
-    '#type' => 'submit',
-    '#value' => t('Save'),
-    '#button_type' => 'primary',
-  ];
-
-  return $form;
-}

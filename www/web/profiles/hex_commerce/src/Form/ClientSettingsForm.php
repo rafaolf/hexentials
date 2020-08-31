@@ -121,9 +121,10 @@ class ClientSettingsForm extends FormBase {
    * Update the configuration values per installation data.
    */
   public function updateConfiguration(FormStateInterface $form_state) {
+    \Drupal::configFactory()->getEditable('system.site')->set('slogan', (string) $form_state->getValue('slogan'));
+
     \Drupal::configFactory()
-      ->getEditable('system.site')
-      ->set('slogan', (string) $form_state->getValue('slogan'))
+      ->getEditable('estore.settings')
       ->set('header_email', (string) $form_state->getValue('email'))
       ->set('header_phone', (string) $form_state->getValue('phone_number'))
       ->set('header_location', (string) $form_state->getValue('location'))
