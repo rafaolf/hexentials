@@ -1,5 +1,5 @@
 name: hexentials
-recipe: drupal9
+recipe: drupal8
 config:
   webroot: www/web
   php: 7.4

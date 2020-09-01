@@ -1,6 +1,6 @@
 {
     "name": "drupal/recommended-project",
-    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "description": "Project template for Drupal 8 projects with a relocated document root",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.drupal.org/project/drupal",
@@ -15,31 +15,10 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.9",
-        "cweagans/composer-patches": "^1.6",
-        "drupal/admin_toolbar": "^2.3",
-        "drupal/block_class": "^1.0",
-        "drupal/bootstrap": "^3.7",
-        "drupal/bootstrap_layouts": "^5.2",
-        "drupal/colorbox": "^1.6",
-        "drupal/commerce": "^2.13",
-        "drupal/commerce_wishlist": "3.x-dev",
-        "drupal/config_split": "^1.4",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
-        "drupal/default_content": "^2.0@alpha",
-        "drupal/diff": "^1.0",
-        "drupal/estore": "^1.14",
-        "drupal/field_group": "^3.1",
-        "drupal/fontawesome": "^2.17",
-        "drupal/page_manager": "^4.0",
-        "drupal/panels": "^4.4",
-        "drupal/pathauto": "^1.8",
-        "drupal/redirect": "^1.6",
-        "drupal/seckit": "^1.2",
-        "drupal/views_bootstrap": "^4.1",
-        "drush/drush": "^10.3"
+        "composer/installers": "^1.2",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -50,12 +29,6 @@
         "sort-packages": true
     },
     "extra": {
-        "enable-patching": true,
-        "patches": {
-            "drupal/estore": {
-                "Fixing the eStore homepage feature dependencies": "patches/estore_homepage_feature-dependencies.patch"
-            }
-        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
