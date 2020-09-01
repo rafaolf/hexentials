@@ -1,6 +1,7 @@
 name: Hexentials E-Commerce
 type: profile
 description: 'Build an e-commerce site to display/shop the company products.'
+# @TODO: double-check this value.
 core_version_requirement: '^8.8 || ^9'
 
 # Optional: Declare your installation profile as a distribution
@@ -65,20 +66,12 @@ install:
 # Profile modules
   - hex_commerce_default_content
 # Theme-related modules - required
-  # - bootstrap
-  - views_bootstrap
   - commerce
-  - commerce_wishlist
-  - fontawesome
-  - block_class
-  - page_manager
+  - commerce_cart_flyout
+# Extra
   - panels
-# Theme-related modules - recommended
-  - colorbox
-  - bootstrap_layouts
-# Theme-related modules - structure
-  - menu_ui
-  - menu_link_content
+  - page_manager
+  - page_manager_ui
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
@@ -91,7 +84,8 @@ dependencies:
 # Note that this will not set any theme as the default theme.
 themes:
   # - bartik
-  - bootstrap
-  - estore
+  # @TODO remove this in case we go with another theme.
+  # - bootstrap
+  - flexi_cart
   - hex_commerce
   - seven

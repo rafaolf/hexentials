@@ -40,9 +40,10 @@ class ClientSettingsForm extends FormBase {
     $form['slogan'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Slogan'),
-      '#default_value' => '',
       '#description' => $this->t('Slogan to display for the users.'),
+      '#default_value' => '',
       '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
 
     $form['email'] = [
@@ -57,22 +58,6 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'tel',
       '#title' => $this->t('Phone number'),
       '#description' => $this->t('Phone number to display for the users.'),
-    ];
-
-    $form['location'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Location'),
-      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
-      '#description' => $this->t('Company\'s address to display for the users.'),
-      '#required' => TRUE,
-    ];
-
-    $form['shop_opens'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Opening hours'),
-      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
-      '#description' => $this->t('Opening hours to display for the users.'),
-      '#required' => TRUE,
     ];
 
     $form['actions']['#type'] = 'actions';
@@ -108,9 +93,9 @@ class ClientSettingsForm extends FormBase {
       $file->setPermanent();
       $file->save();
 
-      \Drupal::configFactory()->getEditable('estore.settings')
-        ->set('logo.path', (string) $file->getFileUri())
+      \Drupal::configFactory()->getEditable('flexi_cart.settings')
         ->set('logo.use_default', FALSE)
+        ->set('logo.path', (string) $file->getFileUri())
         ->save();
     }
 
@@ -124,11 +109,9 @@ class ClientSettingsForm extends FormBase {
     \Drupal::configFactory()->getEditable('system.site')->set('slogan', (string) $form_state->getValue('slogan'));
 
     \Drupal::configFactory()
-      ->getEditable('estore.settings')
+      ->getEditable('flexi_cart.settings')
       ->set('header_email', (string) $form_state->getValue('email'))
       ->set('header_phone', (string) $form_state->getValue('phone_number'))
-      ->set('header_location', (string) $form_state->getValue('location'))
-      ->set('header_shop_opens', (string) $form_state->getValue('shop_opens'))
       ->save();
   }
 

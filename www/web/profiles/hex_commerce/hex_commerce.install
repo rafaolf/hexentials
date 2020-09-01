@@ -59,7 +59,7 @@ function hex_commerce_install_tasks(&$install_state) {
 function hex_commerce_define_theme() {
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'estore')
+    ->set('default', 'flexi_cart')
     ->save();
 }
 
@@ -68,7 +68,7 @@ function hex_commerce_define_theme() {
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_prepare_theme_structure() {
-  \Drupal::service('module_installer')->install(['estore_homepage_feature'], TRUE);
+  // \Drupal::service('module_installer')->install(['estore_homepage_feature'], TRUE);
 }
 
 /** Callback function to prepare the theme structure.
