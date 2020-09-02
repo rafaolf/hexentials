@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^2.3",
         "drupal/commerce": "^2.20",
         "drupal/commerce_cart_flyout": "^1.8",
@@ -94,6 +95,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+          "drupal/default_content": {
+            "Do not reimport existing entities": "https://www.drupal.org/files/issues/2020-09-02/default_content-integrity_constrait_violation-3162987-2.patch"
+          }
         }
     }
 }

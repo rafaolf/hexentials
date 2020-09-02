@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 865ca9af-70ae-48ca-8539-f7c1e4f5132a
+  bundle: menu_link_content
+  default_langcode: pt-br
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Sobre
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/about-us'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
