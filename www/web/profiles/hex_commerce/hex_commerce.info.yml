@@ -69,6 +69,7 @@ install:
   - commerce
   - commerce_cart_flyout
 # Extra
+  - menu_ui
   - panels
   - page_manager
   - page_manager_ui

@@ -4,8 +4,9 @@
  * Install, update and uninstall functions for the profilename install profile.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\hex_commerce\Form\ClientSettingsForm;
+use Drupal\Core\Form\FormState;
+use Drupal\commerce_store\Form\StoreForm;
+use Drupal\hex_commerce\Form;
 
 /**
  * Implements hook_install().
@@ -37,10 +38,15 @@ function hex_commerce_install_tasks(&$install_state) {
       'display_name' => t('Prepare the menu structure'),
       'type' => 'normal',
     ],
-    'hex_commerce_settings_form' => [
+    'hex_commerce_client_settings_form' => [
       'display_name' => t('Define the client settings'),
       'type' => 'form',
       'function' => 'Drupal\hex_commerce\Form\ClientSettingsForm',
+    ],
+    'hex_commerce_store_settings_form' => [
+      'display_name' => t('Create the default store'),
+      'type' => 'form',
+      'function' => 'Drupal\hex_commerce\Form\StoreSettingsForm',
     ],
     'hex_commerce_install_default_content' => [
       'display_name' => t('Install default content'),
