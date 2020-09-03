@@ -1,0 +1,48 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 00238d42-b7cd-4dbf-8e53-2c98599d1ac1
+  bundle: article
+  default_langcode: pt-br
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Blog
+  created:
+    -
+      value: 1599083295
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /blog
+      langcode: pt-br
+  body:
+    -
+      value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis pellentesque id nibh tortor id. Elementum integer enim neque volutpat. Dignissim diam quis enim lobortis scelerisque fermentum dui. Malesuada fames ac turpis egestas sed tempus urna. Pharetra et ultrices neque ornare. Odio aenean sed adipiscing diam donec adipiscing tristique risus nec. Amet purus gravida quis blandit turpis cursus in. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Lorem ipsum dolor sit amet consectetur adipiscing elit ut.</p>\r\n\r\n<p>Massa tincidunt nunc pulvinar sapien et ligula. In tellus integer feugiat scelerisque. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Ullamcorper eget nulla facilisi etiam dignissim diam. Integer quis auctor elit sed vulputate mi sit. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Adipiscing tristique risus nec feugiat in. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Eu augue ut lectus arcu bibendum at varius vel. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Bibendum ut tristique et egestas. Sit amet est placerat in egestas erat imperdiet sed. Vitae purus faucibus ornare suspendisse sed.</p>\r\n\r\n<p>Augue lacus viverra vitae congue eu. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Gravida quis blandit turpis cursus in hac. In est ante in nibh mauris cursus. A erat nam at lectus urna duis convallis. Purus sit amet luctus venenatis. Fringilla est ullamcorper eget nulla facilisi. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Parturient montes nascetur ridiculus mus mauris. Eget nullam non nisi est. Dignissim sodales ut eu sem. Donec ultrices tincidunt arcu non. Sed pulvinar proin gravida hendrerit. Ultricies integer quis auctor elit sed vulputate. Nisl vel pretium lectus quam id leo. Lacinia quis vel eros donec ac odio tempor orci dapibus. Rhoncus est pellentesque elit ullamcorper dignissim.</p>\r\n\r\n<p>Est velit egestas dui id ornare. Diam phasellus vestibulum lorem sed risus. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Massa vitae tortor condimentum lacinia quis. Viverra nam libero justo laoreet sit amet cursus. Risus nullam eget felis eget. Accumsan lacus vel facilisis volutpat est velit egestas dui id. Orci ac auctor augue mauris augue neque gravida in fermentum. Commodo odio aenean sed adipiscing diam donec adipiscing. Tempus quam pellentesque nec nam aliquam sem. Pharetra et ultrices neque ornare aenean euismod. Enim sed faucibus turpis in. Eget egestas purus viverra accumsan. Integer feugiat scelerisque varius morbi enim nunc. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut.</p>\r\n\r\n<p>Pellentesque elit eget gravida cum. Libero justo laoreet sit amet cursus sit. At consectetur lorem donec massa. At ultrices mi tempus imperdiet nulla. Neque aliquam vestibulum morbi blandit cursus. Eget magna fermentum iaculis eu non. At augue eget arcu dictum varius. Enim ut tellus elementum sagittis vitae. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Ipsum a arcu cursus vitae congue mauris. Platea dictumst quisque sagittis purus. Sit amet dictum sit amet justo. Ultrices neque ornare aenean euismod elementum nisi. Eu tincidunt tortor aliquam nulla.</p>\r\n\r\n<p>Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Posuere ac ut consequat semper viverra nam libero. Adipiscing commodo elit at imperdiet dui accumsan. Eu augue ut lectus arcu. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Ullamcorper eget nulla facilisi etiam dignissim diam quis. Diam vulputate ut pharetra sit amet aliquam id diam. Massa id neque aliquam vestibulum morbi blandit cursus. Risus feugiat in ante metus. Eget aliquet nibh praesent tristique magna sit amet purus.</p>\r\n"
+      format: basic_html
+      summary: ''
+  comment:
+    -
+      status: 2
+      cid: 0
+      last_comment_timestamp: 1599083317
+      last_comment_name: ''
+      last_comment_uid: 1
+      comment_count: 0

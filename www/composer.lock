@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f606c10dbb2ab93fef5daf370d4257f7",
+    "content-hash": "0059bf82a4e14482c8092461516d7840",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3041,6 +3041,9 @@
                     "services": {
                         "drush.services.yml": "^9"
                     }
+                },
+                "patches_applied": {
+                    "Do not reimport existing entities": "https://www.drupal.org/files/issues/2020-09-02/default_content-integrity_constrait_violation-3162987-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

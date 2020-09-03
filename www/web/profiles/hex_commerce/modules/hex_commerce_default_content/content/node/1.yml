@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 45943407-98b5-4861-94ab-1d4961d743f9
+  bundle: page
+  default_langcode: pt-br
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Sobre nós'
+  created:
+    -
+      value: 1599083085
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /about-us
+      langcode: pt-br
+  body:
+    -
+      value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis ultricies lacus sed turpis tincidunt id. Lacus sed turpis tincidunt id aliquet risus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Bibendum est ultricies integer quis auctor elit sed vulputate mi. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Non diam phasellus vestibulum lorem sed risus. Orci ac auctor augue mauris augue neque gravida. At tellus at urna condimentum mattis pellentesque. Pellentesque id nibh tortor id aliquet lectus proin. Vitae tortor condimentum lacinia quis vel eros donec. Hac habitasse platea dictumst quisque sagittis purus sit amet. Risus at ultrices mi tempus. Mattis pellentesque id nibh tortor. Praesent tristique magna sit amet purus gravida quis blandit. Nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus. Turpis in eu mi bibendum. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Donec et odio pellentesque diam volutpat.</p>\r\n\r\n<p>Sed velit dignissim sodales ut eu sem. Lacus laoreet non curabitur gravida arcu ac. Id faucibus nisl tincidunt eget nullam non nisi. Aliquam purus sit amet luctus venenatis lectus. Nunc consequat interdum varius sit amet mattis vulputate. Ultrices vitae auctor eu augue ut lectus arcu bibendum. Arcu vitae elementum curabitur vitae nunc sed velit dignissim. Aliquet eget sit amet tellus cras adipiscing enim eu. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Id leo in vitae turpis. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Convallis posuere morbi leo urna molestie at elementum eu facilisis. Non blandit massa enim nec dui nunc mattis. Urna molestie at elementum eu. Nunc non blandit massa enim. Proin sagittis nisl rhoncus mattis. Fermentum dui faucibus in ornare quam viverra orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Ac orci phasellus egestas tellus. In nibh mauris cursus mattis molestie a iaculis at erat.</p>\r\n\r\n<p>Consectetur a erat nam at lectus urna duis convallis convallis. Vitae congue mauris rhoncus aenean vel elit. Nunc aliquet bibendum enim facilisis gravida neque. Habitasse platea dictumst quisque sagittis purus sit. Molestie ac feugiat sed lectus. Lorem ipsum dolor sit amet consectetur. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Vulputate sapien nec sagittis aliquam malesuada bibendum. Est ante in nibh mauris cursus mattis molestie a. Id aliquet lectus proin nibh nisl condimentum. Sit amet mattis vulputate enim nulla aliquet. Ut faucibus pulvinar elementum integer enim. A arcu cursus vitae congue mauris. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Pellentesque sit amet porttitor eget.</p>\r\n\r\n<p>Tristique senectus et netus et malesuada. Vel elit scelerisque mauris pellentesque. Tellus molestie nunc non blandit massa enim nec dui nunc. Eleifend donec pretium vulputate sapien nec sagittis. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Sit amet facilisis magna etiam. In hac habitasse platea dictumst vestibulum. Cursus euismod quis viverra nibh cras. Viverra orci sagittis eu volutpat odio facilisis mauris sit. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Nulla pellentesque dignissim enim sit amet venenatis urna. Vulputate ut pharetra sit amet aliquam id diam maecenas. Id porta nibh venenatis cras sed felis eget. Ipsum consequat nisl vel pretium.</p>\r\n"
+      format: basic_html
+      summary: ''

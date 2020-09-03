@@ -16,7 +16,7 @@ class ClientSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'hex_commerce_settings_form';
+    return 'hex_commerce_client_settings_form';
   }
 
   /**
@@ -58,6 +58,51 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'tel',
       '#title' => $this->t('Phone number'),
       '#description' => $this->t('Phone number to display for the users.'),
+    ];
+
+    $form['facebook'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Facebook'),
+      '#description' => $this->t('Facebook to display for the users.'),
+      '#default_value' => '',
+      '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
+    ];
+
+    $form['twitter'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Twitter'),
+      '#description' => $this->t('Twitter to display for the users.'),
+      '#default_value' => '',
+      '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
+    ];
+
+    $form['linkedin'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('LinkedIn'),
+      '#description' => $this->t('LinkedIn to display for the users.'),
+      '#default_value' => '',
+      '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
+    ];
+
+    $form['instagram'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Instagram'),
+      '#description' => $this->t('Instagram to display for the users.'),
+      '#default_value' => '',
+      '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
+    ];
+
+    $form['copyrights'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('copyrights'),
+      '#description' => $this->t('copyrights to display for the users.'),
+      '#default_value' => '',
+      '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
 
     $form['actions']['#type'] = 'actions';
@@ -110,8 +155,18 @@ class ClientSettingsForm extends FormBase {
 
     \Drupal::configFactory()
       ->getEditable('flexi_cart.settings')
-      ->set('header_email', (string) $form_state->getValue('email'))
-      ->set('header_phone', (string) $form_state->getValue('phone_number'))
+      ->set('email', (string) $form_state->getValue('email'))
+      ->set('phone', (string) $form_state->getValue('phone_number'))
+      ->set('face_book', (string) $form_state->getValue('facebook'))
+      ->set('twitter', (string) $form_state->getValue('twitter'))
+      ->set('linkedin', (string) $form_state->getValue('linkedin'))
+      ->set('instagram', (string) $form_state->getValue('instagram'))
+      ->set('copyrights', (string) $form_state->getValue('copyrights'))
+      ->set('slide_desc_1', $this->t('This is the first slide description to display what we do'))
+      ->set('slide_desc_2', $this->t('This is the second slide description to display who we are'))
+      ->set('slide_desc_3', $this->t('This is the third slide description to display our service'))
+      ->set('slide_desc_4', $this->t('This is the fourth slide description to display our mission'))
+      ->set('slide_desc_5', $this->t('This is the fourth slide description to display our vision'))
       ->save();
   }
 

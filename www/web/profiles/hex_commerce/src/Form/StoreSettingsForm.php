@@ -15,7 +15,7 @@ class StoreSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'hex_commerce_settings_form';
+    return 'hex_commerce_store_settings_form';
   }
 
   /**
@@ -82,7 +82,9 @@ class StoreSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    //
+    if (strlen($form_state->getValue('state')) > 2) {
+      $form_state->setErrorByName('state', $this->t('The state is too long. Please use the abbreviation.'));
+    }
   }
 
   /**
