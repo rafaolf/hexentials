@@ -99,7 +99,7 @@ class StoreSettingsForm extends FormBase {
       'postal_code' => $form_state->getValue('postal_code'),
     ];
 
-    $currency = 'USD';
+    $currency = 'BRL';
 
     // If needed, this will import the currency.
     $currency_importer = \Drupal::service('commerce_price.currency_importer');
