@@ -1,0 +1,21 @@
+uuid: 68480837-dfdd-4580-bdc4-b3fa2691eea9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - hex_commerce
+id: formulariodebusca
+theme: hex_commerce
+region: search_area
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulário de busca'
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

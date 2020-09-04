@@ -1,0 +1,18 @@
+uuid: 94018e2e-3a3d-41c9-b73f-e873feb4a163
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - hex_commerce
+id: primaryadminactions
+theme: hex_commerce
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

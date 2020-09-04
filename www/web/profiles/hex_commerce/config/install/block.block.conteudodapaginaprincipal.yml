@@ -1,0 +1,20 @@
+uuid: 20367da3-1d2c-443c-822a-639a1c3920ea
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hex_commerce
+id: conteudodapaginaprincipal
+theme: hex_commerce
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Conteúdo da página principal'
+  provider: system
+  label_display: '0'
+visibility: {  }

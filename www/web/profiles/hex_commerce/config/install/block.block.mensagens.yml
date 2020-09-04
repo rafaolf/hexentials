@@ -1,0 +1,20 @@
+uuid: 12cc8904-6888-4bff-a355-c6e0f9724266
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hex_commerce
+id: mensagens
+theme: hex_commerce
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensagens
+  provider: system
+  label_display: '0'
+visibility: {  }

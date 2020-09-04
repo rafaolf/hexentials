@@ -1,0 +1,21 @@
+uuid: cf779811-b2af-423f-928a-1fc987daaac7
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - commerce_cart_flyout
+  theme:
+    - hex_commerce
+id: cartflyout
+theme: hex_commerce
+region: header_top
+weight: 0
+provider: null
+plugin: commerce_cart_flyout
+settings:
+  id: commerce_cart_flyout
+  label: 'Cart Flyout'
+  provider: commerce_cart_flyout
+  label_display: '0'
+  use_quantity_count: false
+visibility: {  }

@@ -138,7 +138,7 @@ class ClientSettingsForm extends FormBase {
       $file->setPermanent();
       $file->save();
 
-      \Drupal::configFactory()->getEditable('flexi_cart.settings')
+      \Drupal::configFactory()->getEditable('hex_commerce.settings')
         ->set('logo.use_default', FALSE)
         ->set('logo.path', (string) $file->getFileUri())
         ->save();

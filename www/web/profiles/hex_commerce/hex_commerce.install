@@ -77,7 +77,7 @@ function hex_commerce_install_tasks(&$install_state) {
 function hex_commerce_define_theme() {
   \Drupal::configFactory()
     ->getEditable('system.theme')
-    ->set('default', 'flexi_cart')
+    ->set('default', 'hex_commerce')
     ->save();
 }
 

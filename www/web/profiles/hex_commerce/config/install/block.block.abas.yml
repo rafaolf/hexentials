@@ -1,0 +1,20 @@
+uuid: a6d17f39-4b98-4125-bf76-891ec5e10d45
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - hex_commerce
+id: abas
+theme: hex_commerce
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Abas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
