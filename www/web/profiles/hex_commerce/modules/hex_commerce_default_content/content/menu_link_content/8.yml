@@ -1,22 +1,22 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 9f0d138d-6c7e-494d-839c-e8644cf0fa43
+  uuid: 684fb7b1-328c-461c-8ab3-4cd2b25fe28d
   bundle: menu_link_content
   default_langcode: pt-br
 default:
   enabled:
     -
-      value: false
+      value: true
   title:
     -
-      value: Contato
+      value: Acessibilidade
   menu_name:
     -
-      value: main
+      value: footer
   link:
     -
-      uri: 'internal:/contact'
+      uri: 'internal:/accessibility'
       title: ''
       options: {  }
   external:
@@ -27,7 +27,7 @@ default:
       value: true
   weight:
     -
-      value: -49
+      value: 0
   expanded:
     -
       value: false

@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 9f0d138d-6c7e-494d-839c-e8644cf0fa43
+  uuid: 991bf260-6418-410b-9d32-4cb52ff51c87
   bundle: menu_link_content
   default_langcode: pt-br
+  depends:
+    fbfdf25c-4577-4b6b-99e1-f7054b6ec836: node
 default:
   enabled:
     -
-      value: false
+      value: true
   title:
     -
-      value: Contato
+      value: 'Termos de uso'
   menu_name:
     -
-      value: main
+      value: footer
   link:
     -
-      uri: 'internal:/contact'
+      target_uuid: fbfdf25c-4577-4b6b-99e1-f7054b6ec836
       title: ''
       options: {  }
   external:
@@ -24,10 +26,10 @@ default:
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
-      value: -49
+      value: 0
   expanded:
     -
       value: false

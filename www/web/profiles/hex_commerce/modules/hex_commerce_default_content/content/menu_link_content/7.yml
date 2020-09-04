@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 9f0d138d-6c7e-494d-839c-e8644cf0fa43
+  uuid: 10440b63-445a-4378-a14a-51216bcbaa77
   bundle: menu_link_content
   default_langcode: pt-br
+  depends:
+    e9055989-85e0-4119-95d0-4e2b825c1038: node
 default:
   enabled:
     -
-      value: false
+      value: true
   title:
     -
-      value: Contato
+      value: 'Política de privacidade'
   menu_name:
     -
-      value: main
+      value: footer
   link:
     -
-      uri: 'internal:/contact'
+      target_uuid: e9055989-85e0-4119-95d0-4e2b825c1038
       title: ''
       options: {  }
   external:
@@ -24,10 +26,10 @@ default:
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
-      value: -49
+      value: 0
   expanded:
     -
       value: false
