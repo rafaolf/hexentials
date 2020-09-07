@@ -9,6 +9,9 @@ base theme: flexi_cart
 dependencies:
   - drupal:flexi_cart
 
+libraries:
+  - hex_commerce/front
+
 regions:
   header_top: 'Header Top'
   header: 'Header'

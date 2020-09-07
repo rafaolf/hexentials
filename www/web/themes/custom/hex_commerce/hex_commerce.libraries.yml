@@ -1,4 +1,5 @@
-global-styling:
+front:
+  version: 1.x
   css:
-    component:
+    theme:
       css/style.css: {}
