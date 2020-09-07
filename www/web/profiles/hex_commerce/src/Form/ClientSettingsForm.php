@@ -58,6 +58,9 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'tel',
       '#title' => $this->t('Phone number'),
       '#description' => $this->t('Phone number to display for the users.'),
+      // @TOdo; keep this commented out while we don't have a functionality to
+      // auto-fill the special characters.
+      // '#pattern' => '\(\d{2,}\) \d{4,}\-\d{4}',
     ];
 
     $form['facebook'] = [
@@ -151,12 +154,12 @@ class ClientSettingsForm extends FormBase {
    * Update the configuration values per installation data.
    */
   public function updateConfiguration(FormStateInterface $form_state) {
-    \Drupal::configFactory()->getEditable('system.site')->set('slogan', (string) $form_state->getValue('slogan'));
+    \Drupal::configFactory()->getEditable('system.site')->set('slogan', (string) $form_state->getValue('slogan'))->save();
+    \Drupal::configFactory()->getEditable('hex_commerce.settings')->set('phone', (string) $form_state->getValue('phone_number'))->save();
 
     \Drupal::configFactory()
       ->getEditable('flexi_cart.settings')
       ->set('email', (string) $form_state->getValue('email'))
-      ->set('phone', (string) $form_state->getValue('phone_number'))
       ->set('face_book', (string) $form_state->getValue('facebook'))
       ->set('twitter', (string) $form_state->getValue('twitter'))
       ->set('linkedin', (string) $form_state->getValue('linkedin'))

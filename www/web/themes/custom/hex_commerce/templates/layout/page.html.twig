@@ -182,7 +182,7 @@
         </div>
       </div>
     {% endif %}
-    
+
     {% if page.system_messages %}
       <div class="system-messages">
         <div class="container">
@@ -194,7 +194,7 @@
         </div>
       </div>
     {% endif %}
-      
+
     {% if is_front %}
       {% if page.category %}
         <div id="category" class="category">
@@ -302,9 +302,11 @@
           {% endif %}
           <div class="footer-bottom">
             <div class="footer-bottom-wrap clearfix">
-              <div class="email float-md-left text-center"><p>{{ email }}</p></div>
+              <div class="phone float-md-left text-center"><p>{{ phone }}</p></div>
               <div class="copyrights float-md-right text-center"><p>{{ copyrights }}</p></div>
             </div>
+            <div class="footer-bottom-wrap clearfix">
+              <div class="email float-md-left text-center"><p>{{ email }}</p></div>
           </div>
       </div>
     </div>
