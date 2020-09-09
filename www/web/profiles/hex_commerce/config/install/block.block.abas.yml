@@ -3,9 +3,9 @@ langcode: pt-br
 status: true
 dependencies:
   theme:
-    - hex_commerce
+    - hex
 id: abas
-theme: hex_commerce
+theme: hex
 region: content
 weight: -4
 provider: null

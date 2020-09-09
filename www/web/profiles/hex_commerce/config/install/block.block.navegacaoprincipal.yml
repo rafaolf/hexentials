@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - hex_commerce
+    - hex
 id: navegacaoprincipal
-theme: hex_commerce
+theme: hex
 region: navigation
 weight: 0
 provider: null

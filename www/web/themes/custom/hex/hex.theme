@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the hex theme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function hex_theme_suggestions_block_alter(&$suggestions, $variables) {
+
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('hex', 'flexi_cart_', $suggestion);
+  }
+}
+
+// @TODO: add a definition here.
+function hex_preprocess_page(&$variables) {
+  // Make the phone available to all pages.
+  $config = \Drupal::config('hex_commerce.settings');
+
+  foreach (\Drupal::theme()->getActiveTheme()->getRegions() as $region) {
+    if (!isset($variables['phone'])) {
+      $variables['phone'] = \Drupal::config('hex_commerce.settings')->get('phone');
+    }
+  }
+}

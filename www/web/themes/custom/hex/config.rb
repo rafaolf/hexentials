@@ -23,3 +23,12 @@ javascripts_dir = "js"
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+require 'fileutils'
+
+on_stylesheet_saved do |file|
+  if File.exists?(file)
+    filename = File.basename(file, File.extname(file))
+    File.rename(file, css_dir + "/" + "hc." + filename + File.extname(file))
+  end
+end

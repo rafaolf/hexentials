@@ -3,9 +3,9 @@ langcode: pt-br
 status: true
 dependencies:
   theme:
-    - hex_commerce
+    - hex
 id: primaryadminactions
-theme: hex_commerce
+theme: hex
 region: content
 weight: -2
 provider: null

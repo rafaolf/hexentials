@@ -1,16 +1,15 @@
 name: Hexentials E-Commerce
-type: theme
 description: This is a theme complementing the profile
+type: theme
 core: 8.x
 # @TODO: update this core requirement.
 # core_version_requirement: ^8 || ^9
-base theme: flexi_cart
-
 dependencies:
   - drupal:flexi_cart
+base theme: flexi_cart
 
 libraries:
-  - hex_commerce/front
+  - hex/front-style
 
 regions:
   header_top: 'Header Top'

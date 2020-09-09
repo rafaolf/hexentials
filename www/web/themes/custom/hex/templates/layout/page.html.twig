@@ -67,6 +67,8 @@
  */
 #}
 
+{{ attach_library('hex/front-style') }}
+
 <div id="page-container" class="page-container">
   <header id="header" class="header">
   <div id="header_top_container" class="header-top-container">
@@ -302,12 +304,10 @@
           {% endif %}
           <div class="footer-bottom">
             <div class="footer-bottom-wrap clearfix">
-              <div class="phone float-md-left text-center"><p>{{ phone }}</p></div>
+              <div class="phone float-md-left text-left"><p>{{ phone }}</p></div>
+              <div class="email float-md-left text-right"><p>{{ email }}</p></div>
               <div class="copyrights float-md-right text-center"><p>{{ copyrights }}</p></div>
             </div>
-            <div class="footer-bottom-wrap clearfix">
-              <div class="email float-md-left text-center"><p>{{ email }}</p></div>
-          </div>
       </div>
     </div>
 </footer>

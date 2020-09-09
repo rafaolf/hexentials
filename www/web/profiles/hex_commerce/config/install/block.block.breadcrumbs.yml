@@ -5,9 +5,9 @@ dependencies:
   module:
     - system
   theme:
-    - hex_commerce
+    - hex
 id: breadcrumbs
-theme: hex_commerce
+theme: hex
 region: breadcrumb
 weight: 0
 provider: null

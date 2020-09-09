@@ -5,9 +5,9 @@ dependencies:
   module:
     - search
   theme:
-    - hex_commerce
+    - hex
 id: formulariodebusca
-theme: hex_commerce
+theme: hex
 region: search_area
 weight: 0
 provider: null

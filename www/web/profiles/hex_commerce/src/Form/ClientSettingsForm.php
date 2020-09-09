@@ -141,7 +141,7 @@ class ClientSettingsForm extends FormBase {
       $file->setPermanent();
       $file->save();
 
-      \Drupal::configFactory()->getEditable('hex_commerce.settings')
+      \Drupal::configFactory()->getEditable('hex.settings')
         ->set('logo.use_default', FALSE)
         ->set('logo.path', (string) $file->getFileUri())
         ->save();

@@ -88,5 +88,5 @@ themes:
   # @TODO remove this in case we go with another theme.
   # - bootstrap
   - flexi_cart
-  - hex_commerce
+  - hex
   - seven

@@ -5,9 +5,9 @@ dependencies:
   module:
     - help
   theme:
-    - hex_commerce
+    - hex
 id: ajuda
-theme: hex_commerce
+theme: hex
 region: content
 weight: -3
 provider: null

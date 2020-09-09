@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - hex_commerce
+    - hex
 id: rodape
-theme: hex_commerce
+theme: hex
 region: footer
 weight: 0
 provider: null

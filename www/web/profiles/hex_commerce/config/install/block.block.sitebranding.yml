@@ -5,9 +5,9 @@ dependencies:
   module:
     - system
   theme:
-    - hex_commerce
+    - hex
 id: sitebranding
-theme: hex_commerce
+theme: hex
 region: header
 weight: 0
 provider: null

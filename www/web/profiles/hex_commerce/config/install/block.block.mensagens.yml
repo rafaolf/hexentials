@@ -5,9 +5,9 @@ dependencies:
   module:
     - system
   theme:
-    - hex_commerce
+    - hex
 id: mensagens
-theme: hex_commerce
+theme: hex
 region: highlighted
 weight: 0
 provider: null

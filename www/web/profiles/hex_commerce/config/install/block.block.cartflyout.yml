@@ -5,9 +5,9 @@ dependencies:
   module:
     - commerce_cart_flyout
   theme:
-    - hex_commerce
+    - hex
 id: cartflyout
-theme: hex_commerce
+theme: hex
 region: header_top
 weight: 0
 provider: null
