@@ -3,3 +3,9 @@ front-style:
   css:
     theme:
       css/hc.style.css: {}
+      # @TODO: add the ie, print and screen files (if needed).
+
+color-style:
+  css:
+    theme:
+      css/hc.color.css: {}

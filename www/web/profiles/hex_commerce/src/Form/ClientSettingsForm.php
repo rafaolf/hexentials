@@ -125,11 +125,6 @@ class ClientSettingsForm extends FormBase {
     if (strlen($form_state->getValue('phone_number')) < 3) {
       $form_state->setErrorByName('phone_number', $this->t('The phone number is too short. Please enter a full phone number.'));
     }
-
-    // @TODO: check if this error validation is needed.
-    // if ($error = user_validate_name($form_state->getValue(['account', 'name']))) {
-    //   $form_state->setErrorByName('account][name', $error);
-    // }
   }
 
   /**
@@ -155,10 +150,10 @@ class ClientSettingsForm extends FormBase {
    */
   public function updateConfiguration(FormStateInterface $form_state) {
     \Drupal::configFactory()->getEditable('system.site')->set('slogan', (string) $form_state->getValue('slogan'))->save();
-    \Drupal::configFactory()->getEditable('hex_commerce.settings')->set('phone', (string) $form_state->getValue('phone_number'))->save();
 
     \Drupal::configFactory()
-      ->getEditable('flexi_cart.settings')
+      ->getEditable('hex.settings')
+      ->set('phone', (string) $form_state->getValue('phone_number'))
       ->set('email', (string) $form_state->getValue('email'))
       ->set('face_book', (string) $form_state->getValue('facebook'))
       ->set('twitter', (string) $form_state->getValue('twitter'))

@@ -1,0 +1,61 @@
+// Default colors.
+$primary: #111111;
+$secondary: #f51167;
+$main_menu: #111111;
+$footer_menu: #ffffff;
+$background: #ffffff;
+$text: #111111;
+
+body {
+  color: $primary;
+  background-color: $background;
+}
+
+.header-top, .footer {
+  background: $primary;
+}
+
+.header-second {
+  background-color: $background;
+}
+
+.cart-flyout {
+  .cart-block--summary__count {
+    background: $secondary;
+  }
+}
+
+// Main menu color.
+ul.menu {
+  li.menu-item {
+    a {
+      color: $main_menu;
+
+      &.is-active {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.footer {
+  .footer-top {
+    ul.menu {
+      li.menu-item {
+        a {
+          color: $footer_menu;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    p {
+      color: $footer_menu;
+    }
+  }
+}
+
+p {
+  color: $text;
+}

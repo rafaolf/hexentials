@@ -8,11 +8,11 @@
 
 function hex_commerce_preprocess_page(&$variables) {
   // Make the phone available to all pages.
-  $config = \Drupal::config('hex_commerce.settings');
+  $config = \Drupal::config('hex.settings');
 
   foreach (\Drupal::theme()->getActiveTheme()->getRegions() as $region) {
     if (!isset($variables['phone'])) {
-      $variables['phone'] = \Drupal::config('hex_commerce.settings')->get('phone');
+      $variables['phone'] = $config->get('phone');
     }
   }
 }
