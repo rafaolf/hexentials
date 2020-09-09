@@ -44,6 +44,10 @@ ul.menu {
       li.menu-item {
         a {
           color: $footer_menu;
+
+          &.is-active {
+            color: $secondary;
+          }
         }
       }
     }
