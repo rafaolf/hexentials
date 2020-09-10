@@ -22,7 +22,7 @@ $info = [
       ],
     ],
     'red' => [
-      'title' => t('Red'),
+      'title' => t('Dark red'),
       'colors' => [
         'primary' => '#e54237',
         'secondary' => $background_color,
@@ -31,7 +31,7 @@ $info = [
       ]
     ],
     'green' => [
-      'title' => t('Green'),
+      'title' => t('Dark green'),
       'colors' => [
         'primary' => '#40c312',
         'secondary' => $background_color,
@@ -39,12 +39,12 @@ $info = [
         'text' => $text_color,
       ]
     ],
-    'yellow' => [
-      'title' => t('Yellow'),
+    'blue' => [
+      'title' => t('Dark blue'),
       'colors' => [
-        'primary' => '#e9ec0c',
+        'primary' => '#0e5cc1',
         'secondary' => $background_color,
-        'active' => '#f29e11',
+        'active' => '#280fa2',
         'text' => $text_color,
       ]
     ]
