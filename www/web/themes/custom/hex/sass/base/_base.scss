@@ -1,0 +1,19 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  .page {
+    flex: auto;
+    min-height: 80vh;
+  }
+
+  footer {
+    bottom: 0;
+  }
+}

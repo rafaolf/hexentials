@@ -1,13 +1,14 @@
 <?php
 
+$background_color = '#ffffff';
+$text_color = '#000000';
+
 $info = [
   // Available colors and color labels used in theme.
   'fields' => [
     'primary' => t('Primary color'),
-    'secondary' => t('Secondary color (highlighted)'),
-    'main_menu' => t('Main menu color'),
-    'footer_menu' => t('Footer menu color'),
-    'background' => t('Background color'),
+    'secondary' => t('Secondary color'),
+    'active' => t('Active color'),
     'text' => t('Text color'),
   ],
   'schemes' => [
@@ -15,22 +16,36 @@ $info = [
       'title' => t('Default'),
       'colors' => [
         'primary' => '#111111',
-        'secondary' => '#f51167',
-        'main_menu' => '#111111',
-        'footer_menu' => '#ffffff',
-        'background' => '#ffffff',
-        'text' => '#111111',
+        'secondary' => $background_color,
+        'active' => '#f51167',
+        'text' => $text_color,
       ],
     ],
     'red' => [
       'title' => t('Red'),
       'colors' => [
-        'primary' => '#f44336',
-        'secondary' => '#ffcdd2',
-        'main_menu' => '#f44336',
-        'footer_menu' => '#f44336',
-        'background' => '#ffffff',
-        'text' => '#600000',
+        'primary' => '#e54237',
+        'secondary' => $background_color,
+        'active' => '#a20f0f',
+        'text' => $text_color,
+      ]
+    ],
+    'green' => [
+      'title' => t('Green'),
+      'colors' => [
+        'primary' => '#40c312',
+        'secondary' => $background_color,
+        'active' => '#296315',
+        'text' => $text_color,
+      ]
+    ],
+    'yellow' => [
+      'title' => t('Yellow'),
+      'colors' => [
+        'primary' => '#e9ec0c',
+        'secondary' => $background_color,
+        'active' => '#f29e11',
+        'text' => $text_color,
       ]
     ]
   ]

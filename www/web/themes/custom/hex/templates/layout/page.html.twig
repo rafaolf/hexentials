@@ -67,10 +67,7 @@
  */
 #}
 
-{{ attach_library('hex/front-style') }}
-
-<div id="page-container" class="page-container">
-  <header id="header" class="header">
+<header id="header" class="header">
   <div id="header_top_container" class="header-top-container">
     <div id="header-top" class="clearfix header-top">
       <div class="container">
@@ -88,17 +85,19 @@
               <div class="usr-info-wrap float-right clearfix">
                 <div class="usr-log-info d-inline-block">
                 {% if logged_in %}
-                <span class="user-account"><i class="fa fa-user" aria-hidden="true"></i>
-                  <ul class="user-login-menu">
-                    <li class="menu-item"><a href="/user" data-drupal-link-system-path="user"><i class="fa fa-user" aria-hidden="true"></i> My account</a></li>
-                    <li class="menu-item"><a href="/user/logout" data-drupal-link-system-path="user/logout"><i class="fa fa-power-off" aria-hidden="true"></i> Log out</a></li>    </ul></span>
+                    <span class="user-account"><i class="fa fa-user" aria-hidden="true"></i>
+                      <ul class="user-login-menu">
+                        <li class="menu-item"><a href="/user" data-drupal-link-system-path="user"><i class="fa fa-user" aria-hidden="true"></i> My account</a></li>
+                        <li class="menu-item"><a href="/user/logout" data-drupal-link-system-path="user/logout"><i class="fa fa-power-off" aria-hidden="true"></i> Log out</a></li>
+                      </ul>
+                    </span>
                   {% else %}
-                  <ul class="login-menu">
-                    <li class="menu-item">
-                      <a href="/user/login" data-drupal-link-system-path="user/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
-                    </li>
-                  </ul>
-                {% endif %}
+                    <ul class="login-menu">
+                      <li class="menu-item">
+                        <a href="/user/login" data-drupal-link-system-path="user/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
+                      </li>
+                    </ul>
+                  {% endif %}
                 </div>
                 <div class="d-inline-block cart-icon">
                   {{ page.header_top }}
@@ -114,40 +113,41 @@
   {% if page.header or page.search_area or page.navigation %}
     <div id="header-second" class="header-second clearfix">
       {% if page.header or page.search_area or page.navigation %}
-          <div class="container">
-            <div id="container-wrap" class="container-wrap">
+        <div class="container">
+          <div id="container-wrap" class="container-wrap">
             <div class="mob-icon float-left d-md-none"><i class="fa fa-bars" aria-hidden="true"></i></div>
-              <div class="header-left float-left">
-                {% if page.header %}
-                  <div class="header-logo">
-                      {{ page.header }}
+            <div class="header-left float-left">
+              {% if page.header %}
+                <div class="header-logo">
+                  {{ page.header }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="header-right float-right">
+              {% if page.search_area or page.navigation %}
+                {% if page.navigation %}
+                  <div id="main-navigation" class="clearfix main-navigation d-inline-block">
+                    <nav role="navigation">
+                      {{ page.navigation }}
+                    </nav>
                   </div>
                 {% endif %}
-              </div>
-              <div class="header-right float-right">
-                {% if page.search_area or page.navigation %}
-                  {% if page.navigation %}
-                      <div id="main-navigation" class="clearfix main-navigation d-inline-block">
-                        <nav role="navigation">
-                          {{ page.navigation }}
-                        </nav>
-                      </div>
-                    {% endif %}
-                    {% if page.search_area %}
-                    <div id="search-area" class="clearfix search-area d-inline-block">
-                      <div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                      {{ page.search_area }}
-                    </div>
-                  {% endif %}
+                {% if page.search_area %}
+                  <div id="search-area" class="clearfix search-area d-inline-block">
+                    <div class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    {{ page.search_area }}
+                  </div>
                 {% endif %}
-              </div>
+              {% endif %}
             </div>
           </div>
+        </div>
       {% endif %}
     </div>
   {% endif %}
 </header>
-  {% if is_front %}
+
+{% if is_front %}
   <div id="banner" class="banner">
     <div class="container">
       <div id="banner-inside" class="clearfix banner-inside">
@@ -155,160 +155,164 @@
       </div>
     </div>
   </div>
-  {% endif %}
-  {% if slider %}
-    <div class="slider">
-      <ul class="slides">
-        {% for slide in slider %}
-          <li>
-            <img src="{{ slide.src }}" />
-            <div class="slider-caption">
-              <h2 class="flex-caption">{{ slide.title }}</h2>
-              <p class="flex-desc">{{ slide.desc }}</p>
-              <a href="{{ slide.url }}"> More</a>
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
+{% endif %}
+
+{% if slider %}
+  <div class="slider">
+    <ul class="slides">
+      {% for slide in slider %}
+        <li>
+          <img src="{{ slide.src }}" />
+          <div class="slider-caption">
+            <h2 class="flex-caption">{{ slide.title }}</h2>
+            <p class="flex-desc">{{ slide.desc }}</p>
+            <a href="{{ slide.url }}"> More</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+
+<div id="page" class="clearfix page">
+  {% if page.breadcrumb %}
+    <div class="breadcrumb-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.breadcrumb }}
+          </div>
+        </div>
+      </div>
     </div>
   {% endif %}
-  <div id="page" class="clearfix page">
-    {% if page.breadcrumb %}
-      <div class="breadcrumb-wrap">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              {{ page.breadcrumb }}
-            </div>
+
+  {% if page.system_messages %}
+    <div class="system-messages">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            {{ page.system_messages }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if is_front %}
+    {% if page.category %}
+      <div id="category" class="category">
+        <div class="category-layout-1 container">
+          <div id="category-inside" class="clearfix category-inside">
+            {{ page.category }}
           </div>
         </div>
       </div>
     {% endif %}
+  {% endif %}
 
-    {% if page.system_messages %}
-      <div class="system-messages">
-        <div class="container">
+  {% if page.highlighted %}
+    <div id="highlighted" class="clearfix highlighted">
+      <div class="container">
+        <div id="highlighted-inside" class="clearfix highlighted-inside">
           <div class="row">
             <div class="col-md-12">
-              {{ page.system_messages }}
+              <div class="highlighted-area">
+                {{ page.highlighted }}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    {% endif %}
+    </div>
+  {% endif %}
 
-    {% if is_front %}
-      {% if page.category %}
-        <div id="category" class="category">
-          <div class="category-layout-1 container">
-            <div id="category-inside" class="clearfix category-inside">
-              {{ page.category }}
+  <div id="main-content" class="clearfix main-content">
+    <div class="container">
+      {% if page.sidebar_first %}
+        <aside class="sidebar-first">
+          <section id="sidebar-first-in" class="sidebar sidebar-first-in clearfix">
+            {{ page.sidebar_first }}
+          </section>
+        </aside>
+      {% endif %}
+      <section class="main-section">
+        <div id="main" class="clearfix main main-area">
+          {% if page.content %}
+            {{ page.content }}
+          {% endif %}
+        </div>
+      </section>
+      {% if page.sidebar_second %}
+        <aside class="sidebar-second">
+          <section id="sidebar-second-in" class="sidebar sidebar-second-in clearfix">
+            {{ page.sidebar_second }}
+          </section>
+        </aside>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if page.featured_top %}
+    <div id="featured-top" class="clearfix featured-top">
+      <div class="container">
+        <div id="featured-top-inside" class="clearfix featured-top-inside">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="featured-top-area">
+                {{ page.featured_top }}
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.featured %}
+    <div id="featured" class="clearfix featured">
+      <div class="container">
+        <div id="featured-inside" class="clearfix featured-inside">
+          {{ page.featured }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if page.featured_bottom %}
+    <div id="featured-bottom" class="clearfix featured-bottom">
+      <div class="container">
+        <div id="featured-bottom-inside" class="clearfix featured-bottom-inside">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="featured-bottom-area">
+                {{ page.featured_bottom }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<footer>
+  <div id="footer" class="clearfix footer">
+    <div class="container">
+      {% if  page.footer %}
+        <div class="footer-top">
+          <div class="footer-top-area first">
+            {{ page.footer }}
           </div>
         </div>
       {% endif %}
-    {% endif %}
-
-    {% if page.highlighted %}
-      <div id="highlighted" class="clearfix highlighted">
-        <div class="container">
-          <div id="highlighted-inside" class="clearfix highlighted-inside">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="highlighted-area">
-                  {{ page.highlighted }}
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-wrap clearfix">
+          <div class="phone float-md-left text-left"><p>{{ phone }}</p></div>
+          <div class="email float-md-left text-right"><p>{{ email }}</p></div>
+          <div class="copyrights float-md-right text-center"><p>{{ copyrights }}</p></div>
         </div>
-      </div>
-    {% endif %}
-    <div id="main-content" class="clearfix main-content">
-      <div class="container">
-      {% if page.sidebar_first %}
-          <aside class="sidebar-first">
-            <section id="sidebar-first-in" class="sidebar sidebar-first-in clearfix">
-              {{ page.sidebar_first }}
-            </section>
-          </aside>
-        {% endif %}
-        <section class="main-section">
-          <div id="main" class="clearfix main main-area">
-            {% if page.content %}
-              {{ page.content }}
-            {% endif %}
-          </div>
-        </section>
-        {% if page.sidebar_second %}
-          <aside class="sidebar-second">
-            <section id="sidebar-second-in" class="sidebar sidebar-second-in clearfix">
-              {{ page.sidebar_second }}
-            </section>
-          </aside>
-        {% endif %}
       </div>
     </div>
-
-    {% if page.featured_top %}
-      <div id="featured-top" class="clearfix featured-top">
-        <div class="container">
-          <div id="featured-top-inside" class="clearfix featured-top-inside">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="featured-top-area">
-                  {{ page.featured_top }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    {% if page.featured %}
-      <div id="featured" class="clearfix featured">
-        <div class="container">
-          <div id="featured-inside" class="clearfix featured-inside">
-                  {{ page.featured }}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    {% if page.featured_bottom %}
-      <div id="featured-bottom" class="clearfix featured-bottom">
-        <div class="container">
-          <div id="featured-bottom-inside" class="clearfix featured-bottom-inside">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="featured-bottom-area">
-                  {{ page.featured_bottom }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endif %}
   </div>
-  <footer>
-    <div id="footer" class="clearfix footer">
-      <div class="container">
-          {% if  page.footer %}
-            <div class="footer-top">
-              <div class="footer-top-area first">
-                {{ page.footer }}
-              </div>
-            </div>
-          {% endif %}
-          <div class="footer-bottom">
-            <div class="footer-bottom-wrap clearfix">
-              <div class="phone float-md-left text-left"><p>{{ phone }}</p></div>
-              <div class="email float-md-left text-right"><p>{{ email }}</p></div>
-              <div class="copyrights float-md-right text-center"><p>{{ copyrights }}</p></div>
-            </div>
-      </div>
-    </div>
 </footer>
-</div>
