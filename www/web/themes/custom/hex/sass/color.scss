@@ -1,11 +1,14 @@
 // Default colors.
 $primary: #111111;
-$secondary: #ffffff;
+$secondary: #222222;
 $active: #f51167;
+$background: #ffffff;
+$header: #333333;
+$footer: #444444;
 $text: #000000;
 
 body {
-  background-color: $secondary;
+  background-color: $background;
 }
 
 .header-top, .footer {
@@ -13,7 +16,7 @@ body {
 }
 
 .header-second {
-  background-color: $secondary;
+  background-color: $background;
 }
 
 .cart-flyout {
@@ -25,14 +28,14 @@ body {
 .header-right {
   .search-area {
     .fa-search {
-      color: $active;
+      color: $header;
     }
   }
 
   ul.menu {
     li.menu-item {
       a {
-        color: $text;
+        color: $header;
 
         &.is-active {
           color: $active;
@@ -46,10 +49,20 @@ body {
   .footer-top {
     ul.menu {
       li.menu-item {
-        a.is-active {
-          color: $active;
+        a {
+          color: $footer;
+
+          &.is-active {
+            color: $active;
+          }
         }
       }
+    }
+  }
+
+  .footer-bottom {
+    p {
+      color: $footer;
     }
   }
 }

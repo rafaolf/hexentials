@@ -10,7 +10,6 @@ base theme: flexi_cart
 
 libraries:
   - hex/front-style
-  - hex/color-style
 
 regions:
   header_top: 'Header Top'
