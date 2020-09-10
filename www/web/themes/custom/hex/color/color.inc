@@ -39,7 +39,7 @@ $info = [
         'secondary' => $secondary_color,
         'active' => $active_color,
         'background' => $background_color,
-        'top_menu_item' => $top_menu_item_color,
+        'top_menu_item' => $primary_color,
         'footer_menu_item' => $background_color,
         'text' => $text_color,
       ],
