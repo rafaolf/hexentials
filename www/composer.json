@@ -20,7 +20,7 @@
         "drupal/admin_toolbar": "^2.3",
         "drupal/commerce": "^2.20",
         "drupal/commerce_cart_flyout": "^1.8",
-        "drupal/config_split": "^1.4",
+        "drupal/config_split": "^1.5",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
