@@ -3,7 +3,7 @@
 if (getenv('LANDO') === 'ON') {
   $settings['trusted_host_patterns'] = ['.*'];
   $settings['hash_salt'] = md5(getenv('LANDO_HOST_IP'));
-  $settings["config_sync_directory"] = 'config/sync';
+  $settings["config_sync_directory"] = 'config/dev';
 
   $lando_info = json_decode(getenv('LANDO_INFO'), TRUE);
   $databases['default']['default'] = [
