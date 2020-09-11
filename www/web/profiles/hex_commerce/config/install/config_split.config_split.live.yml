@@ -1,0 +1,15 @@
+uuid: 454fad7f-b75c-498a-98dd-845e545ccac1
+langcode: pt-br
+status: false
+dependencies: {  }
+id: live
+label: Live
+description: ''
+folder: config_split/live
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
