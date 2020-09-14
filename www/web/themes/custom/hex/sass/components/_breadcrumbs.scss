@@ -1,0 +1,32 @@
+.breadcrumb-wrap {
+  .breadcrumb {
+    margin: 1em 0;
+    padding: 0;
+
+    ol {
+      list-style: none;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        margin: 0;
+        margin-right: 1em;
+        padding: 0;
+        display: list-item;
+        list-style: none;
+
+        .breadcrumb-home-icon {
+          display: inline-block;
+        }
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          position: relative;
+        }
+      }
+    }
+  }
+}
