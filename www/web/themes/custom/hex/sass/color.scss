@@ -45,6 +45,12 @@ body {
   }
 }
 
+.breadcrumb {
+  .fa-home {
+    color: $active;
+  }
+}
+
 .footer {
   .footer-top {
     ul.menu {
