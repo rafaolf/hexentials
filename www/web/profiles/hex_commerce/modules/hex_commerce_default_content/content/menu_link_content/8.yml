@@ -1,22 +1,25 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 684fb7b1-328c-461c-8ab3-4cd2b25fe28d
+  uuid: 991bf260-6418-410b-9d32-4cb52ff51c87
   bundle: menu_link_content
   default_langcode: pt-br
+  depends:
+    684fb7b1-328c-461c-8ab3-4cd2b25fe28d: menu_link_content
+    fbfdf25c-4577-4b6b-99e1-f7054b6ec836: node
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: Acessibilidade
+      value: 'Termos de uso'
   menu_name:
     -
       value: footer
   link:
     -
-      uri: 'internal:/accessibility'
+      target_uuid: fbfdf25c-4577-4b6b-99e1-f7054b6ec836
       title: ''
       options: {  }
   external:
@@ -24,13 +27,16 @@ default:
       value: false
   rediscover:
     -
-      value: true
+      value: false
   weight:
     -
-      value: 0
+      value: -48
   expanded:
     -
-      value: false
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:684fb7b1-328c-461c-8ab3-4cd2b25fe28d'
   revision_translation_affected:
     -
       value: true
