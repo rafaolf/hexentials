@@ -63,6 +63,15 @@ class ClientSettingsForm extends FormBase {
       // '#pattern' => '\(\d{2,}\) \d{4,}\-\d{4}',
     ];
 
+    $form['address'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Address'),
+      '#description' => $this->t('Address to display for the users.'),
+      '#default_value' => '',
+      '#required' => FALSE,
+      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
+    ];
+
     $form['facebook'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Facebook'),
@@ -150,7 +159,12 @@ class ClientSettingsForm extends FormBase {
    */
   public function updateConfiguration(FormStateInterface $form_state) {
     \Drupal::configFactory()->getEditable('system.site')->set('slogan', (string) $form_state->getValue('slogan'))->save();
-    \Drupal::configFactory()->getEditable('hex.settings')->set('phone', (string) $form_state->getValue('phone_number'))->save();
+
+    \Drupal::configFactory()
+      ->getEditable('hex.settings')
+      ->set('phone', (string) $form_state->getValue('phone_number'))
+      ->set('address', (string) $form_state->getValue('address'))
+      ->save();
 
     \Drupal::configFactory()
       ->getEditable('flexi_cart.settings')

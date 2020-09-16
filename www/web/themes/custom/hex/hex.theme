@@ -50,6 +50,7 @@ function hex_preprocess_block(&$variables) {
 
   $variables['phone'] = $config->get('phone');
   $variables['email'] = $config->get('email');
+  $variables['address'] = $config->get('address');
 
   $variables['company_name'] = \Drupal::config('system.site')->get('name');
 }

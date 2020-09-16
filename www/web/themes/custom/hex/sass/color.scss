@@ -11,8 +11,14 @@ $text: #000000;
   border-bottom: 1px solid $active;
 }
 
+// Page structure.
 body {
   background-color: $background;
+}
+
+// Font-awesome icons.
+.fa-home, .fa-phone, .fa-inbox, .fa-street-view {
+  color: $active;
 }
 
 .header-top, .footer {
@@ -46,12 +52,6 @@ body {
         }
       }
     }
-  }
-}
-
-.breadcrumb {
-  .fa-home {
-    color: $active;
   }
 }
 

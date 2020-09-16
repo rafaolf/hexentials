@@ -35,6 +35,10 @@
 
       .footer-contact-us__item {
         display: block;
+
+        p {
+          display: inline-block;
+        }
       }
     }
   }
