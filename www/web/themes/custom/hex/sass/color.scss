@@ -7,6 +7,10 @@ $header: #333333;
 $footer: #444444;
 $text: #000000;
 
+@mixin border-style {
+  border-bottom: 1px solid $active;
+}
+
 body {
   background-color: $background;
 }
@@ -62,12 +66,16 @@ body {
             color: $active;
           }
         }
+
+        & > a.menu-footer__link:after {
+          @include border-style;
+        }
       }
     }
 
     .footer-contact-us {
       .footer-contact-us__title {
-        border-bottom: 1px solid $active;
+        @include border-style;
 
         p {
           color: $footer;

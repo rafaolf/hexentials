@@ -12,6 +12,16 @@
           font-size: $menu-font-size;
         }
       }
+
+      > li.menu-footer__item {
+        > a.menu-footer__link:after {
+          content: "";
+          display: block;
+          margin: 0;
+          margin-bottom: 0.5em;
+          width: 3%;
+        }
+      }
     }
 
     .footer-contact-us {
