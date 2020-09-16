@@ -1,7 +1,41 @@
-ul.menu {
-  li.menu-item {
-    a {
-      font-size: $menu-font-size;
+.navigation {
+  &.menu--footer {
+    display: flex;
+
+    ul.menu-footer__list {
+      display: flex;
+      flex: 0 0 75%;
+
+      li.menu-footer__item {
+        a.menu-footer__link {
+          display: block;
+          font-size: $menu-font-size;
+        }
+      }
+    }
+
+    .footer-contact-us {
+      display: list-item;
+      flex: 0 0 25%;
+
+      .footer-contact-us__title {
+        display: block;
+        font-size: $menu-font-size;
+      }
+
+      .footer-contact-us__item {
+        display: block;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    &.menu--footer {
+      ul.menu-footer__list {
+        li.menu-footer__item {
+          flex: 0 0 33%;
+        }
+      }
     }
   }
 }

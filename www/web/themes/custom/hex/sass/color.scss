@@ -53,14 +53,30 @@ body {
 
 .footer {
   .footer-top {
-    ul.menu {
-      li.menu-item {
-        a {
+    ul.menu-footer__list {
+      li.menu-footer__item {
+        a.menu-footer__link {
           color: $footer;
 
           &.is-active {
             color: $active;
           }
+        }
+      }
+    }
+
+    .footer-contact-us {
+      .footer-contact-us__title {
+        border-bottom: 1px solid $active;
+
+        p {
+          color: $footer;
+        }
+      }
+
+      .footer-contact-us__item {
+        p {
+          color: $footer;
         }
       }
     }
