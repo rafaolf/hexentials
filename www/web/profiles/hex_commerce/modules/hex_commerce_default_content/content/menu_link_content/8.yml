@@ -1,25 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 991bf260-6418-410b-9d32-4cb52ff51c87
+  uuid: 9dd060b3-4e40-41fb-b741-59d0d4d88b9b
   bundle: menu_link_content
   default_langcode: pt-br
   depends:
-    684fb7b1-328c-461c-8ab3-4cd2b25fe28d: menu_link_content
-    fbfdf25c-4577-4b6b-99e1-f7054b6ec836: node
+    28148ef2-6421-433a-8836-388cd0ab625a: menu_link_content
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: 'Termos de uso'
+      value: Promoções
   menu_name:
     -
       value: footer
   link:
     -
-      target_uuid: fbfdf25c-4577-4b6b-99e1-f7054b6ec836
+      uri: 'internal:/promotions'
       title: ''
       options: {  }
   external:
@@ -27,16 +26,16 @@ default:
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
-      value: -48
+      value: -49
   expanded:
     -
       value: true
   parent:
     -
-      value: 'menu_link_content:684fb7b1-328c-461c-8ab3-4cd2b25fe28d'
+      value: 'menu_link_content:28148ef2-6421-433a-8836-388cd0ab625a'
   revision_translation_affected:
     -
       value: true

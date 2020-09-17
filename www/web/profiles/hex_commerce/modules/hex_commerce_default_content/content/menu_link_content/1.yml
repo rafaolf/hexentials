@@ -1,22 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 9f0d138d-6c7e-494d-839c-e8644cf0fa43
+  uuid: 8f3d2b15-b9fa-433b-82e3-78a0749cbece
   bundle: menu_link_content
   default_langcode: pt-br
+  depends:
+    28148ef2-6421-433a-8836-388cd0ab625a: menu_link_content
 default:
   enabled:
     -
-      value: false
+      value: true
   title:
     -
-      value: Contato
+      value: Produtos
   menu_name:
     -
-      value: main
+      value: footer
   link:
     -
-      uri: 'internal:/contact'
+      uri: 'internal:/products'
       title: ''
       options: {  }
   external:
@@ -27,10 +29,13 @@ default:
       value: true
   weight:
     -
-      value: -49
+      value: -50
   expanded:
     -
-      value: false
+      value: true
+  parent:
+    -
+      value: 'menu_link_content:28148ef2-6421-433a-8836-388cd0ab625a'
   revision_translation_affected:
     -
       value: true

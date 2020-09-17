@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 684fb7b1-328c-461c-8ab3-4cd2b25fe28d
+  uuid: 865ca9af-70ae-48ca-8539-f7c1e4f5132a
   bundle: menu_link_content
   default_langcode: pt-br
 default:
@@ -10,13 +10,13 @@ default:
       value: true
   title:
     -
-      value: Acessibilidade
+      value: 'Sobre nós'
   menu_name:
     -
-      value: footer
+      value: main
   link:
     -
-      uri: 'internal:/accessibility'
+      uri: 'internal:/about-us'
       title: ''
       options: {  }
   external:
@@ -27,10 +27,10 @@ default:
       value: true
   weight:
     -
-      value: -50
+      value: -48
   expanded:
     -
-      value: true
+      value: false
   revision_translation_affected:
     -
       value: true

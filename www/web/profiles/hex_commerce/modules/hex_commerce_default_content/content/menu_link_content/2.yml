@@ -1,22 +1,22 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: eec46c7e-c4ef-49fb-8040-ed9f588be750
+  uuid: 9f0d138d-6c7e-494d-839c-e8644cf0fa43
   bundle: menu_link_content
   default_langcode: pt-br
 default:
   enabled:
     -
-      value: true
+      value: false
   title:
     -
-      value: Home
+      value: Contato
   menu_name:
     -
       value: main
   link:
     -
-      uri: 'internal:/'
+      uri: 'internal:/contact'
       title: ''
       options: {  }
   external:
@@ -27,7 +27,7 @@ default:
       value: true
   weight:
     -
-      value: -50
+      value: -49
   expanded:
     -
       value: false

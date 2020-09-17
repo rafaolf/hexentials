@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 865ca9af-70ae-48ca-8539-f7c1e4f5132a
+  uuid: eec46c7e-c4ef-49fb-8040-ed9f588be750
   bundle: menu_link_content
   default_langcode: pt-br
 default:
@@ -10,13 +10,13 @@ default:
       value: true
   title:
     -
-      value: 'Sobre nós'
+      value: Home
   menu_name:
     -
       value: main
   link:
     -
-      uri: 'internal:/about-us'
+      uri: 'internal:/'
       title: ''
       options: {  }
   external:
@@ -27,7 +27,7 @@ default:
       value: true
   weight:
     -
-      value: -48
+      value: -50
   expanded:
     -
       value: false

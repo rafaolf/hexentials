@@ -1,25 +1,22 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 10440b63-445a-4378-a14a-51216bcbaa77
+  uuid: 684fb7b1-328c-461c-8ab3-4cd2b25fe28d
   bundle: menu_link_content
   default_langcode: pt-br
-  depends:
-    684fb7b1-328c-461c-8ab3-4cd2b25fe28d: menu_link_content
-    e9055989-85e0-4119-95d0-4e2b825c1038: node
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: 'Política de privacidade'
+      value: Acessibilidade
   menu_name:
     -
       value: footer
   link:
     -
-      target_uuid: e9055989-85e0-4119-95d0-4e2b825c1038
+      uri: 'internal:/accessibility'
       title: ''
       options: {  }
   external:
@@ -27,16 +24,13 @@ default:
       value: false
   rediscover:
     -
-      value: false
+      value: true
   weight:
     -
-      value: -49
+      value: -47
   expanded:
     -
       value: true
-  parent:
-    -
-      value: 'menu_link_content:684fb7b1-328c-461c-8ab3-4cd2b25fe28d'
   revision_translation_affected:
     -
       value: true
