@@ -162,13 +162,13 @@ class ClientSettingsForm extends FormBase {
 
     \Drupal::configFactory()
       ->getEditable('hex.settings')
-      ->set('phone', (string) $form_state->getValue('phone_number'))
       ->set('address', (string) $form_state->getValue('address'))
+      ->set('phone', (string) $form_state->getValue('phone_number'))
+      ->set('email', (string) $form_state->getValue('email'))
       ->save();
 
     \Drupal::configFactory()
       ->getEditable('flexi_cart.settings')
-      ->set('email', (string) $form_state->getValue('email'))
       ->set('face_book', (string) $form_state->getValue('facebook'))
       ->set('twitter', (string) $form_state->getValue('twitter'))
       ->set('linkedin', (string) $form_state->getValue('linkedin'))

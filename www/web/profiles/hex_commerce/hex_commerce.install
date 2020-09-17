@@ -63,6 +63,10 @@ function hex_commerce_install_tasks(&$install_state) {
     'hex_commerce_import_default_content' => [
       'display_name' => t('Install default content'),
       'type' => 'normal',
+    ],
+    'hex_commerce_update_theme_settings' => [
+      'display_name' => t('Update theme settings to generate the structure'),
+      'type' => 'normal',
     ]
   ];
 
@@ -193,4 +197,35 @@ function hex_commerce_create_product_types(ProductVariation $variation) {
     'variations' => [$variation],
   ]);
   $product->save();
+}
+
+/**
+ * Create the product types.
+ */
+function hex_commerce_update_theme_settings() {
+  global $base_url;
+  $theme = \Drupal::theme()->getActiveTheme();
+  $css_path = $base_url.'/'. $theme->getPath() .'/css/hc.color.css';
+  $info = color_get_info('hex');
+
+  $values = [
+    'theme' => 'hex',
+    'info' => $info,
+    'palette' => [
+      'primary' => '#111111',
+      'secondary' => '#222222',
+      'active' => '#f51167',
+      'background' => '#ffffff',
+      'top_menu_item' => '#111111',
+      'footer_menu_item' => '#ffffff',
+      'text' => '#000000',
+    ],
+    'scheme' => 'flexi_cart',
+    'schemes' => NULL,
+  ];
+
+  $form_state = new FormState();
+  $form_state->setValues($values);
+
+  color_scheme_form_submit(array(), $form_state);
 }
