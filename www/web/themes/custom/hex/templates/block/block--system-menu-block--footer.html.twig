@@ -49,11 +49,11 @@
   <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
   {{ title_suffix }}
 
+  {% include '@hex/includes/footer-contact-us.html.twig' %}
+
   {# Menu. #}
   {% block content %}
     {{ content }}
   {% endblock %}
-
-  {% include '@hex/includes/footer-contact-us.html.twig' %}
 </nav>
 

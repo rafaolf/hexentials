@@ -75,10 +75,12 @@ body {
 
     .footer-contact-us {
       .footer-contact-us__title {
-        @include border-style;
-
         p {
           color: $footer;
+
+          &:after {
+            @include border-style;
+          }
         }
       }
 

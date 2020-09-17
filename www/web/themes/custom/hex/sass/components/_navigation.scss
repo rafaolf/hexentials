@@ -2,9 +2,38 @@
   &.menu--footer {
     display: flex;
 
+    .footer-contact-us {
+      display: list-item;
+      flex: 0 0 50%;
+      padding-right: 5em;
+
+      .footer-contact-us__title {
+        display: block;
+
+        p {
+          font-size: $menu-font-size;
+          margin: 0 0 0.5em;
+
+          &:after {
+            @include pseudo-after-border(30%);
+            padding-bottom: 0.5em;
+          }
+        }
+      }
+
+      .footer-contact-us__item {
+        display: block;
+
+        p {
+          display: inline-block;
+          margin: 0.5em 0;
+        }
+      }
+    }
+
     ul.menu-footer__list {
       display: flex;
-      flex: 0 0 75%;
+      flex: 0 0 50%;
 
       li.menu-footer__item {
         a.menu-footer__link {
@@ -15,29 +44,7 @@
 
       > li.menu-footer__item {
         > a.menu-footer__link:after {
-          content: "";
-          display: block;
-          margin: 0;
-          margin-bottom: 0.5em;
-          width: 3%;
-        }
-      }
-    }
-
-    .footer-contact-us {
-      display: list-item;
-      flex: 0 0 25%;
-
-      .footer-contact-us__title {
-        display: block;
-        font-size: $menu-font-size;
-      }
-
-      .footer-contact-us__item {
-        display: block;
-
-        p {
-          display: inline-block;
+          @include pseudo-after-border(3%);
         }
       }
     }

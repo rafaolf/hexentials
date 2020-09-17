@@ -1,0 +1,7 @@
+@mixin pseudo-after-border($width) {
+  content: "";
+  display: block;
+  margin: 0;
+  margin-bottom: 0.5em;
+  width: $width;
+}
