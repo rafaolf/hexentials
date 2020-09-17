@@ -10,7 +10,7 @@ default:
       value: true
   title:
     -
-      value: FAQ
+      value: 'Perguntas e respostas'
   menu_name:
     -
       value: footer
