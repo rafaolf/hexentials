@@ -200,7 +200,7 @@ function hex_commerce_create_product_types(ProductVariation $variation) {
 }
 
 /**
- * Create the product types.
+ * Update the theme settings with flexi_cart colors.
  */
 function hex_commerce_update_theme_settings() {
   global $base_url;
@@ -216,6 +216,7 @@ function hex_commerce_update_theme_settings() {
       'secondary' => '#222222',
       'active' => '#f51167',
       'background' => '#ffffff',
+      'view' => '#ffffff',
       'top_menu_item' => '#111111',
       'footer_menu_item' => '#ffffff',
       'text' => '#000000',

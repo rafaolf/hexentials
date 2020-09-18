@@ -3,16 +3,13 @@ $primary: #111111;
 $secondary: #222222;
 $active: #f51167;
 $background: #ffffff;
+$view: #a92727;
 $header: #333333;
 $footer: #444444;
 $text: #000000;
 
 @mixin border-bottom-style {
   border-bottom: 1px solid $active;
-}
-
-@mixin border-right-style {
-  border-right: 1px solid $active;
 }
 
 // Page structure.
@@ -62,7 +59,11 @@ body {
 .view-products {
   .view-data {
     .view-filters {
-      @include border-right-style;
+
+    }
+
+    .view-content {
+      background-color: $view;
     }
   }
 }
