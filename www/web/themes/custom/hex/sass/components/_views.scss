@@ -1,0 +1,29 @@
+.view-products { // Products page.
+  .view-header {
+    font-size: $page-title;
+    text-align: center;
+  }
+
+  .view-data {
+    display: flex;
+
+    .view-filters {
+      flex: 0 0 15%;
+      margin-bottom: 2em;
+
+      .form-item {
+        input, select {
+          width: 80%;
+        }
+      }
+
+      .form-actions {
+        float: left;
+      }
+    }
+
+    .view-content {
+      flex: 0 0 80%;
+    }
+  }
+}

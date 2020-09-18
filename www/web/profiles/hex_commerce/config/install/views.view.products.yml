@@ -3,6 +3,7 @@ langcode: pt-br
 status: true
 dependencies:
   module:
+    - commerce
     - commerce_product
 id: products
 label: Produtos
@@ -10,7 +11,7 @@ module: views
 description: ''
 tag: ''
 base_table: commerce_product_field_data
-base_field: nid
+base_field: product_id
 display:
   default:
     display_plugin: default
@@ -43,25 +44,32 @@ display:
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Primeiro'
+            last: 'Último »'
           expose:
-            items_per_page: false
+            items_per_page: true
             items_per_page_label: 'Itens por página'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
             items_per_page_options_all_label: '- Tudo -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
-        type: html_list
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:commerce_product'
       fields:
@@ -143,19 +151,182 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-      sorts: {  }
+        variations_target_id:
+          id: variations_target_id
+          table: commerce_product__variations
+          field: variations_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: variations_target_id_op
+            label: Variações
+            description: ''
+            use_operator: false
+            operator: variations_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: variations_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: Variações
+            description: ''
+            identifier: variations_target_id
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+              2:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+              3:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+          entity_type: commerce_product
+          entity_field: variations
+          plugin_id: numeric
+        type:
+          id: type
+          table: commerce_product_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: type_op
+            label: 'Tipo de produto'
+            description: ''
+            use_operator: false
+            operator: type_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+            hide_single_bundle: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: commerce_product
+          entity_field: type
+          plugin_id: commerce_entity_bundle
+      sorts:
+        title:
+          id: title
+          table: commerce_product_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: Nome
+          entity_type: commerce_product
+          entity_field: title
+          plugin_id: standard
+        type:
+          id: type
+          table: commerce_product_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: 'Tipo de produto'
+          entity_type: commerce_product
+          entity_field: type
+          plugin_id: standard
+        variations_target_id:
+          id: variations_target_id
+          table: commerce_product__variations
+          field: variations_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Variações
+          entity_type: commerce_product
+          entity_field: variations
+          plugin_id: standard
       title: Produtos
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags: {  }
   page_1:
     display_plugin: page
@@ -170,5 +341,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags: {  }

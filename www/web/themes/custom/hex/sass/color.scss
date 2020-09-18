@@ -7,8 +7,12 @@ $header: #333333;
 $footer: #444444;
 $text: #000000;
 
-@mixin border-style {
+@mixin border-bottom-style {
   border-bottom: 1px solid $active;
+}
+
+@mixin border-right-style {
+  border-right: 1px solid $active;
 }
 
 // Page structure.
@@ -55,6 +59,14 @@ body {
   }
 }
 
+.view-products {
+  .view-data {
+    .view-filters {
+      @include border-right-style;
+    }
+  }
+}
+
 .footer {
   .footer-top {
     ul.menu-footer__list {
@@ -68,7 +80,7 @@ body {
         }
 
         & > a.menu-footer__link:after {
-          @include border-style;
+          @include border-bottom-style;
         }
       }
     }
@@ -79,7 +91,7 @@ body {
           color: $footer;
 
           &:after {
-            @include border-style;
+            @include border-bottom-style;
           }
         }
       }
