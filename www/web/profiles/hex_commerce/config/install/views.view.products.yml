@@ -184,37 +184,30 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-          is_grouped: false
+          is_grouped: true
           group_info:
             label: Variações
             description: ''
             identifier: variations_target_id
             optional: true
-            widget: select
+            widget: radios
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
             group_items:
               1:
-                title: ''
+                title: 'Variação 1'
                 operator: '='
                 value:
-                  value: ''
+                  value: variation_1
                   min: ''
                   max: ''
               2:
-                title: ''
+                title: 'Variação 2'
                 operator: '='
                 value:
-                  value: ''
-                  min: ''
-                  max: ''
-              3:
-                title: ''
-                operator: '='
-                value:
-                  value: ''
+                  value: variation_2
                   min: ''
                   max: ''
           entity_type: commerce_product
@@ -249,18 +242,32 @@ display:
               administrator: '0'
             reduce: false
             hide_single_bundle: true
-          is_grouped: false
+          is_grouped: true
           group_info:
-            label: ''
+            label: 'Tipos de produto'
             description: ''
-            identifier: ''
+            identifier: type
             optional: true
-            widget: select
+            widget: radios
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1:
+                title: Padrão
+                operator: in
+                value:
+                  default: default
+                  all: '0'
+                  with_color_variations: '0'
+              2:
+                title: Cor
+                operator: in
+                value:
+                  with_color_variations: with_color_variations
+                  all: '0'
+                  default: '0'
           entity_type: commerce_product
           entity_field: type
           plugin_id: commerce_entity_bundle
