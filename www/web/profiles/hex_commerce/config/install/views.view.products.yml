@@ -199,68 +199,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        variations_target_id:
-          id: variations_target_id
-          table: commerce_product__variations
-          field: variations_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: variations_target_id_op
-            label: Variações
-            description: ''
-            use_operator: false
-            operator: variations_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: variations_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: true
-          group_info:
-            label: Variações
-            description: 'Selecione a variação desejada.'
-            identifier: variations_target_id
-            optional: true
-            widget: radios
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1:
-                title: 'Variação 1'
-                operator: '='
-                value:
-                  value: variation_1
-                  min: ''
-                  max: ''
-              2:
-                title: 'Variação 2'
-                operator: '='
-                value:
-                  value: variation_2
-                  min: ''
-                  max: ''
-          entity_type: commerce_product
-          entity_field: variations
-          plugin_id: numeric
         type:
           id: type
           table: commerce_product_field_data
@@ -308,12 +246,12 @@ display:
                 value:
                   default: default
                   all: '0'
-                  with_color_variations: '0'
+                  dress: '0'
               2:
-                title: Cor
+                title: Vestido
                 operator: in
                 value:
-                  with_color_variations: with_color_variations
+                  dress: dress
                   all: '0'
                   default: '0'
           entity_type: commerce_product

@@ -5,16 +5,6 @@
  */
 
 use Drupal\Core\Form\FormState;
-use Drupal\commerce_price\Price;
-use Drupal\commerce_product\Entity\Product;
-use Drupal\commerce_product\Entity\ProductAttribute;
-use Drupal\commerce_product\Entity\ProductAttributeValue;
-use Drupal\commerce_product\Entity\ProductType;
-use Drupal\commerce_product\Entity\ProductVariation;
-use Drupal\commerce_product\Entity\ProductVariationType;
-use Drupal\commerce_store\Entity\Store;
-use Drupal\commerce_store\Form\StoreForm;
-use Drupal\hex_commerce\Form;
 
 /**
  * Implements hook_install().
@@ -107,7 +97,9 @@ function hex_commerce_prepare_menu_structure() {
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_prepare_store() {
-  hex_commerce_create_product_variation_and_attributes();
+  module_load_include('inc', 'hex_commerce', 'hex_commerce.products');
+
+  hex_commerce_prepare_products();
 }
 
 /**
@@ -117,86 +109,6 @@ function hex_commerce_prepare_store() {
  */
 function hex_commerce_import_default_content() {
   \Drupal::service('default_content.importer')->importContent('hex_commerce_default_content');
-}
-
-/**
- * Create the product variation and attributes.
- */
-function hex_commerce_create_product_variation_and_attributes() {
-  // Create the new variation type.
-  $variation_type = ProductVariationType::create([
-    'status' => 1,
-    'id' => 'variation_type_with_color',
-    'label' => 'Variation Type With Color',
-    'orderItemType' => 'default',
-    'generateTitle' => TRUE,
-  ]);
-  $variation_type->save();
-
-  $color_attribute = ProductAttribute::create([
-    'id' => 'color',
-    'label' => 'color',
-  ]);
-  $color_attribute->save();
-
-  $field_manager = \Drupal::service('commerce_product.attribute_field_manager');
-  $field_manager->createField($color_attribute, $variation_type->id());
-
-  $blue = ProductAttributeValue::create([
-    'attribute' => 'color',
-    'name' => 'blue',
-  ]);
-  $blue->save();
-
-  $red = ProductAttributeValue::create([
-    'attribute' => 'color',
-    'name' => 'red',
-  ]);
-  $red->save();
-
-  $price = new Price('24.99', 'BRL');
-
-  $variation = ProductVariation::create([
-    'type' => 'variation_type_with_color',
-    'sku' => 'test-product-01',
-    'status' => 1,
-    'price' => $price,
-    'attribute_color' => $red,
-  ]);
-  $variation->save();
-
-  hex_commerce_create_product_types($variation);
-}
-
-/**
- * Create the product types.
- */
-function hex_commerce_create_product_types(ProductVariation $variation) {
-  $product_type = ProductType::create([
-    'id' => 'with_color_variations',
-    'label' => 'Product Type with Color Variations',
-    'status' => 1,
-    'description' => 'This is the description of the product',
-    'variationType' => 'variation_type_with_color',
-    'injectVariationFields' => TRUE,
-  ]);
-  $product_type->save();
-
-  // These three functions must be called to add the appropriate fields to the type.
-  commerce_product_add_variations_field($product_type);
-  commerce_product_add_stores_field($product_type);
-  commerce_product_add_body_field($product_type);
-
-  $store = Store::load(1);
-
-  $product = Product::create([
-    'uid' => 1,
-    'type' => 'with_color_variations',
-    'title' => 'My product',
-    'stores' => [$store],
-    'variations' => [$variation],
-  ]);
-  $product->save();
 }
 
 /**
