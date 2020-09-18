@@ -8,24 +8,62 @@
     display: flex;
 
     .view-filters {
-      flex: 0 0 15%;
+      flex: 0 0 14%;
       margin-bottom: 2em;
 
-      .form-item {
-        width: 100%;
+      .views-exposed-form {
+        .bef-sortby {
+          legend {
+            margin-bottom: 0.5em;
+          }
 
-        input, select {
+          .form-item-items-per-page {
+            display: inline;
+          }
 
+          &:after {
+            content: ' ';
+            display: block;
+            border-bottom: solid 1px #D7D7D7;
+          }
         }
-      }
 
-      .form-actions {
-        float: left;
+        details {
+          border: none;
+          margin: 0;
+          padding: 0;
+
+          summary {
+            font-weight: $bold;
+            padding: 1em 0;
+            outline: none; // Removing the borders when pressing.
+          }
+
+          > .details-wrapper {
+            padding: 0 1em 1em;
+
+            .form-wrapper {
+              margin: 0;
+            }
+          }
+
+          .form-composite {
+            > legend {
+              display: none;
+            }
+          }
+
+          &:after {
+            content: ' ';
+            display: block;
+            border-bottom: solid 1px #D7D7D7;
+          }
+        }
       }
     }
 
     .view-content {
-      flex: 0 0 80%;
+      flex: 0 0 86%;
     }
   }
 }

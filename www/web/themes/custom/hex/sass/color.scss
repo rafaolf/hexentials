@@ -59,7 +59,15 @@ body {
 .view-products {
   .view-data {
     .view-filters {
-
+      .views-exposed-form {
+        details {
+          summary {
+            &::-webkit-details-marker {
+              color: $active;
+            }
+          }
+        }
+      }
     }
 
     .view-content {

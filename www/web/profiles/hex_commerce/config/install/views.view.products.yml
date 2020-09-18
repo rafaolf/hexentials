@@ -3,6 +3,7 @@ langcode: pt-br
 status: true
 dependencies:
   module:
+    - better_exposed_filters
     - commerce
     - commerce_product
 id: products
@@ -34,15 +35,62 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Aplicar
-          reset_button: false
-          reset_button_label: Reiniciar
+          reset_button: true
+          reset_button_label: Resetar
           exposed_sorts_label: 'Ordenar por'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Ascendente
           sort_desc_label: Decrescente
+          text_input_required: 'Selecione um filtro e clique em Aplicar para ver os resultados'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Configurações avançadas'
+              secondary_open: true
+            sort:
+              plugin_id: bef
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: 'Resetar ordenação'
+                collapsible: true
+                collapsible_label: Ordenação
+                is_secondary: false
+            pager:
+              plugin_id: bef
+              advanced:
+                is_secondary: false
+            filter:
+              variations_target_id:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: 0
+              type:
+                plugin_id: bef
+                advanced:
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: true
+                  is_secondary: false
+                select_all_none: false
+                select_all_none_nested: false
+                display_inline: 0
       pager:
         type: full
         options:
@@ -187,7 +235,7 @@ display:
           is_grouped: true
           group_info:
             label: Variações
-            description: ''
+            description: 'Selecione a variação desejada.'
             identifier: variations_target_id
             optional: true
             widget: radios
@@ -245,7 +293,7 @@ display:
           is_grouped: true
           group_info:
             label: 'Tipos de produto'
-            description: ''
+            description: 'Selecione o tipo de produto desejado.'
             identifier: type
             optional: true
             widget: radios
@@ -280,7 +328,7 @@ display:
           group_type: group
           admin_label: ''
           order: ASC
-          exposed: false
+          exposed: true
           expose:
             label: Nome
           entity_type: commerce_product
@@ -333,7 +381,6 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
       tags: {  }
   page_1:
     display_plugin: page
@@ -343,6 +390,7 @@ display:
     display_options:
       display_extenders: {  }
       path: products
+      exposed_block: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -351,5 +399,4 @@ display:
         - url
         - url.query_args
         - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
       tags: {  }
