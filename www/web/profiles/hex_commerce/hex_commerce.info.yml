@@ -58,6 +58,7 @@ install:
   - admin_toolbar
   - better_exposed_filters
   - config_split
+  - current_page_crumb
   - default_content
   - diff
   - field_group

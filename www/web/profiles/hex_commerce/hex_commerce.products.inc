@@ -61,13 +61,13 @@ function hex_commerce_prepare_products() {
 function hex_commerce_create_product_attributes(ProductVariationType $variation_type) {
   $color_attribute = ProductAttribute::create([
     'id' => 'color',
-    'label' => 'color',
+    'label' => t('Color'),
   ]);
   $color_attribute->save();
 
   $size_attribute = ProductAttribute::create([
     'id' => 'size',
-    'label' => 'size',
+    'label' => t('Size'),
   ]);
   $size_attribute->save();
 

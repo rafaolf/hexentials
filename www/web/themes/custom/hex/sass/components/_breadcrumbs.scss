@@ -22,10 +22,11 @@
           display: inline-block;
         }
 
-        a {
-          display: inline-block;
+        a, p {
+          display: inline;
           text-decoration: none;
           position: relative;
+          margin-left: 0.5em;
         }
       }
     }

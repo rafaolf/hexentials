@@ -9,12 +9,16 @@
 
     .view-filters {
       flex: 0 0 14%;
-      margin-bottom: 2em;
+      margin: 0 2em 2em 0;
 
       .views-exposed-form {
         .bef-sortby {
           legend {
             margin-bottom: 0.5em;
+          }
+
+          .form-wrapper {
+            margin-top: 0;
           }
 
           .form-item-items-per-page {
@@ -24,6 +28,7 @@
           &:after {
             content: ' ';
             display: block;
+            // @TODO: create a color for this border.
             border-bottom: solid 1px #D7D7D7;
           }
         }
