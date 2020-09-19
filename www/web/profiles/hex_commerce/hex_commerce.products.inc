@@ -17,23 +17,24 @@ use Drupal\commerce_store\Entity\Store;
  * Create the product variation and attributes.
  */
 function hex_commerce_prepare_products() {
-  // Create the new variation type.
-  $variation_type = ProductVariationType::create([
-    'status' => 1,
-    'id' => 'variation_type',
-    'label' => 'Variation Type With Color',
-    'orderItemType' => 'default',
-    'generateTitle' => TRUE,
-  ]);
-  $variation_type->save();
+  // Use the default variation type instead of creating a new one.
+  // $variation_type = ProductVariationType::create([
+    // 'status' => 1,
+    // 'id' => 'variation_type',
+    // 'label' => 'Variation Type With Color',
+    // 'orderItemType' => 'default',
+    // 'generateTitle' => TRUE,
+  // ]);
+  // $variation_type>save();
 
+  $variation_type = ProductVariationType::load('default');
   $attributes = hex_commerce_create_product_attributes($variation_type);
 
   $price = new Price('24.99', 'BRL');
   $price2 = new Price('39.99', 'BRL');
 
   $variation = ProductVariation::create([
-    'type' => 'variation_type',
+    'type' => 'default',
     'sku' => 'test-product-01',
     'status' => 1,
     'price' => $price,
@@ -43,8 +44,8 @@ function hex_commerce_prepare_products() {
   $variation->save();
 
   $variation2 = ProductVariation::create([
-    'type' => 'variation_type',
-    'sku' => 'test-product-01',
+    'type' => 'default',
+    'sku' => 'test-product-02',
     'status' => 1,
     'price' => $price2,
     'attribute_color' => $attributes['color']['yellow'],
@@ -141,14 +142,13 @@ function hex_commerce_create_product_types(array $variations) {
     'label' => 'Dress - color and size',
     'status' => 1,
     'description' => 'This is the description of the product',
-    'variationType' => 'variation_type',
+    'variationType' => 'default',
     'injectVariationFields' => TRUE,
   ]);
   $product_type->save();
 
-  // These three functions must be called to add the appropriate fields to the type.
-  commerce_product_add_variations_field($product_type);
-  commerce_product_add_stores_field($product_type);
+  // commerce_product_add_variations_field($product_type);
+  // commerce_product_add_stores_field($product_type);
   commerce_product_add_body_field($product_type);
 
   $store = Store::load(1);
