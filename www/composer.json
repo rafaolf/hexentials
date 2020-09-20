@@ -20,6 +20,7 @@
         "drupal/admin_toolbar": "^2.3",
         "drupal/better_exposed_filters": "^5.0@beta",
         "drupal/commerce": "^2.20",
+        "drupal/commerce_bulk": "^1.0@beta",
         "drupal/commerce_cart_flyout": "^1.8",
         "drupal/config_split": "^1.5",
         "drupal/core-composer-scaffold": "^8.8",
