@@ -1,0 +1,12 @@
+uuid: 459bf1cd-6012-47e9-9954-88f45dfd0eaa
+langcode: pt-br
+status: true
+dependencies: {  }
+id: dress
+label: 'Dress - color and size'
+description: 'This is the description of the product'
+variationType: default
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

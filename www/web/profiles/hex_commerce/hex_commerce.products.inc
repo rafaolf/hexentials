@@ -137,21 +137,23 @@ function hex_commerce_create_product_attributes(ProductVariationType $variation_
  * Create the product types.
  */
 function hex_commerce_create_product_types(array $variations) {
-  $product_type = ProductType::create([
-    'id' => 'dress',
-    'label' => 'Dress - color and size',
-    'status' => 1,
-    'description' => 'This is the description of the product',
-    'variationType' => 'default',
-    'injectVariationFields' => TRUE,
-  ]);
-  $product_type->save();
+  // $product_type = ProductType::create([
+  //   'id' => 'dress',
+  //   'label' => 'Dress - color and size',
+  //   'status' => 1,
+  //   'description' => 'This is the description of the product',
+  //   'variationType' => 'default',
+  //   'injectVariationFields' => TRUE,
+  // ]);
+  // $product_type->save();
 
   // commerce_product_add_variations_field($product_type);
   // commerce_product_add_stores_field($product_type);
-  commerce_product_add_body_field($product_type);
+  // commerce_product_add_body_field($product_type);
 
   $store = Store::load(1);
+
+  $images = hex_commerce_prepare_images(['test_button.jpg', 'test_launch.jpg', 'testing.png']);
 
   $product = Product::create([
     'uid' => 1,
@@ -159,6 +161,7 @@ function hex_commerce_create_product_types(array $variations) {
     'title' => 'Dress 1',
     'stores' => [$store],
     'variations' => [$variations[0]],
+    'field_image' => $images[0],
   ]);
   $product->save();
 
@@ -168,6 +171,39 @@ function hex_commerce_create_product_types(array $variations) {
     'title' => 'Dress 2',
     'stores' => [$store],
     'variations' => [$variations[1]],
+    'field_image' => $images[1],
   ]);
   $product2->save();
+
+  $product3 = Product::create([
+    'uid' => 3,
+    'type' => 'dress',
+    'title' => 'Dress 3',
+    'stores' => [$store],
+    'variations' => [$variations[0]],
+    'field_image' => $images[2],
+  ]);
+  $product3->save();
+}
+
+/**
+ * Save the images to file system and returns the File object.
+ */
+function hex_commerce_prepare_images($filenames) {
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+
+  foreach ($filenames as $filename) {
+    $image_path = $profile_path . '/images/' . $filename;
+    $content = file_get_contents($image_path);
+    $file = file_save_data($content, 'public://hex_commerce/' . $filename, FILE_EXISTS_REPLACE);
+
+    $file_info = explode('.', $filename, 1);
+    $files[] = [
+      'target_id' => $file->id(),
+      'alt' => strtolower($file_info[0]),
+      'title' => ucfirst($file_info[0]),
+    ];
+  }
+
+  return $files;
 }
