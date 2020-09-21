@@ -153,37 +153,27 @@ function hex_commerce_create_product_types(array $variations) {
 
   $store = Store::load(1);
 
-  $images = hex_commerce_prepare_images(['test_button.jpg', 'test_launch.jpg', 'testing.png']);
+  $images = hex_commerce_prepare_images(['button.jpg', 'launch.jpg', 'testing.png', 'demo_black.jpg', 'demo_green.jpg']);
 
-  $product = Product::create([
-    'uid' => 1,
-    'type' => 'dress',
-    'title' => 'Dress 1',
-    'stores' => [$store],
-    'variations' => [$variations[0]],
-    'field_image' => $images[0],
-  ]);
-  $product->save();
+  $i = 0;
+  $variation_key = 0;
 
-  $product2 = Product::create([
-    'uid' => 2,
-    'type' => 'dress',
-    'title' => 'Dress 2',
-    'stores' => [$store],
-    'variations' => [$variations[1]],
-    'field_image' => $images[1],
-  ]);
-  $product2->save();
+  foreach ($images as $image) {
+    $product = Product::create([
+      'uid' => $i,
+      'type' => 'dress',
+      'title' => 'Dress ' . $i,
+      'stores' => [$store],
+      'variations' => [$variations[$variation_key]],
+      'field_image' => $images[$i],
+    ]);
 
-  $product3 = Product::create([
-    'uid' => 3,
-    'type' => 'dress',
-    'title' => 'Dress 3',
-    'stores' => [$store],
-    'variations' => [$variations[0]],
-    'field_image' => $images[2],
-  ]);
-  $product3->save();
+    $product->save();
+
+    $i++;
+    // Switch between the two variations for each loop.
+    $variation_key = $variation_key == 0 ? 1 : 0;
+  }
 }
 
 /**
@@ -193,7 +183,7 @@ function hex_commerce_prepare_images($filenames) {
   $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
 
   foreach ($filenames as $filename) {
-    $image_path = $profile_path . '/images/' . $filename;
+    $image_path = $profile_path . '/images/test_' . $filename;
     $content = file_get_contents($image_path);
     $file = file_save_data($content, 'public://hex_commerce/' . $filename, FILE_EXISTS_REPLACE);
 
