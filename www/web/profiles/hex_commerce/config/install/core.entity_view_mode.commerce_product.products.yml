@@ -1,0 +1,10 @@
+uuid: 54b9f2ae-c15e-4d0d-87cf-9898613c0817
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.products
+label: Products
+targetEntityType: commerce_product
+cache: true

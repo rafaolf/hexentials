@@ -2,10 +2,14 @@ uuid: 28eac11c-81d3-4690-a246-f817887fc377
 langcode: pt-br
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.commerce_product.products
   module:
     - better_exposed_filters
     - commerce
     - commerce_product
+_core:
+  default_config_hash: qL658-QnwyYxrP6AG-1aclCIe39ZK-TmBWI6zKEmo8A
 id: products
 label: Produtos
 module: views
@@ -120,6 +124,9 @@ display:
           uses_fields: false
       row:
         type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: products
       fields:
         title:
           table: commerce_product_field_data
