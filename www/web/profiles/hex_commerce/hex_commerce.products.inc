@@ -60,21 +60,22 @@ function hex_commerce_prepare_products() {
  * Create the product attributes.
  */
 function hex_commerce_create_product_attributes(ProductVariationType $variation_type) {
-  $color_attribute = ProductAttribute::create([
-    'id' => 'color',
-    'label' => t('Color'),
-  ]);
-  $color_attribute->save();
+  // This creation is not needed as we are using a config for it.
+  // $color_attribute = ProductAttribute::create([
+  //   'id' => 'color',
+  //   'label' => t('Color'),
+  // ]);
+  // $color_attribute->save();
 
-  $size_attribute = ProductAttribute::create([
-    'id' => 'size',
-    'label' => t('Size'),
-  ]);
-  $size_attribute->save();
+  // $size_attribute = ProductAttribute::create([
+  //   'id' => 'size',
+  //   'label' => t('Size'),
+  // ]);
+  // $size_attribute->save();
 
-  $field_manager = \Drupal::service('commerce_product.attribute_field_manager');
-  $field_manager->createField($color_attribute, $variation_type->id());
-  $field_manager->createField($size_attribute, $variation_type->id());
+  // $field_manager = \Drupal::service('commerce_product.attribute_field_manager');
+  // $field_manager->createField($color_attribute, $variation_type->id());
+  // $field_manager->createField($size_attribute, $variation_type->id());
 
   $blue = ProductAttributeValue::create([
     'attribute' => 'color',
