@@ -186,7 +186,7 @@ function hex_commerce_prepare_images($filenames) {
   foreach ($filenames as $filename) {
     $image_path = $profile_path . '/images/test_' . $filename;
     $content = file_get_contents($image_path);
-    $file = file_save_data($content, 'public://hex_commerce/' . $filename, FILE_EXISTS_REPLACE);
+    $file = file_save_data($content, 'public://' . $filename, FILE_EXISTS_REPLACE);
 
     $file_info = explode('.', $filename, 1);
     $files[] = [
