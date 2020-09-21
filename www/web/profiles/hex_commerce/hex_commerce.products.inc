@@ -166,8 +166,8 @@ function hex_commerce_create_product_types(array $variations) {
       'title' => 'Dress ' . $i,
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
-      'body' => 'Body text ' . strtolower($image) . ' ' . $i,
-      'field_image' => $images[$i],
+      'body' => 'Body text ' . $i,
+      'field_image' => $image,
     ]);
 
     $product->save();
