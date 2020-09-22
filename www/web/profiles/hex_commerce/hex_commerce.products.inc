@@ -166,7 +166,7 @@ function hex_commerce_create_product_types(array $variations) {
       'title' => 'Product ' . $i,
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
-      'body' => 'Body text ' . $i,
+      'body' => hex_commerce_get_dummy_text(),
       'field_image' => $image,
     ]);
 
@@ -198,4 +198,11 @@ function hex_commerce_prepare_images($filenames) {
   }
 
   return $files;
+}
+
+/**
+ *
+ */
+function hex_commerce_get_dummy_text() {
+  return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 }

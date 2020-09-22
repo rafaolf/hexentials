@@ -1,13 +1,55 @@
 .path-product {
   .product__page {
     display: flex;
+    margin-bottom: 4em;
 
     .product__left {
       flex: 0 0 60%;
+
+      .product__item--image {
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
     }
 
     .product__right {
       flex: 0 0 40%;
+      text-align: center;
+      margin: auto 0;
+
+      .product__item {
+        margin-bottom: 15px;
+      }
+
+      .product__item--title {
+        font-size: 2em;
+      }
+
+      .product__item--body {
+        font-weight: $lighter;
+      }
+
+      .product__item--variation-price {
+        font-size: 1.15em;
+      }
+
+      .product__item--variations {
+        .field__item {
+          .form-wrapper {
+            .form-type-select {
+              display: inline;
+              margin-right: 2em;
+
+              label {
+                display: inline;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
