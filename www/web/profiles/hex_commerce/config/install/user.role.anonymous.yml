@@ -1,13 +1,16 @@
-langcode: en
+uuid: 0d5605d2-3853-4053-badc-dd9812825818
+langcode: pt-br
 status: true
 dependencies: {  }
 id: anonymous
-label: 'Anonymous user'
+label: 'Usuário anônimo'
 weight: 0
 is_admin: false
 permissions:
   - 'access comments'
+  - 'access commerce_store overview'
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view commerce_product'
