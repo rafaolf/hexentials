@@ -154,7 +154,7 @@ function hex_commerce_create_product_types(array $variations) {
 
   $store = Store::load(1);
 
-  $images = hex_commerce_prepare_images(['button.jpg', 'dress.jpg', 'flower.png', 'headphones.jpg', 'knife.webp', 'lipstick.jpg', 'sandwich.jpg', 'shoes.jpg', 'tea.jpg']);
+  $images = hex_commerce_prepare_images(['bottle.jpg', 'button.jpg', 'dress.jpg', 'headphone.jpg', 'lipstick.jpg', 'shoes.jpg']);
 
   $i = 0;
   $variation_key = 0;
@@ -163,7 +163,7 @@ function hex_commerce_create_product_types(array $variations) {
     $product = Product::create([
       'uid' => $i,
       'type' => 'dress',
-      'title' => 'Dress ' . $i,
+      'title' => 'Product ' . $i,
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
       'body' => 'Body text ' . $i,
@@ -185,7 +185,7 @@ function hex_commerce_prepare_images($filenames) {
   $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
 
   foreach ($filenames as $filename) {
-    $image_path = $profile_path . '/images/test_' . $filename;
+    $image_path = $profile_path . '/images/products/test_' . $filename;
     $content = file_get_contents($image_path);
     $file = file_save_data($content, 'public://' . $filename, FILE_EXISTS_REPLACE);
 
