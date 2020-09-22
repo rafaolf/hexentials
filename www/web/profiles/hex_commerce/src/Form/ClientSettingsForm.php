@@ -41,7 +41,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Slogan'),
       '#description' => $this->t('Slogan to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => t('The best products for your needs.'),
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -49,7 +49,7 @@ class ClientSettingsForm extends FormBase {
     $form['email'] = [
       '#type' => 'email',
       '#title' => $this->t('Email address'),
-      '#default_value' => '',
+      '#default_value' => 'oliveirafrafa@gmail.com',
       '#description' => $this->t('E-mail address to display for the users.'),
       '#required' => TRUE,
     ];
@@ -58,6 +58,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'tel',
       '#title' => $this->t('Phone number'),
       '#description' => $this->t('Phone number to display for the users.'),
+      '#default_value' => '+55 (19) 99986-3111',
       // @TOdo; keep this commented out while we don't have a functionality to
       // auto-fill the special characters.
       // '#pattern' => '\(\d{2,}\) \d{4,}\-\d{4}',
@@ -67,7 +68,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Address'),
       '#description' => $this->t('Address to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => 'John Doe - 123 Main St. - City/State',
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -76,7 +77,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Facebook'),
       '#description' => $this->t('Facebook to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => 'https://www.facebook.com/',
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -85,7 +86,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Twitter'),
       '#description' => $this->t('Twitter to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => 'https://www.twitter.com/',
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -94,7 +95,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('LinkedIn'),
       '#description' => $this->t('LinkedIn to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => 'https://www.linkedin.com/',
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -103,7 +104,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Instagram'),
       '#description' => $this->t('Instagram to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => 'https://www.instagram.com/',
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -112,7 +113,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('copyrights'),
       '#description' => $this->t('copyrights to display for the users.'),
-      '#default_value' => '',
+      '#default_value' => t('© Copyright 2020 - Hexentials Eireli'),
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];

@@ -27,7 +27,7 @@ class StoreSettingsForm extends FormBase {
     $form['email'] = [
       '#type' => 'email',
       '#title' => $this->t('Email address'),
-      '#default_value' => '',
+      '#default_value' => 'oliveirafrafa@gmail.com',
       '#description' => $this->t('Fill out the email address for the main store.'),
       '#required' => TRUE,
     ];
@@ -36,7 +36,7 @@ class StoreSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Address'),
       '#description' => $this->t('Fill out the street address.'),
-      '#default_value' => '',
+      '#default_value' => 'John Doe - 123',
       '#required' => TRUE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -45,7 +45,7 @@ class StoreSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Locality'),
       '#description' => $this->t('Fill out the locality.'),
-      '#default_value' => '',
+      '#default_value' => 'Main St.',
       '#required' => TRUE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -54,7 +54,7 @@ class StoreSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('State'),
       '#description' => $this->t('Fill out the state.'),
-      '#default_value' => '',
+      '#default_value' => 'SP',
       '#required' => TRUE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -63,7 +63,7 @@ class StoreSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Postal code'),
       '#description' => $this->t('Fill out the postal code.'),
-      '#default_value' => '',
+      '#default_value' => '22071',
       '#required' => TRUE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];

@@ -9,7 +9,7 @@
 
     .view-filters {
       flex: 0 0 14%;
-      margin: 0 2em 2em 0;
+      margin: 0 6em 2em 0;
 
       .views-exposed-form {
         .bef-sortby {
@@ -19,6 +19,11 @@
 
           .form-wrapper {
             margin-top: 0;
+
+            span {
+              text-transform: uppercase;
+              font-weight: 600;
+            }
           }
 
           .form-item-items-per-page {
@@ -39,7 +44,8 @@
           padding: 0;
 
           summary {
-            font-weight: $bold;
+            text-transform: uppercase;
+            font-weight: 600;
             padding: 1em 0;
             outline: none; // Removing the borders when pressing.
           }
@@ -75,6 +81,15 @@
           @media only screen and (min-width: 64em) {
             min-height: 230px;
           }
+        }
+
+        .field--name-title {
+          font-weight: $bold;
+          font-size: 1.1em;
+        }
+
+        .field--name-price {
+          font-weight: $lighter;
         }
       }
     }
