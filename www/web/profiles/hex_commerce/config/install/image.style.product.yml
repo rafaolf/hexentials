@@ -3,7 +3,7 @@ langcode: pt-br
 status: true
 dependencies: {  }
 name: product
-label: 'Produto (800x500)'
+label: 'Produto (800x600)'
 effects:
   a778126f-8dfa-4ae0-8dd2-37164b0232e7:
     uuid: a778126f-8dfa-4ae0-8dd2-37164b0232e7
@@ -11,5 +11,5 @@ effects:
     weight: 1
     data:
       width: 800
-      height: 500
-      upscale: false
+      height: 600
+      upscale: true
