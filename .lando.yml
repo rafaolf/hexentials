@@ -3,7 +3,7 @@ recipe: drupal8
 config:
   webroot: www/web
   php: 7.4
-  drush: 10
+  # drush: 10
 
 proxy:
   appserver:
