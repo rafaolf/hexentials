@@ -1,10 +1,13 @@
-.product {
-  display: flex;
-  .product__left {
-    flex: 0 0 60%;
-  }
+.path-product {
+  .product__page {
+    display: flex;
 
-  .product__right {
-    flex: 0 0 40%;
+    .product__left {
+      flex: 0 0 60%;
+    }
+
+    .product__right {
+      flex: 0 0 40%;
+    }
   }
 }

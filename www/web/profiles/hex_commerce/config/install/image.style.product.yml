@@ -1,0 +1,15 @@
+uuid: b53b2799-4d97-4bed-8a85-e36a2b948476
+langcode: pt-br
+status: true
+dependencies: {  }
+name: product
+label: 'Produto (800x500)'
+effects:
+  a778126f-8dfa-4ae0-8dd2-37164b0232e7:
+    uuid: a778126f-8dfa-4ae0-8dd2-37164b0232e7
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: 500
+      upscale: false

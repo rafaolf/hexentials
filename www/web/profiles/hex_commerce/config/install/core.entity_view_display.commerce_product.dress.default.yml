@@ -6,7 +6,7 @@ dependencies:
     - commerce_product.commerce_product_type.dress
     - field.field.commerce_product.dress.body
     - field.field.commerce_product.dress.field_image
-    - image.style.medium
+    - image.style.product
   module:
     - commerce_product
     - image
@@ -29,7 +29,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: medium
+      image_style: product
       image_link: content
     third_party_settings: {  }
   title:
