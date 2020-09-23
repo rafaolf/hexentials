@@ -154,12 +154,16 @@ function hex_commerce_create_product_types(array $variations) {
 
   $store = Store::load(1);
 
-  $images = hex_commerce_prepare_images([['bottle.jpg', 'lipstick_two.jpg', 'mirror.jpg'], ['button.jpg'], ['dress.jpg'], ['headphone.jpg'], 'lipstick.jpg']);
+  $images = hex_commerce_prepare_images([['bottle.jpg'], ['button.jpg'], ['dress.jpg'], ['headphone.jpg'], ['lipstick.jpg', 'lipstick_two.jpg', 'mirror.jpg']]);
 
   $i = 0;
   $variation_key = 0;
 
   foreach ($images as $image) {
+    if (empty($image)) {
+      continue;
+    }
+
     $product = Product::create([
       'uid' => $i,
       'type' => 'dress',
@@ -194,6 +198,7 @@ function hex_commerce_prepare_images($image_list) {
  */
 function hex_commerce_get_files($filenames) {
   $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+  $files = array();
 
   foreach ($filenames as $filename) {
     $image_path = $profile_path . '/images/products/test_' . $filename;
