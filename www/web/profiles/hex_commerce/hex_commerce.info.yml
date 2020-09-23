@@ -66,6 +66,7 @@ install:
   - pathauto
   - redirect
   - seckit
+  - single_image_formatter
 # Profile modules
   - hex_commerce_default_content
 # Theme-related modules - required

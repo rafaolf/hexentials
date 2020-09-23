@@ -3,7 +3,7 @@
     display: flex;
     margin-bottom: 4em;
 
-    .product__left {
+    .product__image {
       flex: 0 0 60%;
 
       .product__item--image {
@@ -14,7 +14,7 @@
       }
     }
 
-    .product__right {
+    .product__info {
       flex: 0 0 40%;
       text-align: center;
       margin: auto 0;

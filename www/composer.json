@@ -37,6 +37,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/redirect": "^1.6",
         "drupal/seckit": "^2.0",
+        "drupal/single_image_formatter": "^1.6",
         "drupal/twig_tweak": "^2.6",
         "drush/drush": "^10.3"
     },
