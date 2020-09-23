@@ -14,3 +14,6 @@ msgstr ""
 
 msgid "Add to cart"
 msgstr "Adicionar ao carrinho"
+
+msgid "@entity added to <a href=\":url\">your cart</a>."
+msgstr "@entity incluído no <a href=\":url\">carrinho</a>."

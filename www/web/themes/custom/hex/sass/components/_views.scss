@@ -77,18 +77,22 @@
       flex: 0 0 86%;
 
       .views-row {
-        .field--name-field-image {
+        .product__item {
+          text-align: center;
+        }
+
+        .product__item--image {
           @media only screen and (min-width: 64em) {
             min-height: 230px;
           }
         }
 
-        .field--name-title {
+        .product__item--title {
           font-weight: $bold;
           font-size: 1.1em;
         }
 
-        .field--name-price {
+        .product__item--variation-price {
           font-weight: $lighter;
         }
       }
