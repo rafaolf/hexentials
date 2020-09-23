@@ -154,7 +154,7 @@ function hex_commerce_create_product_types(array $variations) {
 
   $store = Store::load(1);
 
-  $images = hex_commerce_prepare_images(['bottle.jpg', 'button.jpg', 'dress.jpg', 'headphone.jpg', 'lipstick.jpg']);
+  $images = hex_commerce_prepare_images([['bottle.jpg', 'lipstick_two.jpg', 'mirror.jpg'], ['button.jpg'], ['dress.jpg'], ['headphone.jpg'], 'lipstick.jpg']);
 
   $i = 0;
   $variation_key = 0;
@@ -181,7 +181,18 @@ function hex_commerce_create_product_types(array $variations) {
 /**
  * Save the images to file system and returns the File object.
  */
-function hex_commerce_prepare_images($filenames) {
+function hex_commerce_prepare_images($image_list) {
+  foreach ($image_list as $filenames) {
+    $images[] = hex_commerce_get_files($filenames);
+  }
+
+  return $images;
+}
+
+/**
+ * Save the files and get its data.
+ */
+function hex_commerce_get_files($filenames) {
   $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
 
   foreach ($filenames as $filename) {
@@ -190,6 +201,7 @@ function hex_commerce_prepare_images($filenames) {
     $file = file_save_data($content, 'public://' . $filename, FILE_EXISTS_REPLACE);
 
     $file_info = explode('.', $filename, 1);
+
     $files[] = [
       'target_id' => $file->id(),
       'alt' => strtolower($file_info[0]),
@@ -201,7 +213,7 @@ function hex_commerce_prepare_images($filenames) {
 }
 
 /**
- *
+ * Get dummy text for description field.
  */
 function hex_commerce_get_dummy_text() {
   return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
