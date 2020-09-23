@@ -3,6 +3,7 @@ type: profile
 description: 'Build an e-commerce site to display/shop the company products.'
 # @TODO: double-check this value.
 core_version_requirement: '^8.8 || ^9'
+version: '8.x-1.0'
 
 # Optional: Declare your installation profile as a distribution
 # This will make the installer auto-select this installation profile.
@@ -92,3 +93,6 @@ themes:
   - flexi_cart
   - hex
   - seven
+
+interface translation project: hex_commerce
+interface translation server pattern: profiles/hex_commerce/translations/%project-%version.%language.po
