@@ -1,7 +1,7 @@
 .path-product {
   .product__page {
     display: flex;
-    margin-bottom: 4em;
+    margin-bottom: 6em;
 
     .product__image {
       flex: 0 0 60%;
@@ -9,6 +9,7 @@
       .product__item--image {
         .imagefield_slideshow-wrapper {
           border: none;
+          margin: 0;
 
           .cycle-slideshow {
             padding: 0 1em;
