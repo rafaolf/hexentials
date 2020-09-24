@@ -63,10 +63,11 @@ install:
   - default_content
   - diff
   - field_group
+  - imagefield_slideshow # Product gallery style.
   - pathauto
   - redirect
   - seckit
-  - single_image_formatter
+  - single_image_formatter # Products thumbnail exhibition.
 # Profile modules
   - hex_commerce_default_content
 # Theme-related modules - required
