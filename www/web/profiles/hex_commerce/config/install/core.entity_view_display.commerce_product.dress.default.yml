@@ -6,10 +6,9 @@ dependencies:
     - commerce_product.commerce_product_type.dress
     - field.field.commerce_product.dress.body
     - field.field.commerce_product.dress.field_image
-    - image.style.product
   module:
     - commerce_product
-    - image
+    - imagefield_slideshow
     - text
 id: commerce_product.dress.default
 targetEntityType: commerce_product
@@ -24,13 +23,18 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: image
+    type: imagefield_slideshow_field_formatter
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: product
-      image_link: content
+      imagefield_slideshow_style: product
+      imagefield_slideshow_style_effects: fade
+      imagefield_slideshow_style_pause: 'false'
+      imagefield_slideshow_transition_speed: '500'
+      imagefield_slideshow_timeout: '5000'
+      imagefield_slideshow_pager: '1'
+      imagefield_slideshow_prev_next: 0
     third_party_settings: {  }
   title:
     label: hidden
