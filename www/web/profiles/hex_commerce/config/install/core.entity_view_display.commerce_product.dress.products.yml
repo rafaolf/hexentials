@@ -9,16 +9,14 @@ dependencies:
     - field.field.commerce_product.dress.field_image
     - image.style.medium
   module:
-    - image
-_core:
-  default_config_hash: xemXiZZmYRk9DyOKSwJap7hOOdX57w6U1-JhiD6gFlI
+    - single_image_formatter
 id: commerce_product.dress.products
 targetEntityType: commerce_product
 bundle: dress
 mode: products
 content:
   field_image:
-    type: image
+    type: single_image_formatter
     weight: 0
     region: content
     label: hidden
