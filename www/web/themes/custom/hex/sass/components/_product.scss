@@ -10,25 +10,29 @@
         .imagefield_slideshow-wrapper {
           border: none;
 
-          .cycle-pager {
-            position: relative;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+          .cycle-slideshow {
+            padding: 0 1em;
 
-            span {
-              font-size: 5em;
-              margin-left: 0.25em;
+            .cycle-pager {
+              position: relative;
+              text-align: center;
+              margin: 0;
+              padding: 0;
 
-              &:first-child {
-                margin-left: 0;
+              span {
+                font-size: 5em;
+                margin-left: 0.25em;
+
+                &:first-child {
+                  margin-left: 0;
+                }
               }
             }
-          }
 
-          img {
-            display: block;
-            margin: 0 auto;
+            img {
+              display: block;
+              margin: 0 auto;
+            }
           }
         }
       }
