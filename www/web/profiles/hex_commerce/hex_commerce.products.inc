@@ -154,7 +154,7 @@ function hex_commerce_create_product_types(array $variations) {
 
   $store = Store::load(1);
 
-  $images = hex_commerce_prepare_images([['bottle.jpg'], ['button.jpg'], ['dress.jpg'], ['headphone.jpg'], ['lipstick.jpg', 'lipstick_two.jpg', 'mirror.jpg']]);
+  $images = hex_commerce_prepare_images([['bottle.jpg'], ['button.jpg'], ['dress.jpg'], ['headphone.jpg'], ['lipstick.jpg', 'mirror.jpg', 'towel.jpg']]);
 
   $i = 0;
   $variation_key = 0;

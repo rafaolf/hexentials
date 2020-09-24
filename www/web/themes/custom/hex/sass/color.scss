@@ -76,6 +76,22 @@ body {
   }
 }
 
+.product__page {
+  .product__image {
+    .product__item--image {
+      .imagefield_slideshow-wrapper {
+        .cycle-pager {
+          span {
+            &.cycle-pager-active {
+              color: $active;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer {
   .footer-top {
     ul.menu-footer__list {
