@@ -56,6 +56,12 @@ body {
   }
 }
 
+.breadcrumb {
+  a {
+    color: $text;
+  }
+}
+
 .view-products {
   .view-data {
     .view-filters {
