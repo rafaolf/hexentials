@@ -5,3 +5,58 @@
     }
   }
 }
+
+.header-second {
+  .container {
+    .header-left {
+      .header-logo {
+        .site__logo {
+          display: inline-block;
+          vertical-align: middle;
+
+          a {
+            width: auto;
+            padding-right: 2.5em;
+
+            img {
+              height: auto;
+            }
+          }
+        }
+
+        .site__details {
+          display: inline-block;
+          vertical-align: middle;
+
+          .site__details--item {
+            display: inline-block;
+
+            &.site__name {
+              font-weight: $bold;
+              font-size: 1.15em;
+              padding-right: 0.5em;
+
+              a {
+                width: auto;
+              }
+            }
+
+            &.site__slogan {
+              font-size: 0.85em;
+            }
+          }
+        }
+      }
+    }
+
+    .header-right {
+      .main-navigation {
+
+      }
+
+      .search-area {
+
+      }
+    }
+  }
+}
