@@ -1,0 +1,15 @@
+uuid: 98f9359a-76a3-4fa1-933f-063689895bca
+langcode: pt-br
+status: true
+dependencies: {  }
+name: logo
+label: 'Logo (32x32)'
+effects:
+  a9c86d5f-6d80-4068-9a62-d1018883a0d1:
+    uuid: a9c86d5f-6d80-4068-9a62-d1018883a0d1
+    id: image_scale
+    weight: 1
+    data:
+      width: 32
+      height: 32
+      upscale: false
