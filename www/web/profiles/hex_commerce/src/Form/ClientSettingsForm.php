@@ -23,19 +23,21 @@ class ClientSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form_state->disableCache();
     $form['#title'] = $this->t('Configure client preferences');
 
-    $form['image'] = [
-      '#type' => 'managed_file',
-      '#title' => t('Company\'s logo.'),
-      // '#default_value' => theme_get_setting('custom_logo'),
-      '#progress_indicator' => 'bar',
-      '#progress_message'   => t('Please wait...'),
-      '#upload_location' => 'public://',
-      '#upload_validators'  => [
-        'file_validate_extensions' => ['gif png jpg jpeg'],
-      ],
-    ];
+    // @TODO: image not working due to an AJAX issue.
+    // $form['image'] = [
+      // '#type' => 'managed_file',
+      // '#title' => t('Company logo.'),
+      // '#default_value' => theme_get_setting('image'),
+      // '#progress_indicator' => 'bar',
+      // '#progress_message'   => t('Please wait...'),
+      // '#upload_location' => 'public://',
+      // '#upload_validators'  => [
+        // 'file_validate_extensions' => ['gif png jpg jpeg'],
+      // ],
+    // ];
 
     $form['slogan'] = [
       '#type' => 'textfield',

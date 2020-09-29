@@ -1,11 +1,13 @@
 // Color preparation for the color scheme.
 $primary: #111111;
-$secondary: #222222;
 $active: #f51167;
+$shadow: #dadce0;
+$hover: #666666;
 $background: #ffffff;
 $view: #a92727;
-$header: #333333;
-$footer: #444444;
+$top-menu-item: #333333;
+$header-second: #222222;
+$footer-menu-item: #444444;
 $text: #000000;
 
 @mixin border-bottom-style {
@@ -27,7 +29,8 @@ body {
 }
 
 .header-second {
-  background-color: $background;
+  background: $header-second;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 $shadow;
 }
 
 .cart-flyout {
@@ -39,14 +42,14 @@ body {
 .header-right {
   .search-area {
     .fa-search {
-      color: $header;
+      color: $top-menu-item;
     }
   }
 
   ul.menu {
     li.menu-item {
       a {
-        color: $header;
+        color: $top-menu-item;
 
         &.is-active {
           color: $active;
@@ -103,7 +106,7 @@ body {
     ul.menu-footer__list {
       li.menu-footer__item {
         a.menu-footer__link {
-          color: $footer;
+          color: $footer-menu-item;
 
           &.is-active {
             color: $active;
@@ -119,7 +122,7 @@ body {
     .footer-contact-us {
       .footer-contact-us__title {
         p {
-          color: $footer;
+          color: $footer-menu-item;
 
           &:after {
             @include border-bottom-style;
@@ -129,7 +132,7 @@ body {
 
       .footer-contact-us__item {
         p {
-          color: $footer;
+          color: $footer-menu-item;
         }
       }
     }
@@ -137,7 +140,7 @@ body {
 
   .footer-bottom {
     p {
-      color: $footer;
+      color: $footer-menu-item;
     }
   }
 }

@@ -1,90 +1,104 @@
 <?php
 
-$primary_color = '#111111';
-$secondary_color = '#222222';
-$active_color = '#f51167';
-$background_color = '#ffffff';
-$view_color = '#a92727';
-$top_menu_item_color = '#333333';
-$footer_menu_item_color = '#444444';
-$text_color = '#000000';
+$primary = '#111111';
+$active = '#f51167';
+$shadow = '#dadce0';
+$hover = '#f51144';
+$background = '#ffffff';
+$view = '#a92727';
+$top_menu_item = '#333333';
+$header_second = '#222222';
+$footer_menu_item = '#444444';
+$text = '#000000';
 
 $info = [
   // Available colors and color labels used in theme.
   'fields' => [
-    'primary' => t('Primary color'),
-    'secondary' => t('Secondary color'),
-    'active' => t('Active item color'),
-    'background' => t('Background color'),
-    'view' => t('Views color'),
-    'top_menu_item' => t('Top menu item color'),
-    'footer_menu_item' => t('Footer menu item color'),
-    'text' => t('Text color'),
+    'primary' => t('Primary'),
+    'active' => t('Active item'),
+    'shadow' => t('Shadow'),
+    'hover' => t('Hover'),
+    'background' => t('Background'),
+    'view' => t('Views'),
+    'top_menu_item' => t('Top menu item'),
+    'header_second' => t('Header second'),
+    'footer_menu_item' => t('Footer menu item'),
+    'text' => t('Text'),
   ],
   'schemes' => [
     'default' => [
       'title' => t('Default'),
       'colors' => [
-        'primary' => $primary_color,
-        'secondary' => $secondary_color,
-        'active' => $active_color,
-        'background' => $background_color,
-        'view' => $view_color,
-        'top_menu_item' => $top_menu_item_color,
-        'footer_menu_item' => $footer_menu_item_color,
-        'text' => $text_color,
+        'primary' => $primary,
+        'active' => $active,
+        'shadow' => $shadow,
+        'hover' => $hover,
+        'background' => $background,
+        'view' => $view,
+        'top_menu_item' => $top_menu_item,
+        'header_second' => $header_second,
+        'footer_menu_item' => $footer_menu_item,
+        'text' => $text,
       ],
     ],
     'flexi_cart' => [
       'title' => t('Flexi Cart'),
       'colors' => [
-        'primary' => $primary_color,
-        'secondary' => $secondary_color,
-        'active' => $active_color,
-        'background' => $background_color,
-        'view' => $background_color,
-        'top_menu_item' => $primary_color,
-        'footer_menu_item' => $background_color,
-        'text' => $text_color,
+        'primary' => $primary,
+        'active' => $active,
+        'shadow' => $shadow,
+        'hover' => $hover,
+        'background' => $background,
+        'view' => $background,
+        'top_menu_item' => $text,
+        'header_second' => $background,
+        'footer_menu_item' => $background,
+        'text' => $text,
       ],
     ],
     'red' => [
       'title' => t('Dark red'),
       'colors' => [
         'primary' => '#a20f0f',
-        'secondary' => $secondary_color,
         'active' => '#e54237',
-        'background' => $text_color,
-        'view' => $background_color,
-        'top_menu_item' => $background_color,
-        'footer_menu_item' => $background_color,
-        'text' => $background_color,
+        'shadow' => $shadow,
+        'hover' => '#e54237',
+        'background' => $text,
+        'view' => $background,
+        'top_menu_item' => $text,
+        'header_second' => $background,
+        'footer_menu_item' => $background,
+        'text' => $background,
       ]
     ],
     'green' => [
       'title' => t('Dark green'),
       'colors' => [
         'primary' => '#296315',
-        'secondary' => $secondary_color,
         'active' => '#40c312',
-        'background' => $text_color,
-        'view' => $background_color,
-        'top_menu_item' => $background_color,
-        'footer_menu_item' => $background_color,
-        'text' => $background_color,
+        'shadow' => $shadow,
+        'hover' => '#e54237',
+        'background' => $text,
+        'view' => $background,
+        'top_menu_item' => $text,
+        'header_second' => $background,
+        'footer_menu_item' => $background,
+        'text' => $background,
       ]
     ],
     'blue' => [
       'title' => t('Dark blue'),
       'colors' => [
         'primary' => '#0f0fa2',
-        'secondary' => $secondary_color,
         'active' => '#13c7bb',
-        'background' => $text_color,
-        'view' => $background_color,
-        'top_menu_item' => $background_color,
-        'footer_menu_item' => $background_color,
-        'text' => $background_color,
+        'shadow' => $shadow,
+        'hover' => '#e54237',
+        'background' => $text,
+        'view' => $background,
+        'top_menu_item' => $text,
+        'header_second' => $background,
+        'footer_menu_item' => $background,
+        'text' => $background,
       ]
     ]
   ],
