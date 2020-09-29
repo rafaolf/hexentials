@@ -64,6 +64,7 @@ install:
   - diff
   - field_group
   - imagefield_slideshow # Product gallery style.
+  - logo_image_style
   - pathauto
   - redirect
   - seckit

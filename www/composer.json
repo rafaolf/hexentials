@@ -33,6 +33,7 @@
         "drupal/field_group": "^3.1",
         "drupal/flexi_cart": "^1.2",
         "drupal/imagefield_slideshow": "^1.10",
+        "drupal/logo_image_style": "^2.3",
         "drupal/page_manager": "^4.0@beta",
         "drupal/panels": "^4.6",
         "drupal/pathauto": "^1.8",
