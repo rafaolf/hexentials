@@ -3,7 +3,7 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.products
+    - core.entity_view_mode.commerce_product.teaser
   module:
     - better_exposed_filters
     - commerce
@@ -124,7 +124,7 @@ display:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: products
+          view_mode: teaser
       fields:
         title:
           table: commerce_product_field_data
@@ -317,15 +317,48 @@ display:
         - url.query_args
         - 'url.query_args:sort_by'
       tags: {  }
+  highlighted:
+    display_plugin: block
+    id: highlighted
+    display_title: Destaques
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: Destaques
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+        sorts: false
+        pager: false
+      filters: {  }
+      filter_groups:
+        operator: AND
+        groups: {  }
+      sorts: {  }
+      pager:
+        type: some
+        options:
+          items_per_page: 3
+          offset: 0
+      block_hide_empty: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: Produtos
     position: 1
     display_options:
       display_extenders: {  }
       path: products
       exposed_block: false
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

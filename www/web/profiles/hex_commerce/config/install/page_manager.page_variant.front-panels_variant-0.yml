@@ -4,13 +4,26 @@ status: true
 dependencies:
   config:
     - page_manager.page.front
+    - views.view.products
   module:
     - panels
+    - views
 id: front-panels_variant-0
 label: Panels
 variant: panels_variant
 variant_settings:
-  blocks: {  }
+  blocks:
+    6b8b7734-de26-4d37-ac25-5a8f7492386b:
+      id: 'views_block:products-highlighted'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: top
+      weight: 0
+      uuid: 6b8b7734-de26-4d37-ac25-5a8f7492386b
+      context_mapping: {  }
   id: panels_variant
   uuid: b1283724-8659-4cf0-ad29-b5086550c31a
   label: null
