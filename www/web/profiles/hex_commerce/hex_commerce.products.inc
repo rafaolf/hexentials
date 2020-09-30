@@ -171,7 +171,7 @@ function hex_commerce_create_product_types(array $variations) {
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
       'body' => hex_commerce_get_dummy_text(),
-      'field_image' => $image,
+      'field_product_image' => $image,
     ]);
 
     $product->save();

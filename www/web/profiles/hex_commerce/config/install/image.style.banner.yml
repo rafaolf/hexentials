@@ -5,11 +5,11 @@ dependencies: {  }
 name: banner
 label: 'Banner (1366x518)'
 effects:
-  30bfc545-df10-40a1-bc2f-37247058ebd9:
-    uuid: 30bfc545-df10-40a1-bc2f-37247058ebd9
-    id: image_scale_and_crop
-    weight: 1
+  a34858dd-40eb-4033-805f-915f98f71f13:
+    uuid: a34858dd-40eb-4033-805f-915f98f71f13
+    id: image_scale
+    weight: 2
     data:
       width: 1366
       height: 518
-      anchor: center-center
+      upscale: false
