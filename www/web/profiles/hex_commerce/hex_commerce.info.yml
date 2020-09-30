@@ -74,6 +74,7 @@ install:
 # Theme-related modules - required
   - commerce
   - commerce_cart_flyout
+  - commerce_promotion
 # Extra
   - menu_ui
   - panels
