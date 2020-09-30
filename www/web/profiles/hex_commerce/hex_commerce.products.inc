@@ -166,8 +166,8 @@ function hex_commerce_create_product_types(array $variations) {
 
     $product = Product::create([
       'uid' => $i,
-      'type' => 'dress',
-      'title' => 'Product ' . $i,
+      'type' => 'default',
+      'title' => 'Product' . $i,
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
       'body' => hex_commerce_get_dummy_text(),

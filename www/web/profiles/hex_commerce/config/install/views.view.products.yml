@@ -253,14 +253,6 @@ display:
                 value:
                   default: default
                   all: '0'
-                  dress: '0'
-              2:
-                title: Vestido
-                operator: in
-                value:
-                  dress: dress
-                  all: '0'
-                  default: '0'
           entity_type: commerce_product
           entity_field: type
           plugin_id: commerce_entity_bundle
