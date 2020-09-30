@@ -1,0 +1,15 @@
+uuid: eebb67bb-f7e7-411a-9623-d1c8b6970413
+langcode: pt-br
+status: true
+dependencies: {  }
+name: banner
+label: 'Banner (1366x518)'
+effects:
+  30bfc545-df10-40a1-bc2f-37247058ebd9:
+    uuid: 30bfc545-df10-40a1-bc2f-37247058ebd9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1366
+      height: 518
+      anchor: center-center

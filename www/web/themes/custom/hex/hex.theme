@@ -5,6 +5,12 @@
  * Functions to support theming in the hex theme.
  */
 
+define('SLIDESHOW_COUNT', 5);
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter for blocks.
  */
@@ -18,7 +24,9 @@ function hex_theme_suggestions_block_alter(&$suggestions, $variables) {
 
 // @TODO: add a definition here.
 function hex_preprocess_page(&$variables) {
-
+  hex_prepare_social_media_variables($variables);
+  hex_prepare_main_variables($variables);
+  hex_prepare_slider($variables);
 }
 
 /**
@@ -30,6 +38,8 @@ function hex_theme($existing, $type, $theme, $path) {
       'variables' => [
         'phone' => NULL,
         'email' => NULL,
+        'address' => NULL,
+        'company_name' => NULL,
       ],
     ],
   ];
@@ -46,11 +56,211 @@ function hex_preprocess_html(&$variables) {
  * Implements hook_preprocess_HOOK() for block templates.
  */
 function hex_preprocess_block(&$variables) {
-  $config = \Drupal::config('hex.settings');
+  hex_prepare_main_variables($variables);
+}
 
-  $variables['phone'] = $config->get('phone');
-  $variables['email'] = $config->get('email');
-  $variables['address'] = $config->get('address');
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param $form
+ *   The form.
+ * @param $form_state
+ *   The form state.
+ */
+function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  // Use the settings set by the hex_commerce profile instead of Flexi Cart one.
+  unset($form['flexi_cart_settings']);
+
+  $form['hex_settings']['client_info'] = [
+    '#type' => 'details',
+    '#title' => t('Client Info'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+  $form['hex_settings']['client_info']['address'] = [
+    '#type' => 'textfield',
+    '#title' => t('Address'),
+    '#default_value' => theme_get_setting('address', 'hex'),
+  ];
+  $form['hex_settings']['client_info']['phone'] = [
+    '#type' => 'tel',
+    '#title' => t('Phone number'),
+    '#default_value' => theme_get_setting('phone', 'hex'),
+  ];
+  $form['hex_settings']['client_info']['email'] = [
+    '#type' => 'textfield',
+    '#title' => t('E-mail'),
+    '#default_value' => theme_get_setting('email', 'hex'),
+  ];
+  $form['hex_settings']['social_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Social Media Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+  $form['hex_settings']['social_settings']['facebook'] = [
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#default_value' => theme_get_setting('facebook', 'hex'),
+  ];
+  $form['hex_settings']['social_settings']['twitter'] = [
+    '#type' => 'textfield',
+    '#title' => t('Twitter'),
+    '#default_value' => theme_get_setting('twitter', 'hex'),
+  ];
+  $form['hex_settings']['social_settings']['linkedin'] = [
+    '#type' => 'textfield',
+    '#title' => t('Linked in'),
+    '#default_value' => theme_get_setting('linkedin', 'hex'),
+  ];
+  $form['hex_settings']['social_settings']['instagram'] = [
+    '#type' => 'textfield',
+    '#title' => t('Instagram'),
+    '#default_value' => theme_get_setting('instagram', 'hex'),
+  ];
+  $form['hex_settings']['copyrights_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Copyrights'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+  $form['hex_settings']['copyrights_settings']['copyrights'] = [
+    '#type' => 'textfield',
+    '#title' => t('Copyrights'),
+    '#default_value' => theme_get_setting('copyrights', 'hex'),
+  ];
+  $form['hex_settings']['copyrights_settings']['email'] = [
+    '#type' => 'email',
+    '#title' => t('Email'),
+    '#default_value' => theme_get_setting('email', 'hex'),
+  ];
+
+  $form['hex_settings']['slideshow'] = [
+    '#type' => 'details',
+    '#title' => t('Front Page Slideshow'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  ];
+  $form['hex_settings']['slideshow']['slideshow_display'] =[
+    '#type' => 'checkbox',
+    '#title' => t('Show slideshow'),
+    '#default_value' => theme_get_setting('slideshow_display', 'hex'),
+    '#description'   => t("Check this option to show Slideshow in front page. Uncheck to hide."),
+  ];
+  $form['hex_settings']['slideshow']['slide'] = [
+    '#markup' => t('You can change the title, url and image of each slide in the following Slide Setting fieldsets.'),
+  ];
+
+  for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+    $form['hex_settings']['slideshow']['slide' . $i] = [
+      '#type' => 'details',
+      '#title' => t('Slide '.$i),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    ];
+    $form['hex_settings']['slideshow']['slide' . $i]['slide_title_' . $i] = [
+      '#type' => 'textfield',
+      '#title' => t('Slide '.$i.' Title'),
+      '#default_value' => theme_get_setting("slide_title_{$i}", "hex"),
+    ];
+    $form['hex_settings']['slideshow']['slide' . $i]['slide_desc_' . $i] = [
+      '#type' => 'textarea',
+      '#title' => t('Slide '.$i.' Description'),
+      '#default_value' => theme_get_setting("slide_desc_{$i}", "hex"),
+    ];
+    $form['hex_settings']['slideshow']['slide' . $i]['slide_image_' . $i] = [
+      '#type' => 'managed_file',
+      '#title' => t('Slide '.$i.' Image'),
+      '#description' => t('Use same size for all the slideshow images(Recommented size : 1900 x 720).'),
+      '#default_value' => theme_get_setting("slide_image_{$i}", "hex"),
+      '#upload_location' => 'public://',
+    ];
+    $form['hex_settings']['slideshow']['slide' . $i]['slide_url_' . $i] = [
+      '#type' => 'textfield',
+      '#title' => t('Slide '.$i.' URL'),
+      '#default_value' => theme_get_setting("slide_url_{$i}", "hex"),
+    ];
+  }
+
+  $filename = drupal_get_path('theme', 'hex') . '/hex.theme';
+  $form_state->addBuildInfo('files', array($filename));
+
+  $form['#submit'][] = 'hex_settings_form_submit';
+}
+
+/**
+ * Custom submit handler for integrity settings form.
+*/
+function hex_settings_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $account = \Drupal::currentUser();
+  $values = $form_state->getValues();
+  for ($i = 0; $i <= SLIDESHOW_COUNT; $i++) {
+    if (isset($values["slide_image_{$i}"]) && !empty($values["slide_image_{$i}"])) {
+      if ($file = \Drupal\file\Entity\File::load($values["slide_image_{$i}"][0])) {
+        $file->setPermanent();
+        $file->save();
+        $file_usage = \Drupal::service('file.usage');
+        $file_usage->add($file, 'user', 'user', $account->id());
+      }
+    }
+  }
+}
+
+/**
+ * Prepare the social media variables.
+ */
+function hex_prepare_social_media_variables(&$variables) {
+  $variables['facebook'] = theme_get_setting('facebook', 'hex');
+  $variables['twitter'] = theme_get_setting('twitter', 'hex');
+  $variables['linkedin'] = theme_get_setting('linkedin', 'hex');
+  $variables['instagram'] = theme_get_setting('instagram', 'hex');
+}
+
+/**
+ * Prepare the main variables.
+ */
+function hex_prepare_main_variables(&$variables) {
+  $variables['phone'] = theme_get_setting('phone', 'hex');
+  $variables['email'] = theme_get_setting('email', 'hex');
+  $variables['address'] = theme_get_setting('address', 'hex');
 
   $variables['company_name'] = \Drupal::config('system.site')->get('name');
+}
+
+/**
+ * Prepare the slider variables for homepage.
+ */
+function hex_prepare_slider(&$variables) {
+  $show_slideshow = theme_get_setting('slideshow_display', 'hex');
+
+  if (!$variables['is_front'] || !$show_slideshow) {
+    return;
+  }
+
+  $variables['slider'] = array();
+
+  for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+    $fid = theme_get_setting("slide_image_{$i}", "hex");
+    $file = isset($fid[0]) ? File::load($fid[0]) : [];
+
+    // If empty, use the image from sub-theme.
+    if (!empty($file)) {
+      $uri = $file->getFileUri();
+      $image_path = ImageStyle::load('banner')->buildUrl($uri);
+    }
+    else {
+      // @TODO: make the extension dynamic.
+      $image_path = THEME_PATH . "/images/slide-{$i}.jpg";
+    }
+
+    $variables['slider'][] = array(
+      'url' => theme_get_setting("slide_url_{$i}", "hex"),
+      'src' => $image_path,
+      'title' => theme_get_setting("slide_title_{$i}", "hex"),
+      'desc' => theme_get_setting("slide_desc_{$i}", "hex"),
+    );
+  }
 }
