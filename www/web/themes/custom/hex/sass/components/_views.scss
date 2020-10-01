@@ -1,4 +1,6 @@
 .view-products { // Products page.
+  margin-bottom: 4em;
+
   .view-header {
     font-size: $page-title;
     text-align: center;
@@ -9,7 +11,8 @@
 
     .view-filters {
       flex: 0 0 14%;
-      margin: 0 6em 2em 0;
+      margin: 0;
+      padding: 0 6em 0 0;
 
       .views-exposed-form {
         .bef-sortby {
@@ -76,26 +79,37 @@
     .view-content {
       flex: 0 0 86%;
 
-      .views-row {
-        margin-bottom: 0;
+      .grd-list {
+        .views-row {
+          margin-bottom: 0;
+          padding-bottom: 2em;
+          flex: 0 0 33%;
+          max-width: 33%;
 
-        .product__item {
-          text-align: center;
-        }
-
-        .product__item--image {
-          @media only screen and (min-width: 64em) {
-            min-height: 230px;
+          .product__item {
+            text-align: center;
           }
-        }
 
-        .product__item--title {
-          font-weight: $bold;
-          font-size: 1.1em;
-        }
+          .product__item--image {
+            margin-bottom: 2em;
 
-        .product__item--variation-price {
-          font-weight: $lighter;
+            @media only screen and (min-width: 64em) {
+              min-height: 230px;
+            }
+          }
+
+          .product__item--title {
+            font-weight: $bold;
+            font-size: 1.1em;
+          }
+
+          .product__item--body {
+            margin: 0 2em;
+          }
+
+          .product__item--variation-price {
+            font-weight: $lighter;
+          }
         }
       }
     }

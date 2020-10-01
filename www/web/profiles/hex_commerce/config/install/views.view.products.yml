@@ -3,6 +3,7 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.commerce_product.products
     - core.entity_view_mode.commerce_product.teaser
   module:
     - better_exposed_filters
@@ -124,7 +125,7 @@ display:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: products
       fields:
         title:
           table: commerce_product_field_data
@@ -332,6 +333,8 @@ display:
         filter_groups: false
         sorts: false
         pager: false
+        style: false
+        row: false
       filters: {  }
       filter_groups:
         operator: AND
@@ -343,6 +346,17 @@ display:
           items_per_page: 3
           offset: 0
       block_hide_empty: true
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
