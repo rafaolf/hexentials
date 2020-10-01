@@ -58,6 +58,7 @@ install:
 # Contrib modules
   - admin_toolbar
   - better_exposed_filters
+  - block_content_machine_name
   - config_split
   - current_page_crumb
   - default_content
