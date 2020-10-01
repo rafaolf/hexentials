@@ -45,3 +45,20 @@
     }
   }
 }
+
+.block--type-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50% - -7px);
+  margin-bottom: 5em;
+
+  .block__content--image {
+
+  }
+
+  .block__content--details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

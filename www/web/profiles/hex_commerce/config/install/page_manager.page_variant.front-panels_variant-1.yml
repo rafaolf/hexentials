@@ -1,0 +1,57 @@
+uuid: 26adbb9d-1e0f-4881-ba48-304c537e0121
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - page_manager.page.front
+    - views.view.products
+  content:
+    - 'block_content:banner:839373e3-89b2-4534-ad34-587a5fbf28c5'
+  module:
+    - block_content
+    - panels
+    - views
+id: front-panels_variant-1
+label: Home
+variant: panels_variant
+variant_settings:
+  blocks:
+    b86243cf-eef1-476b-83c7-8d10fa89411d:
+      id: 'views_block:products-highlighted'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: b86243cf-eef1-476b-83c7-8d10fa89411d
+      context_mapping: {  }
+    07d2565b-5298-4791-871c-042fe0738259:
+      id: 'block_content:839373e3-89b2-4534-ad34-587a5fbf28c5'
+      label: 'Exiba uma imagem com título e descrição'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: 07d2565b-5298-4791-871c-042fe0738259
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 9e61135b-6378-475a-998a-103deaf7a388
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings:
+    label: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: front-panels_variant-1
+  builder: standard
+page: front
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

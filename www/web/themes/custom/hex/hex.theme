@@ -20,6 +20,13 @@ function hex_theme_suggestions_block_alter(&$suggestions, $variables) {
   foreach ($suggestions as &$suggestion) {
     $suggestion = str_replace('hex', 'flexi_cart_', $suggestion);
   }
+
+  if (!isset($variables['elements']['content']['#block_content'])) {
+    return;
+  }
+
+  // Include a suggestion for the blocks per bundle.
+  array_splice($suggestions, 1, 0, 'block__block_bundle__' . $variables['elements']['content']['#block_content']->bundle());
 }
 
 // @TODO: add a definition here.
@@ -56,6 +63,12 @@ function hex_preprocess_html(&$variables) {
  * Implements hook_preprocess_HOOK() for block templates.
  */
 function hex_preprocess_block(&$variables) {
+  // Add custom attribute class for block.
+  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
+    $block_type = strtr($variables['content']['#block_content']->bundle(), '_', '-');
+    $variables['attributes']['class'][] = 'block--type-' . $block_type;
+  }
+
   hex_prepare_main_variables($variables);
 }
 

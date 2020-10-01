@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 75c32dec-d713-40b9-b55d-e8de6c5afe68
+  default_langcode: pt-br
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: banner-purple.png
+  uri:
+    -
+      value: 'public://2020-10/banner-purple.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 5580687
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1601555064

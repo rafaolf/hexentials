@@ -1,0 +1,23 @@
+uuid: b9445e8b-e1bc-4066-b140-a519f24720b2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_block_banner_full_width
+id: block_content.banner.field_block_banner_full_width
+field_name: field_block_banner_full_width
+entity_type: block_content
+bundle: banner
+label: 'Largura completa'
+description: 'Marque este campo para que o banner seja extendido na página inteira.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean
