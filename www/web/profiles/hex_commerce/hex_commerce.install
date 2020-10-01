@@ -4,6 +4,7 @@
  * Install, update and uninstall functions for the hex_commerce install profile.
  */
 
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Form\FormState;
 
 /**
@@ -56,6 +57,10 @@ function hex_commerce_install_tasks(&$install_state) {
     ],
     'hex_commerce_update_theme_settings' => [
       'display_name' => t('Update theme settings to generate the structure'),
+      'type' => 'normal',
+    ],
+    'hex_commerce_prepare_banner_block_type' => [
+      'display_name' => t('Prepare the banner block type'),
       'type' => 'normal',
     ]
   ];
@@ -143,4 +148,20 @@ function hex_commerce_update_theme_settings() {
   $form_state->setValues($values);
 
   color_scheme_form_submit(array(), $form_state);
+}
+
+/**
+ * Prepare the banner block type.
+ */
+function hex_commerce_prepare_banner_block_type() {
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+  $filename = 'bottom-banner-reduced.jpg';
+
+  $image_path = $profile_path . '/images/blocks/' . $filename;
+  $content = file_get_contents($image_path);
+  $file = file_save_data($content, 'public://' . $filename, FILE_EXISTS_REPLACE);
+
+  $block = BlockContent::load(1);
+  $block->set('field_block_banner_image', $file->id());
+  $block->save();
 }

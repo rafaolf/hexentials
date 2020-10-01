@@ -7,7 +7,7 @@ dependencies:
     - field.field.block_content.banner.body
     - field.field.block_content.banner.field_block_banner_full_width
     - field.field.block_content.banner.field_block_banner_image
-    - image.style.banner
+    - image.style.banner_block
   module:
     - image
     - text
@@ -27,7 +27,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: banner
+      image_style: banner_block
       image_link: ''
     third_party_settings: {  }
     type: image

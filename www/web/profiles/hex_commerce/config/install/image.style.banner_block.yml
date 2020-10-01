@@ -1,0 +1,14 @@
+uuid: 09e1b1ab-2a9e-4ef6-9615-9bddcb47187d
+langcode: pt-br
+status: true
+dependencies: {  }
+name: banner_block
+label: 'Banner - Block (1920x554)'
+effects:
+  0de77444-4858-40a9-b607-c284327227af:
+    uuid: 0de77444-4858-40a9-b607-c284327227af
+    id: image_resize
+    weight: 2
+    data:
+      width: 1920
+      height: 554
