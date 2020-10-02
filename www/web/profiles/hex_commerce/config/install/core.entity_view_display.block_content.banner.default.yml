@@ -5,11 +5,15 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_block_banner_background
+    - field.field.block_content.banner.field_block_banner_color
     - field.field.block_content.banner.field_block_banner_full_width
     - field.field.block_content.banner.field_block_banner_image
+    - field.field.block_content.banner.field_block_banner_link
     - image.style.banner_block
   module:
     - image
+    - link
     - text
 id: block_content.banner.default
 targetEntityType: block_content
@@ -32,6 +36,20 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_block_banner_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
 hidden:
+  field_block_banner_background: true
+  field_block_banner_color: true
   field_block_banner_full_width: true
   langcode: true

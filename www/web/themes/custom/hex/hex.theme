@@ -87,10 +87,32 @@ function hex_prepare_block_type(&$variables, $bundle) {
   }
 
   if ($bundle == 'banner') {
-    $full_width = $variables['elements']['content']['#block_content']->get('field_block_banner_full_width')->getValue();
-    $full_width = reset($full_width);
-    $variables['attributes']['class'][] = ($full_width['value']) ? 'full-width' : '';
+    $block_content = $variables['elements']['content']['#block_content'];
+    foreach (['full_width', 'color', 'background'] as $field_name) {
+      $field = $block_content->get("field_block_banner_{$field_name}")->getValue();
+      $field = reset($field);
+      $value = $field['value'];
+
+      if (!$value) {
+        continue;
+      }
+
+      $variables['attributes']['class'][] = hex_prepare_class_name($field_name, $value);
+    }
   }
+}
+
+/**
+ * Prepare the class name.
+ */
+function hex_prepare_class_name($field_name, $value) {
+  $name = $field_name . '-' . $value;
+
+  if (is_numeric($value)) {
+    $name = $field_name;
+  }
+
+  return str_replace('_', '-', $name);
 }
 
 /**

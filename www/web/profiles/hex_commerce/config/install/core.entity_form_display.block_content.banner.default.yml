@@ -5,11 +5,15 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_block_banner_background
+    - field.field.block_content.banner.field_block_banner_color
     - field.field.block_content.banner.field_block_banner_full_width
     - field.field.block_content.banner.field_block_banner_image
+    - field.field.block_content.banner.field_block_banner_link
     - image.style.thumbnail
   module:
     - image
+    - link
     - machine_name_widget
     - text
 id: block_content.banner.default
@@ -27,20 +31,40 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
+  field_block_banner_background:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_block_banner_color:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_block_banner_full_width:
-    weight: 5
+    weight: 7
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_block_banner_image:
-    weight: 6
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_block_banner_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   info:
     type: string_textfield

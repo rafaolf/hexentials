@@ -1,0 +1,23 @@
+uuid: b23c131c-68ee-4f65-8f6d-ef65506789b1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_block_banner_background
+  module:
+    - options
+id: block_content.banner.field_block_banner_background
+field_name: field_block_banner_background
+entity_type: block_content
+bundle: banner
+label: 'Cor de fundo'
+description: 'Selecione a cor de fundo para o link/botão.'
+required: false
+translatable: false
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

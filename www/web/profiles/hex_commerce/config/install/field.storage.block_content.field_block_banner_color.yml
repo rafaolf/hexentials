@@ -1,0 +1,33 @@
+uuid: ad794fdf-5f27-404a-a1ce-acff3143782d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_block_banner_color
+field_name: field_block_banner_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: black
+      label: Preto
+    -
+      value: white
+      label: Branco
+    -
+      value: primary
+      label: Primário
+    -
+      value: active
+      label: Ativo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

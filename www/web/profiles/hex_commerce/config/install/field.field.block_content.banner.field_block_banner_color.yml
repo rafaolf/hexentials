@@ -1,0 +1,23 @@
+uuid: 665eb9d7-411e-46be-9858-3bc5c9603209
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_block_banner_color
+  module:
+    - options
+id: block_content.banner.field_block_banner_color
+field_name: field_block_banner_color
+entity_type: block_content
+bundle: banner
+label: Cor
+description: 'Selecione a cor de texto para os seguintes elementos: título, descrição e link.'
+required: false
+translatable: false
+default_value:
+  -
+    value: black
+default_value_callback: ''
+settings: {  }
+field_type: list_string

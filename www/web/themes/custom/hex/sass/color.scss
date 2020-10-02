@@ -101,6 +101,64 @@ body {
   }
 }
 
+.block--type-banner {
+  &.background-black {
+    .field--name-field-block-banner-link {
+      a {
+        background-color: #000000;
+      }
+    }
+  }
+
+  &.background-white {
+    .field--name-field-block-banner-link {
+      a {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &.background-primary {
+    .field--name-field-block-banner-link {
+      a {
+        background-color: $primary;
+      }
+    }
+  }
+
+  &.background-active {
+    .field--name-field-block-banner-link {
+      a {
+        background-color: $active;
+      }
+    }
+  }
+
+  &.color-black {
+    h2, .field--name-body p, .field--name-field-block-banner-link a {
+      color: #000000;
+    }
+  }
+
+  &.color-white {
+    h2, .field--name-body p, .field--name-field-block-banner-link a {
+      color: #ffffff;
+    }
+  }
+
+  &.color-primary {
+    h2, .field--name-body p, .field--name-field-block-banner-link a {
+      color: $primary;
+    }
+  }
+
+  &.color-active {
+    h2, .field--name-body p, .field--name-field-block-banner-link a {
+      color: $active;
+    }
+  }
+}
+
 .footer {
   .footer-top {
     ul.menu-footer__list {
