@@ -71,19 +71,18 @@
         {{ empty }}
       </div>
     {% endif %}
-
-    {% if pager %}
-      {{ pager }}
-    {% endif %}
     {% if attachment_after %}
       <div class="attachment attachment-after">
         {{ attachment_after }}
       </div>
     {% endif %}
-    {% if more %}
-      {{ more }}
-    {% endif %}
   </div>
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
   {% if footer %}
     <div class="view-footer">
       {{ footer }}
