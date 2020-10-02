@@ -5,8 +5,6 @@
  * Functions to support theming in the hex theme.
  */
 
-define('SLIDESHOW_COUNT', 5);
-
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
@@ -63,13 +61,36 @@ function hex_preprocess_html(&$variables) {
  * Implements hook_preprocess_HOOK() for block templates.
  */
 function hex_preprocess_block(&$variables) {
+  $elements = &$variables['elements'];
+
   // Add custom attribute class for block.
-  if ($variables['elements']['#base_plugin_id'] == 'block_content') {
+  if ($elements['#base_plugin_id'] == 'block_content') {
     $block_type = strtr($variables['content']['#block_content']->bundle(), '_', '-');
     $variables['attributes']['class'][] = 'block--type-' . $block_type;
   }
 
+  if (!empty($elements['content']['#block_content'])) {
+    $block_bundle = $elements['content']['#block_content']->bundle();
+
+    hex_prepare_block_type($variables, $block_bundle);
+  }
+
   hex_prepare_main_variables($variables);
+}
+
+/**
+ * Prepare the block type per bundle.
+ */
+function hex_prepare_block_type(&$variables, $bundle) {
+  if (empty($bundle)) {
+    return;
+  }
+
+  if ($bundle == 'banner') {
+    $full_width = $variables['elements']['content']['#block_content']->get('field_block_banner_full_width')->getValue();
+    $full_width = reset($full_width);
+    $variables['attributes']['class'][] = ($full_width['value']) ? 'full-width' : '';
+  }
 }
 
 /**

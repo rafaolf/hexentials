@@ -47,13 +47,19 @@
 }
 
 .block--type-banner {
-  width: 100vw;
-  margin-left: calc(-50vw + 50% - -7px);
   margin-bottom: 5em;
 
-  .block__content--image {
-
+  &.full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + 50% - -7px);
   }
+
+  .block__content--image {
+    img {
+      width: 100%;
+    }
+  }
+
 
   .block__content--details {
     position: absolute;
