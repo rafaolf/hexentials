@@ -2,7 +2,8 @@
 $primary: #111111;
 $active: #f51167;
 $shadow: #dadce0;
-$hover: #666666;
+$hover: #f51144;
+$hover-background: #f0e9e9;
 $background: #ffffff;
 $view: #a92727;
 $top-menu-item: #333333;
@@ -62,6 +63,15 @@ body {
 .breadcrumb {
   a {
     color: $text;
+  }
+}
+
+.slider {
+  .slider-caption {
+    a:hover {
+      background: $hover;
+      color: $hover-background;
+    }
   }
 }
 
@@ -155,6 +165,15 @@ body {
   &.color-active {
     h2, .field--name-body p, .field--name-field-block-banner-link a {
       color: $active;
+    }
+  }
+
+  .field--name-field-block-banner-link {
+    a {
+      &:hover {
+        background: $hover;
+        color: $hover-background;
+      }
     }
   }
 }

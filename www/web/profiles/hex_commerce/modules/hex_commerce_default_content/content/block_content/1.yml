@@ -5,7 +5,7 @@ _meta:
   bundle: banner
   default_langcode: pt-br
   depends:
-    75c32dec-d713-40b9-b55d-e8de6c5afe68: file
+    7c9b2282-206f-4bdf-bd09-fe8be4abf957: file
 default:
   status:
     -
@@ -30,13 +30,24 @@ default:
       value: "<p>Aqui é colocada a descrição desejada.</p>\r\n"
       format: basic_html
       summary: ''
+  field_block_banner_background:
+    -
+      value: white
+  field_block_banner_color:
+    -
+      value: black
   field_block_banner_full_width:
     -
       value: true
   field_block_banner_image:
     -
-      entity: 75c32dec-d713-40b9-b55d-e8de6c5afe68
-      alt: banner_purple
+      entity: 7c9b2282-206f-4bdf-bd09-fe8be4abf957
+      alt: alt-text
       title: ''
-      width: 5000
-      height: 2571
+      width: 1920
+      height: 640
+  field_block_banner_link:
+    -
+      uri: 'internal:/'
+      title: 'Clique aqui'
+      options: {  }

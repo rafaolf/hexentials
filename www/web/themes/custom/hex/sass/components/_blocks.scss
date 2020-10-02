@@ -84,9 +84,7 @@
       text-align: center;
 
       a {
-        display: inline;
-        border-radius: 50px;
-        padding: 1em;
+        @include button-appearence;
       }
     }
   }

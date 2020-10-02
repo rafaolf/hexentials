@@ -133,6 +133,7 @@ function hex_commerce_update_theme_settings() {
       'active' => '#f51167',
       'shadow' => '#dadce0',
       'hover' => '#f51167',
+      'hover_background' => '#ffffff',
       'background' => '#ffffff',
       'view' => '#ffffff',
       'top_menu_item' => '#111111',
