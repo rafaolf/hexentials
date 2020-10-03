@@ -7,9 +7,9 @@ dependencies:
     - core.entity_view_mode.commerce_product.teaser
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_product_image
-    - image.style.teaser
+    - responsive_image.styles.breakpoint_teaser
   module:
-    - single_image_formatter
+    - single_image_formatter_responsive
     - text
 id: commerce_product.default.teaser
 targetEntityType: commerce_product
@@ -25,12 +25,12 @@ content:
       trim_length: 100
     third_party_settings: {  }
   field_product_image:
-    type: single_image_formatter
+    type: single_responsive_image_formatter
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: teaser
+      responsive_image_style: breakpoint_teaser
       image_link: content
     third_party_settings: {  }
   title:
