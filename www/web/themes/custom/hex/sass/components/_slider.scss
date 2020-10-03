@@ -1,7 +1,19 @@
 .slider {
-  p {
-    &.hex-desc {
-      letter-spacing: 0.5px;
+  .slick-slider {
+    button {
+      opacity: 0.2;
+
+      @media only screen and (min-width: 64em) {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slick-list {
+    p {
+      &.hex-desc {
+        letter-spacing: 0.5px;
+      }
     }
   }
 }
