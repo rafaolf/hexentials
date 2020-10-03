@@ -28,33 +28,34 @@ distribution:
 
 # Modules to install to support the profile.
 install:
-  - history
   - block_content
   - breakpoint
+  - ckeditor
   - color
-  - config
   - comment
-  - contextual
+  - config
   - contact
-  - quickedit
+  - contextual
+  - dblog
+  - editor
+  - field_ui
+  - file
+  - hal
   - help
+  - history
   - image
   - options
   - path
-  - taxonomy
-  - dblog
-  - search
-  - shortcut
-  - toolbar
-  - field_ui
-  - file
+  - quickedit
+  - responsive_image
   - rdf
+  - search
+  - serialization
+  - shortcut
+  - taxonomy
+  - toolbar
   - views
   - views_ui
-  - editor
-  - ckeditor
-  - hal
-  - serialization
 # Contrib modules
   - admin_toolbar
   - better_exposed_filters
@@ -70,6 +71,7 @@ install:
   - redirect
   - seckit
   - single_image_formatter # Products thumbnail exhibition.
+  - single_image_formatter_responsive
 # Profile modules
   - hex_commerce_default_content
 # Theme-related modules - required
