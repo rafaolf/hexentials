@@ -1,18 +1,31 @@
-hex.mobile:
+hex.xs:
   label: mobile
-  mediaQuery: ''
+  mediaQuery: 'all and (max-width: 479px)'
   weight: 0
   multipliers:
     - 1x
-hex.narrow:
-  label: narrow
-  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
+hex.sm:
+  label: iPads/tablets
+  mediaQuery: 'all and (min-width: 480px) and (max-width: 767px)'
   weight: 1
   multipliers:
     - 1x
-hex.wide:
-  label: wide
-  mediaQuery: 'all and (min-width: 851px)'
+hex.md:
+  label: small screens/laptops
+  mediaQuery: 'all and (min-width: 768px) and (max-width: 1023px)'
   weight: 2
   multipliers:
     - 1x
+hex.lg:
+  label: desktop/large screens
+  mediaQuery: 'all and (min-width: 1024px) and (max-width: 1199px)'
+  weight: 2
+  multipliers:
+    - 1x
+hex.xl:
+  label: extra large screens/TVs
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x

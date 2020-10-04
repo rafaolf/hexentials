@@ -3,13 +3,20 @@ langcode: pt-br
 status: true
 dependencies: {  }
 name: teaser
-label: 'Teaser (350x350)'
+label: 'Teaser (340x340)'
 effects:
   79b32f36-042b-4cf3-a4a4-48c3705cd3ae:
     uuid: 79b32f36-042b-4cf3-a4a4-48c3705cd3ae
     id: image_scale
     weight: 1
     data:
-      width: 350
-      height: 350
+      width: 340
+      height: 340
       upscale: false
+  e559efb6-e948-4860-a9de-52b295ad0ee7:
+    uuid: e559efb6-e948-4860-a9de-52b295ad0ee7
+    id: image_resize
+    weight: 2
+    data:
+      width: 340
+      height: 340

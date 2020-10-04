@@ -4,7 +4,7 @@
   h2 {
     font-size: 2em;
     text-align: center;
-    margin: 1em 0;
+    margin: 0;
   }
 
   div {
@@ -16,28 +16,62 @@
         display: block;
         flex: none;
 
-        .views-row {
-          flex: 0 0 33%;
-          max-width: 33%;
-          padding-right: 1em;
+        .grd-list {
+          .views-row {
+            margin: 0;
+            padding: 0;
+            flex: 0 0 100%;
+            max-width: 100%;
 
-          .product__image {
-            img {
-              padding-bottom: 2em;
+            @include sm {
+              @include flex-one-line;
             }
-          }
 
-          .product__info {
-            .product__item--body {
-              margin: 0 3em;
+            @include md {
+              @include flex-one-line;
+            }
 
-              p {
-                font-weight: $lighter;
+            @include lg {
+              @include flex-three-lines;
+            }
+
+            @include xl {
+              @include flex-three-lines;
+            }
+
+            &:first-child {
+              padding-top: 0;
+            }
+
+            .product__image {
+              margin-bottom: 2em;
+
+              img {
+                height: auto;
+                width: auto;
+
+                @include lg {
+                  width: 100%;
+                }
+
+                @include xl {
+                  width: 100%;
+                }
               }
             }
 
-            .product__item--variation-price {
-              font-weight: $light;
+            .product__info {
+              .product__item--body {
+                margin: 0 3em;
+
+                p {
+                  font-weight: $lighter;
+                }
+              }
+
+              .product__item--variation-price {
+                font-weight: $light;
+              }
             }
           }
         }

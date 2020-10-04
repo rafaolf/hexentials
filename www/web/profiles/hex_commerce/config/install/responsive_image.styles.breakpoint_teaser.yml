@@ -12,19 +12,34 @@ id: breakpoint_teaser
 label: 'Breakpoint - teaser'
 image_style_mappings:
   -
-    breakpoint_id: hex.wide
+    breakpoint_id: hex.xl
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: teaser
   -
-    breakpoint_id: hex.narrow
-    multiplier: 1x
+    breakpoint_id: hex.xl
+    multiplier: 2x
     image_mapping_type: image_style
     image_mapping: teaser
   -
-    breakpoint_id: hex.mobile
+    breakpoint_id: hex.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+  -
+    breakpoint_id: hex.md
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: large
+  -
+    breakpoint_id: hex.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
 breakpoint_group: hex
 fallback_image_style: medium

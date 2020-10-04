@@ -1,4 +1,4 @@
-uuid: 83d464da-ce67-4c4c-8e30-d97bb8bc7919
+uuid: b9c9e6b9-b5de-4af8-a26c-4f5f57e8ab0a
 langcode: pt-br
 status: true
 dependencies: {  }
@@ -13,3 +13,10 @@ effects:
       width: 220
       height: 220
       upscale: false
+  99bce87f-ea44-4fc2-9882-09a5ac814a63:
+    uuid: 99bce87f-ea44-4fc2-9882-09a5ac814a63
+    id: image_resize
+    weight: 2
+    data:
+      width: 220
+      height: 220

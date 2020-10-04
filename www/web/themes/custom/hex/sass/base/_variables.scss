@@ -8,10 +8,8 @@ $bold: bold;
 $light: 400;
 $lighter: 300;
 
-@mixin button-appearence {
-  padding: 0.75em 1.25em;
-  display: inline-block;
-  text-decoration: none;
-  @include border-radius(50px);
-  @include transition(all 0.3s ease-in);
-}
+// Breakpoints.
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 1024px;
+$screen-lg-min: 1200px;

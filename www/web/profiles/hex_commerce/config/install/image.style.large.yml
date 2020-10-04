@@ -1,0 +1,22 @@
+uuid: f7bc8b56-fa50-4b00-8f7c-ed539bd66aef
+langcode: pt-br
+status: true
+dependencies: {  }
+name: large
+label: 'Grande (480×480)'
+effects:
+  ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
+    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
+    id: image_scale
+    weight: 0
+    data:
+      width: 480
+      height: 480
+      upscale: false
+  03336d71-38ac-4741-a488-8b0e4b9931b8:
+    uuid: 03336d71-38ac-4741-a488-8b0e4b9931b8
+    id: image_resize
+    weight: 2
+    data:
+      width: 480
+      height: 480

@@ -1,3 +1,21 @@
+@mixin button-appearence {
+  padding: 0.75em 1.25em;
+  display: inline-block;
+  text-decoration: none;
+  @include border-radius(50px);
+  @include transition(all 0.3s ease-in);
+}
+
+@mixin flex-one-line {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@mixin flex-three-lines {
+  flex: 0 0 33%;
+  max-width: 33%;
+}
+
 @mixin pseudo-after-border($width) {
   content: "";
   display: block;
