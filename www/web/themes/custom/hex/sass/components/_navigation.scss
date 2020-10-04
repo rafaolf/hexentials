@@ -5,7 +5,7 @@
     .footer-contact-us {
       display: list-item;
       flex: 0 0 50%;
-      padding-right: 5em;
+      padding-right: 3em;
       list-style-type: none;
 
       .footer-contact-us__title {
@@ -34,9 +34,12 @@
 
     ul.menu-footer__list {
       display: flex;
-      flex: 0 0 50%;
+      flex-wrap: wrap;
+      text-align: left;
 
       li.menu-footer__item {
+        @include flex-one-column;
+
         a.menu-footer__link {
           display: block;
           font-size: $menu-font-size;
@@ -48,6 +51,42 @@
           @include pseudo-after-border(3%);
         }
       }
+
+      @include sm {
+        @include flex-two-columns;
+
+        > li.menu-footer__item {
+          @include flex-two-columns;
+        }
+      }
+
+      @include md {
+        @include flex-two-columns;
+        flex-wrap: nowrap;
+
+        > li.menu-footer__item {
+          @include flex-three-columns;
+        }
+      }
+
+      @include lg {
+        @include flex-two-columns;
+        flex-wrap: nowrap;
+
+        > li.menu-footer__item {
+          @include flex-three-columns;
+        }
+      }
+
+      @include xl {
+        @include flex-two-columns;
+        flex-wrap: nowrap;
+
+        > li.menu-footer__item {
+          @include flex-three-columns;
+        }
+      }
+
     }
   }
 

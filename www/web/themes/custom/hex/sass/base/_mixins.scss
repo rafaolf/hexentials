@@ -6,12 +6,17 @@
   @include transition(all 0.3s ease-in);
 }
 
-@mixin flex-one-line {
+@mixin flex-one-column {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-@mixin flex-three-lines {
+@mixin flex-two-columns {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@mixin flex-three-columns {
   flex: 0 0 33%;
   max-width: 33%;
 }

@@ -24,19 +24,19 @@
             max-width: 100%;
 
             @include sm {
-              @include flex-one-line;
+              @include flex-one-column;
             }
 
             @include md {
-              @include flex-one-line;
+              @include flex-one-column;
             }
 
             @include lg {
-              @include flex-three-lines;
+              @include flex-three-columns;
             }
 
             @include xl {
-              @include flex-three-lines;
+              @include flex-three-columns;
             }
 
             &:first-child {
