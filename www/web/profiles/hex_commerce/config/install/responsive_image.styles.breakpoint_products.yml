@@ -1,15 +1,14 @@
-uuid: fabbb410-5d32-4edb-a58b-b1f5eee0f434
+uuid: e407bcd6-b86c-423e-9410-e22d93f6dd5f
 langcode: pt-br
 status: true
 dependencies:
   config:
-    - image.style.large
     - image.style.medium
     - image.style.teaser
   theme:
     - hex
-id: breakpoint_teaser
-label: 'Breakpoint - product - teaser'
+id: breakpoint_products
+label: 'Breakpoint - products'
 image_style_mappings:
   -
     breakpoint_id: hex.xl
@@ -30,7 +29,7 @@ image_style_mappings:
     breakpoint_id: hex.md
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: large
+    image_mapping: medium
   -
     breakpoint_id: hex.sm
     multiplier: 1x
@@ -40,6 +39,6 @@ image_style_mappings:
     breakpoint_id: hex.xs
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: medium
+    image_mapping: teaser
 breakpoint_group: hex
 fallback_image_style: medium

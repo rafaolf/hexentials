@@ -24,9 +24,14 @@
 
       .footer-contact-us__item {
         display: block;
+        margin-bottom: 0.5em;
+
+        i {
+          display: inline;
+        }
 
         p {
-          display: inline-block;
+          display: inline;
           margin: 0.5em 0;
         }
       }

@@ -7,21 +7,21 @@ dependencies:
     - core.entity_view_mode.commerce_product.products
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_product_image
-    - image.style.medium
+    - responsive_image.styles.breakpoint_products
   module:
-    - single_image_formatter
+    - single_image_formatter_responsive
 id: commerce_product.default.products
 targetEntityType: commerce_product
 bundle: default
 mode: products
 content:
   field_product_image:
-    type: single_image_formatter
+    type: single_responsive_image_formatter
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: medium
+      responsive_image_style: breakpoint_products
       image_link: content
     third_party_settings: {  }
   title:
