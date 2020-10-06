@@ -37,6 +37,7 @@ install:
   - contact
   - contextual
   - dblog
+  - dynamic_page_cache
   - editor
   - field_ui
   - file
@@ -45,6 +46,7 @@ install:
   - history
   - image
   - options
+  - page_cache
   - path
   - quickedit
   - responsive_image
@@ -69,6 +71,7 @@ install:
   - logo_image_style
   - pathauto
   - redirect
+  - redis
   - seckit
   - single_image_formatter # Products thumbnail exhibition.
   - single_image_formatter_responsive

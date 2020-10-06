@@ -795,3 +795,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
+if (!drupal_installation_attempted() && extension_loaded('redis') && !(getenv('LANDO') === 'ON')) {
+  $settings['redis.connection']['interface'] = 'PhpRedis';
+  $settings['redis.connection']['host']      = 'localhost';
+  $settings['cache']['default'] = 'cache.backend.redis';
+
+  $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+}

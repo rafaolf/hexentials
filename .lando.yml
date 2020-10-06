@@ -30,3 +30,7 @@ services:
     # core: freedom
     # config:
       # dir: www/sites/all/modules/contrib/search_api_solr/solr-conf/7.x
+
+  cache:
+    type: redis
+    portforward: true
