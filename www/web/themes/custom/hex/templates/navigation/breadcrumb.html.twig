@@ -16,7 +16,7 @@
         {% if item.url %}
           {% if loop.first %}
             <div class="breadcrumb-home-icon">
-              <i class="fa fa-home"></i>
+              <i class="fa fa-home" aria-hidden="true"></i>
             </div>
           {% endif %}
           <a href="{{ item.url }}">{{ item.text }}</a>

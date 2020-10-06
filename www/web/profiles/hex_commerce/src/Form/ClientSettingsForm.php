@@ -66,6 +66,13 @@ class ClientSettingsForm extends FormBase {
       // '#pattern' => '\(\d{2,}\) \d{4,}\-\d{4}',
     ];
 
+    $form['phone_whatsapp'] = [
+      '#type' => 'tel',
+      '#title' => $this->t('Phone number - WhatsApp'),
+      '#description' => $this->t('WhatsApp phone number to display for the users.'),
+      '#default_value' => '+55 (19) 99986-3222',
+    ];
+
     $form['address'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Address'),
@@ -134,8 +141,14 @@ class ClientSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (strlen($form_state->getValue('phone_number')) < 3) {
-      $form_state->setErrorByName('phone_number', $this->t('The phone number is too short. Please enter a full phone number.'));
+    $message = $this->t('The phone number is too short. Please enter a full phone number.');
+
+    if (strlen($form_state->getValue('phone_number')) < 8) {
+      $form_state->setErrorByName('phone_number', $message);
+    }
+
+    if (strlen($form_state->getValue('phone_whatsapp')) < 8) {
+      $form_state->setErrorByName('phone_whatsapp', $message);
     }
   }
 
@@ -167,6 +180,7 @@ class ClientSettingsForm extends FormBase {
       ->getEditable('hex.settings')
       ->set('address', (string) $form_state->getValue('address'))
       ->set('phone', (string) $form_state->getValue('phone_number'))
+      ->set('phone_whatsapp', (string) $form_state->getValue('phone_whatsapp'))
       ->set('email', (string) $form_state->getValue('email'))
       ->set('facebook', (string) $form_state->getValue('facebook'))
       ->set('twitter', (string) $form_state->getValue('twitter'))
@@ -184,6 +198,11 @@ class ClientSettingsForm extends FormBase {
       ->set('slide_desc_3', $this->t('This is the third slide description to display our service'))
       ->set('slide_desc_4', $this->t('This is the fourth slide description to display our mission'))
       ->set('slide_desc_5', $this->t('This is the fourth slide description to display our vision'))
+      ->set('slide_button_text_1', $this->t('More'))
+      ->set('slide_button_text_2', $this->t('More'))
+      ->set('slide_button_text_3', $this->t('More'))
+      ->set('slide_button_text_4', $this->t('More'))
+      ->set('slide_button_text_5', $this->t('More'))
       ->save();
   }
 

@@ -234,6 +234,11 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
       '#title' => t('Slide '.$i.' URL'),
       '#default_value' => theme_get_setting("slide_url_{$i}", "hex"),
     ];
+    $form['hex_settings']['slideshow']['slide' . $i]['slide_button_text_' . $i] = [
+      '#type' => 'textfield',
+      '#title' => t('Slide '.$i.' button text'),
+      '#default_value' => theme_get_setting("slide_button_text_{$i}", "hex"),
+    ];
   }
 
   $filename = drupal_get_path('theme', 'hex') . '/hex.theme';
@@ -275,6 +280,7 @@ function hex_prepare_social_media_variables(&$variables) {
  */
 function hex_prepare_main_variables(&$variables) {
   $variables['phone'] = theme_get_setting('phone', 'hex');
+  $variables['phone_whatsapp'] = theme_get_setting('phone_whatsapp', 'hex');
   $variables['email'] = theme_get_setting('email', 'hex');
   $variables['address'] = theme_get_setting('address', 'hex');
   $variables['copyrights'] = theme_get_setting('copyrights', 'hex');
@@ -289,6 +295,8 @@ function hex_prepare_slider(&$variables) {
   $show_slideshow = theme_get_setting('slideshow_display', 'hex');
 
   if (!$variables['is_front'] || !$show_slideshow) {
+    unset($variables['slider']);
+
     return;
   }
 
@@ -313,6 +321,7 @@ function hex_prepare_slider(&$variables) {
       'src' => $image_path,
       'title' => theme_get_setting("slide_title_{$i}", "hex"),
       'desc' => theme_get_setting("slide_desc_{$i}", "hex"),
+      'button_text' => theme_get_setting("slide_button_text_{$i}", "hex"),
     );
   }
 }

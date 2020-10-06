@@ -95,11 +95,9 @@ dependencies:
 # Note that this will not set any theme as the default theme.
 themes:
   # - bartik
-  # @TODO remove this in case we go with another theme.
-  # - bootstrap
+  - seven
   - flexi_cart
   - hex
-  - seven
 
 interface translation project: hex_commerce
 interface translation server pattern: profiles/hex_commerce/translations/%project-%version.%language.po

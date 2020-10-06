@@ -34,15 +34,21 @@
 <div class="footer-contact-us">
   <div class="footer-contact-us__title company-name text-left"><p>{{ company_name }}</p></div>
   <div class="footer-contact-us__item address text-left">
-    <i class="fa fa-street-view"></i>
+    <i class="fa fa-street-view" aria-hidden="true"></i>
     <p>{{ address }}</p>
   </div>
   <div class="footer-contact-us__item phone text-left">
-    <i class="fa fa-phone"></i>
+    <i class="fa fa-phone" aria-hidden="true"></i>
     <p>{{ phone }}</p>
   </div>
+  {% if phone_whatsapp %}
+    <div class="footer-contact-us__item phone-whatsapp text-left">
+      <i class="fa fa-whatsapp " aria-hidden="true"></i>
+      <p>{{ phone_whatsapp }}</p>
+    </div>
+  {% endif %}
   <div class="footer-contact-us__item email text-left">
-    <i class="fa fa-inbox"></i>
+    <i class="fa fa-inbox" aria-hidden="true"></i>
     <p>{{ email }}</p>
   </div>
 </div>

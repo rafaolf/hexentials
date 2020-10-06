@@ -10,12 +10,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  .page {
-    flex: auto;
-    min-height: 80vh;
-    margin-bottom: 4em;
-  }
-
   footer {
     bottom: 0;
   }

@@ -1,5 +1,5 @@
 .block-views-blockproducts-highlighted {
-  margin: 5em 0;
+  margin: 0 0 $space 0;
 
   h2 {
     font-size: 2em;
@@ -81,7 +81,7 @@
 }
 
 .block--type-banner {
-  margin-bottom: 5em;
+  margin-bottom: $space;
   position: relative;
 
   &.full-width {
