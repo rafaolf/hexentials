@@ -41,6 +41,7 @@
         "drupal/redirect": "^1.6",
         "drupal/redis": "^1.4",
         "drupal/seckit": "^2.0",
+        "drupal/security_review": "^1.0@alpha",
         "drupal/single_image_formatter": "^1.6",
         "drupal/twig_tweak": "^2.6",
         "drush/drush": "^10.3"
