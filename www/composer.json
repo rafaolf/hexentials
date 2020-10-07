@@ -30,6 +30,7 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/devel": "^4.0",
         "drupal/diff": "^1.0",
+        "drupal/fast_404": "^2.0@alpha",
         "drupal/field_group": "^3.1",
         "drupal/flexi_cart": "^1.2",
         "drupal/imagefield_slideshow": "^1.10",
@@ -108,6 +109,10 @@
         "patches": {
           "drupal/default_content": {
             "Do not reimport existing entities": "https://www.drupal.org/files/issues/2020-09-02/default_content-integrity_constrait_violation-3162987-2.patch"
+          },
+          "drupal/fast_404": {
+            "Usage of fast404.inc approach": "https://www.drupal.org/files/issues/2019-02-24/2961512-13.patch",
+            "Remove translatable string": "patches/fast_404-remove-translatable-string.patch"
           }
         }
     }

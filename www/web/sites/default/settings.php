@@ -796,6 +796,22 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
+$config['system.performance']['fast_404']['exclude_paths'] = '/\/(?:styles)|(?:system\/files)\//';
+$config['system.performance']['fast_404']['paths'] = '/\.(?:txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i';
+$config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
+
+/**
+ * Load fast404 configuration, if available.
+ *
+ * Use settings.fast404.php to provide settings for Fast 404 module.
+ *
+ * Keep this code block at the end of this file to take full effect.
+ */
+#
+if (file_exists($app_root . '/' . $site_path . '/settings.fast404.php')) {
+  include $app_root . '/' . $site_path . '/settings.fast404.php';
+}
+
 if (!drupal_installation_attempted() && extension_loaded('redis') && !(getenv('LANDO') === 'ON')) {
   $settings['redis.connection']['interface'] = 'PhpRedis';
   $settings['redis.connection']['host']      = 'localhost';

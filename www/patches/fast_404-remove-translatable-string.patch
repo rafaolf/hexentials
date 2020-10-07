@@ -1,0 +1,13 @@
+diff --git a/src/Fast404.php b/src/Fast404.php
+index b17b1dd..b4f395d 100644
+--- a/src/Fast404.php
++++ b/src/Fast404.php
+@@ -215,7 +215,8 @@ class Fast404 {
+     }
+     else {
+       $response->send();
+-      throw new ServiceUnavailableHttpException(3, $this->t('The requested URL "@path" was not found on this server. Try again shortly.', ['@path' => $this->request->getPathInfo()]));
++      // throw new ServiceUnavailableHttpException(3, $this->t('The requested URL "@path" was not found on this server. Try again shortly.', ['@path' => $this->request->getPathInfo()]));
++      throw new ServiceUnavailableHttpException();
+     }
+   }

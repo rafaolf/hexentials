@@ -13,6 +13,13 @@ use Drupal\user\UserInterface;
 class ClientSettingsForm extends FormBase {
 
   /**
+   * Maximum length of username text field.
+   *
+   * Keep this under 191 characters so we can use a unique constraint in MySQL.
+   */
+  const ADDRESS_MAX_LENGTH = 120;
+
+  /**
    * {@inheritdoc}
    */
   public function getFormId() {
@@ -45,7 +52,7 @@ class ClientSettingsForm extends FormBase {
       '#description' => $this->t('Slogan to display for the users.'),
       '#default_value' => t('The best products for your needs.'),
       '#required' => FALSE,
-      '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
+      '#maxlength' => self::ADDRESS_MAX_LENGTH,
     ];
 
     $form['email'] = [
