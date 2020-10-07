@@ -25,6 +25,14 @@ body {
   color: $active;
 }
 
+[data-big-pipe-placeholder-id] {
+  background: $background;
+
+  &:before, &:after {
+    background: $active;
+  }
+}
+
 .header-top, .footer {
   background: $primary;
 }

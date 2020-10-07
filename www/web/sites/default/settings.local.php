@@ -34,7 +34,7 @@ if (getenv('LANDO') === 'ON') {
   $settings['cache']['default'] = 'cache.backend.null';
 
   // Allow access to rebuild.PHP.
-  $settings['rebuild_access'] = TRUE;
+  // $settings['rebuild_access'] = TRUE;
 
   // Do not let Drupal change permissions on files.
   $settings['skip_permissions_hardening'] = TRUE;

@@ -10,6 +10,10 @@ body {
   display: flex;
   flex-direction: column;
 
+  #toolbar-administration {
+    text-align: left;
+  }
+
   footer {
     bottom: 0;
   }

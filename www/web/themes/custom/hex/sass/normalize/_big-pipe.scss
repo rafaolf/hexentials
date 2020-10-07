@@ -1,0 +1,45 @@
+$pulse-duration: 0.2s;
+
+@keyframes pulse-throbber {
+  0% {
+    opacity: 1;
+    transform: scaley(1);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: scaley(0.5);
+  }
+}
+
+
+[data-big-pipe-placeholder-id] {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  width: 6px;
+  height: 30px;
+  animation: pulse-throbber $pulse-duration infinite;
+  animation-delay: ($pulse-duration / 3);
+  animation-direction: alternate;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    animation: pulse-throbber $pulse-duration infinite;
+    animation-direction: alternate;
+  }
+
+  &:before {
+    left: -12px;
+  }
+
+  &:after {
+    left: 12px;
+    animation-delay: ($pulse-duration / 1.5);
+  }
+}

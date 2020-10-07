@@ -28,6 +28,9 @@ distribution:
 
 # Modules to install to support the profile.
 install:
+  - big_pipe
+  # @TODO: after upgrading to Drupal 9, enable the following module.
+  # - big_pipe_sessionless
   - block_content
   - breakpoint
   - ckeditor

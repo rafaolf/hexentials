@@ -6,10 +6,14 @@
 
 
 @import "base/base";
-@import "base/breakpoints";
 @import "base/init";
-@import "base/mixins";
-@import "base/variables";
+
+// @TODO: include the Big Pipe style to the loading areas. Currently, Chrome has
+// an issue and this isn't working properly.
+// @import "normalize/big-pipe";
+@import "normalize/breakpoints";
+@import "normalize/mixins";
+@import "normalize/variables";
 
 @import "components/blocks";
 @import "components/breadcrumbs";
