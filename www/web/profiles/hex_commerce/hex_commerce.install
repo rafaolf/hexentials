@@ -59,10 +59,10 @@ function hex_commerce_install_tasks(&$install_state) {
       'display_name' => t('Update theme settings to generate the structure'),
       'type' => 'normal',
     ],
-    'hex_commerce_prepare_banner_block_type' => [
+    'hex_commerce_prepare_block_content' => [
       'display_name' => t('Prepare the banner block type'),
       'type' => 'normal',
-    ]
+    ],
   ];
 
   return $tasks;
@@ -154,15 +154,37 @@ function hex_commerce_update_theme_settings() {
 /**
  * Prepare the banner block type.
  */
-function hex_commerce_prepare_banner_block_type() {
+function hex_commerce_prepare_block_content() {
   $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
-  $filename = 'bottom-banner-reduced.jpg';
+  $info = [
+    1 => [
+      0 => [
+        'filename' => 'bottom-banner-reduced.jpg',
+        'field_name' => 'field_block_banner_image',
+      ],
+    ],
+    3 => [
+      0 => [
+        'filename' => 'change.jpeg',
+        'field_name' => 'field_block_double_image_first',
+      ],
+      1 => [
+        'filename' => 'road.jpg',
+        'field_name' => 'field_block_double_image_second',
+      ],
+    ],
+  ];
 
-  $image_path = $profile_path . '/images/blocks/' . $filename;
-  $content = file_get_contents($image_path);
-  $file = file_save_data($content, 'public://' . $filename, FILE_EXISTS_REPLACE);
+  foreach ($info as $block_id => $file_info) {
+    foreach ($file_info as $data) {
+      $image_path = $profile_path . '/images/blocks/' . $data['filename'];
 
-  $block = BlockContent::load(1);
-  $block->set('field_block_banner_image', $file->id());
-  $block->save();
+      $content = file_get_contents($image_path);
+      $file = file_save_data($content, 'public://' . $data['filename'], FILE_EXISTS_REPLACE);
+
+      $block = BlockContent::load($block_id);
+      $block->set($data['field_name'], $file->id());
+      $block->save();
+    }
+  }
 }

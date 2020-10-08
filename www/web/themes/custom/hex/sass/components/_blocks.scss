@@ -20,16 +20,7 @@
           .views-row {
             margin: 0;
             padding: 0;
-            flex: 0 0 100%;
-            max-width: 100%;
-
-            @include sm {
-              @include flex-one-column;
-            }
-
-            @include md {
-              @include flex-one-column;
-            }
+            @include flex-one-column;
 
             @include lg {
               @include flex-three-columns;
@@ -122,5 +113,64 @@
         @include button-appearence;
       }
     }
+  }
+}
+
+.block--type-text {
+  text-align: center;
+  margin-top: $space;
+
+  .field--name-body {
+    width: 65%;
+    margin: 0 auto;
+    font-weight: $lighter;
+  }
+}
+
+.block--type-double-images {
+  .block-content__content {
+    margin-top: $space;
+    display: block;
+
+    @include lg {
+      display: flex;
+    }
+
+    @include xl {
+      display: flex;
+    }
+
+    .block-content__item {
+      margin-bottom: 2em;
+      @include flex-one-column;
+
+      @include lg {
+        margin-bottom: 0;
+        @include flex-two-columns;
+      }
+
+      @include xl {
+        margin-bottom: 0;
+        @include flex-two-columns;
+      }
+
+      .field--type-image {
+        text-align: center;
+
+        img {
+          height: auto;
+          width: auto;
+        }
+      }
+
+      .field--type-text-long {
+        text-align: center;
+      }
+    }
+  }
+
+  .block-content__body {
+    margin: 0 20%;
+    font-weight: $lighter;
   }
 }

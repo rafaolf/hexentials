@@ -1,0 +1,35 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 7f724463-3ad6-4c14-8b1c-cea7a289da33
+  bundle: double_images
+  default_langcode: pt-br
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Exibição de dupla imagem'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  machine_name:
+    -
+      value: block_double_image
+  body:
+    -
+      value: "<p>Suspendisse non facilisis justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut tellus dui, posuere at felis sit amet, semper mollis sem. Cras malesuada diam nec nulla varius accumsan. Nullam ac ipsum lacinia quam gravida fringilla non ac metus. Fusce commodo faucibus velit. Nullam et nisl sodales, iaculis massa at, pretium tortor. Praesent vitae massa turpis. Pellentesque congue hendrerit semper.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_block_double_image_text_f:
+    -
+      value: "<p>Lorem ipsum dolor sit amet.</p>\r\n"
+      format: basic_html
+  field_block_double_image_text_s:
+    -
+      value: "<p>Curabitur sodales ligula in libero</p>\r\n"
+      format: basic_html

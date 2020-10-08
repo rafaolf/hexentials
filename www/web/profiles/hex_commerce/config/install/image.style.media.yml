@@ -1,0 +1,15 @@
+uuid: d669419b-30b3-4644-b256-5d3a1cef9e7a
+langcode: pt-br
+status: true
+dependencies: {  }
+name: media
+label: 'Media (1000x1000)'
+effects:
+  f4ad98b7-d852-4faa-a6c4-eb168714423d:
+    uuid: f4ad98b7-d852-4faa-a6c4-eb168714423d
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 1000
+      height: 1000
+      anchor: center-center

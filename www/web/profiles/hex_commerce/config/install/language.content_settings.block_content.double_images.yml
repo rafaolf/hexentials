@@ -1,0 +1,11 @@
+uuid: c223a572-bc7e-4b92-81ec-251f6a34d4f6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.double_images
+id: block_content.double_images
+target_entity_type_id: block_content
+target_bundle: double_images
+default_langcode: site_default
+language_alterable: false

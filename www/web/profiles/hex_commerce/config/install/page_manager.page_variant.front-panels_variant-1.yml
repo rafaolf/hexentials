@@ -7,6 +7,8 @@ dependencies:
     - views.view.products
   content:
     - 'block_content:banner:839373e3-89b2-4534-ad34-587a5fbf28c5'
+    - 'block_content:double_images:7f724463-3ad6-4c14-8b1c-cea7a289da33'
+    - 'block_content:text:3f3894b9-67db-4d7f-875a-11fb643acc07'
   module:
     - block_content
     - panels
@@ -24,7 +26,7 @@ variant_settings:
       views_label: ''
       items_per_page: none
       region: content
-      weight: 0
+      weight: -1
       uuid: b86243cf-eef1-476b-83c7-8d10fa89411d
       context_mapping: {  }
     07d2565b-5298-4791-871c-042fe0738259:
@@ -36,8 +38,32 @@ variant_settings:
       info: ''
       view_mode: full
       region: content
-      weight: 1
+      weight: 0
       uuid: 07d2565b-5298-4791-871c-042fe0738259
+      context_mapping: {  }
+    9868743f-9cea-40c2-95c5-45e2b991e6c7:
+      id: 'block_content:7f724463-3ad6-4c14-8b1c-cea7a289da33'
+      label: 'Exibição de dupla imagem'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 2
+      uuid: 9868743f-9cea-40c2-95c5-45e2b991e6c7
+      context_mapping: {  }
+    c6d5ff78-0b1f-450f-91a2-ddef27dd12f8:
+      id: 'block_content:3f3894b9-67db-4d7f-875a-11fb643acc07'
+      label: 'Exibição de texto simples'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: c6d5ff78-0b1f-450f-91a2-ddef27dd12f8
       context_mapping: {  }
   id: panels_variant
   uuid: 9e61135b-6378-475a-998a-103deaf7a388

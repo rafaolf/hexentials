@@ -1,0 +1,21 @@
+uuid: 97cb34c8-3a39-4976-9766-ca442eee6c94
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.double_images
+    - field.storage.block_content.field_block_double_image_text_s
+  module:
+    - text
+id: block_content.double_images.field_block_double_image_text_s
+field_name: field_block_double_image_text_s
+entity_type: block_content
+bundle: double_images
+label: 'Segundo texto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
