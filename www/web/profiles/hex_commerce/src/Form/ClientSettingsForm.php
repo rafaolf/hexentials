@@ -67,7 +67,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'tel',
       '#title' => $this->t('Phone number'),
       '#description' => $this->t('Phone number to display for the users.'),
-      '#default_value' => '+55 (19) 99986-3111',
+      '#default_value' => '+55 (19) 1111-1111',
       // @TOdo; keep this commented out while we don't have a functionality to
       // auto-fill the special characters.
       // '#pattern' => '\(\d{2,}\) \d{4,}\-\d{4}',
@@ -77,7 +77,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'tel',
       '#title' => $this->t('Phone number - WhatsApp'),
       '#description' => $this->t('WhatsApp phone number to display for the users.'),
-      '#default_value' => '+55 (19) 99986-3222',
+      '#default_value' => '+55 (19) 22222-2222',
     ];
 
     $form['address'] = [
@@ -129,7 +129,7 @@ class ClientSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('copyrights'),
       '#description' => $this->t('copyrights to display for the users.'),
-      '#default_value' => t('© Copyright 2020 - Hexentials Eireli'),
+      '#default_value' => t('© Copyright 2020 - Company name here'),
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];

@@ -54,7 +54,7 @@ class StoreSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('State'),
       '#description' => $this->t('Fill out the state.'),
-      '#default_value' => 'SP',
+      '#default_value' => 'NY',
       '#required' => TRUE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
@@ -63,7 +63,7 @@ class StoreSettingsForm extends FormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Postal code'),
       '#description' => $this->t('Fill out the postal code.'),
-      '#default_value' => '22071',
+      '#default_value' => '2207',
       '#required' => TRUE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
     ];
