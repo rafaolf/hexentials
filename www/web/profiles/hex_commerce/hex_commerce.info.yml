@@ -1,7 +1,6 @@
 name: Hexentials E-Commerce
 type: profile
 description: 'Build an e-commerce site to display/shop the company products.'
-# @TODO: double-check this value.
 core_version_requirement: '^8.8 || ^9'
 version: '8.x-1.0'
 

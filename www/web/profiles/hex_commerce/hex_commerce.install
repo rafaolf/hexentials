@@ -93,7 +93,6 @@ function hex_commerce_prepare_theme_structure() {
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_prepare_menu_structure() {
-  // @TODO: add the menu here or as part of default content.
   \Drupal::service('router.builder')->rebuildIfNeeded();
 }
 

@@ -5,6 +5,8 @@
  * Functions to support theming in the hex theme.
  */
 
+define('SLIDESHOW_AMOUNT', 5);
+
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\image\Entity\ImageStyle;
@@ -27,7 +29,9 @@ function hex_theme_suggestions_block_alter(&$suggestions, $variables) {
   array_splice($suggestions, 1, 0, 'block__block_bundle__' . $variables['elements']['content']['#block_content']->bundle());
 }
 
-// @TODO: add a definition here.
+/**
+ * Implements hook_preprocess_page().
+ */
 function hex_preprocess_page(&$variables) {
   hex_prepare_social_media_variables($variables);
   hex_prepare_main_variables($variables);
@@ -205,7 +209,7 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
     '#markup' => t('You can change the title, url and image of each slide in the following Slide Setting fieldsets.'),
   ];
 
-  for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+  for ($i = 1; $i <= SLIDESHOW_AMOUNT; $i++) {
     $form['hex_settings']['slideshow']['slide' . $i] = [
       '#type' => 'details',
       '#title' => t('Slide '.$i),
@@ -244,7 +248,7 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
   $filename = drupal_get_path('theme', 'hex') . '/hex.theme';
   $form_state->addBuildInfo('files', array($filename));
 
-  $form['#submit'][] = 'hex_settings_form_submit';
+  $form['#submit'] = ['hex_settings_form_submit'];
 }
 
 /**
@@ -253,7 +257,7 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
 function hex_settings_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
   $account = \Drupal::currentUser();
   $values = $form_state->getValues();
-  for ($i = 0; $i <= SLIDESHOW_COUNT; $i++) {
+  for ($i = 0; $i <= SLIDESHOW_AMOUNT; $i++) {
     if (isset($values["slide_image_{$i}"]) && !empty($values["slide_image_{$i}"])) {
       if ($file = \Drupal\file\Entity\File::load($values["slide_image_{$i}"][0])) {
         $file->setPermanent();
@@ -302,7 +306,7 @@ function hex_prepare_slider(&$variables) {
 
   $variables['slider'] = array();
 
-  for ($i = 1; $i <= SLIDESHOW_COUNT; $i++) {
+  for ($i = 1; $i <= SLIDESHOW_AMOUNT; $i++) {
     $fid = theme_get_setting("slide_image_{$i}", "hex");
     $file = isset($fid[0]) ? File::load($fid[0]) : [];
 
@@ -312,7 +316,6 @@ function hex_prepare_slider(&$variables) {
       $image_path = ImageStyle::load('banner')->buildUrl($uri);
     }
     else {
-      // @TODO: make the extension dynamic.
       $image_path = THEME_PATH . "/images/slide-{$i}.jpg";
     }
 
