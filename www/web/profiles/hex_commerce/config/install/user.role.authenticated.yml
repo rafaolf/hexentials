@@ -1,4 +1,4 @@
-uuid: b755da64-2c23-448f-89c8-04a6333a758f
+uuid: 06ff52b4-7f26-47d1-965b-c0ecea1a4de8
 langcode: pt-br
 status: true
 dependencies: {  }
@@ -14,9 +14,11 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'access toolbar'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view commerce_product'
   - 'view commerce_product_attribute'
+  - 'view the administration theme'
