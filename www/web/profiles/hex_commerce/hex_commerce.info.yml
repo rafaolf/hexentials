@@ -75,6 +75,9 @@ install:
   - redirect
   - redis
   - seckit
+  - search_api_solr
+  - simple_sitemap
+  - simple_sitemap_views
   - single_image_formatter # Products thumbnail exhibition.
   - single_image_formatter_responsive
 # Profile modules

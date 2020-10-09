@@ -24,12 +24,12 @@ services:
       - appserver
     portforward: true
 
-  # solr:
-    # type: solr:8.4
-    # portforward: 8983
-    # core: freedom
-    # config:
-      # dir: www/sites/all/modules/contrib/search_api_solr/solr-conf/7.x
+  solr:
+    type: solr:8.6
+    portforward: 8983
+    core: freedom
+    config:
+      dir: www/web/modules/contrib/search_api_solr/solr-conf-templates/8.x
 
   cache:
     type: redis
