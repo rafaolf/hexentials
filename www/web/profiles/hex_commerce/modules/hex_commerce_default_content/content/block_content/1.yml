@@ -39,13 +39,6 @@ default:
   field_block_banner_full_width:
     -
       value: true
-  field_block_banner_image:
-    -
-      entity: 7c9b2282-206f-4bdf-bd09-fe8be4abf957
-      alt: alt-text
-      title: ''
-      width: 1920
-      height: 640
   field_block_banner_link:
     -
       uri: 'internal:/'

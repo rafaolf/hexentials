@@ -182,6 +182,11 @@ function hex_commerce_prepare_block_content() {
       $file = file_save_data($content, 'public://' . $data['filename'], FILE_EXISTS_REPLACE);
 
       $block = BlockContent::load($block_id);
+
+      if (!$block->hasField($data['field_name'])) {
+        continue;
+      }
+
       $block->set($data['field_name'], $file->id());
       $block->save();
     }
