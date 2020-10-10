@@ -8,12 +8,16 @@ config:
 proxy:
   appserver:
     - hexentials.lndo.site
-  # solr:
-    # - solr.hexentials.lndo.site:8983
+  search:
+    - solr.hexentials.lndo.site:8983
   mailhog:
     - mailhog.hexentials.lndo.site
 
 services:
+  appserver:
+    build:
+      - cd www && composer install
+
   database:
     type: mariadb:10.4
     portforward: true
@@ -24,12 +28,12 @@ services:
       - appserver
     portforward: true
 
-  solr:
-    type: solr:8.6
-    portforward: 8983
-    core: freedom
+  search:
+    type: solr:8
+    portforward: true
+    core: hex
     config:
-      dir: www/web/modules/contrib/search_api_solr/solr-conf-templates/8.x
+      dir: www/solr-config
 
   cache:
     type: redis
