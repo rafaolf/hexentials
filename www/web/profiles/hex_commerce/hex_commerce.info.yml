@@ -38,7 +38,8 @@ install:
   - config
   - contact
   - contextual
-  - dblog
+  # Disabled in favor of syslog.
+  # - dblog
   - dynamic_page_cache
   - editor
   - field_ui
@@ -53,9 +54,11 @@ install:
   - quickedit
   - responsive_image
   - rdf
-  - search
+  # Core's search isn't needed - improve performance (also, Solr is being used).
+  # - search
   - serialization
   - shortcut
+  - syslog
   - taxonomy
   - toolbar
   - views
@@ -68,6 +71,8 @@ install:
   - current_page_crumb
   - default_content
   - diff
+  # Advanced configuration used (which doesn't need the module installation).
+  # - fast_404
   - field_group
   - imagefield_slideshow # Product gallery style.
   - logo_image_style
