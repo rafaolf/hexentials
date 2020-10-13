@@ -4,7 +4,6 @@
  * Install, update and uninstall functions for the hex_commerce install profile.
  */
 
-use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Form\FormState;
 
 /**
@@ -156,13 +155,13 @@ function hex_commerce_update_theme_settings() {
 function hex_commerce_prepare_block_content() {
   $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
   $info = [
-    1 => [
+    '839373e3-89b2-4534-ad34-587a5fbf28c5' => [
       0 => [
         'filename' => 'bottom-banner-reduced.jpg',
         'field_name' => 'field_block_banner_image',
       ],
     ],
-    3 => [
+    '7f724463-3ad6-4c14-8b1c-cea7a289da33' => [
       0 => [
         'filename' => 'change.jpeg',
         'field_name' => 'field_block_double_image_first',
@@ -174,14 +173,14 @@ function hex_commerce_prepare_block_content() {
     ],
   ];
 
-  foreach ($info as $block_id => $file_info) {
+  foreach ($info as $block_uuid => $file_info) {
     foreach ($file_info as $data) {
       $image_path = $profile_path . '/images/blocks/' . $data['filename'];
 
       $content = file_get_contents($image_path);
       $file = file_save_data($content, 'public://' . $data['filename'], FILE_EXISTS_REPLACE);
 
-      $block = BlockContent::load($block_id);
+      $block = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $block_uuid);
 
       if (!$block->hasField($data['field_name'])) {
         continue;
