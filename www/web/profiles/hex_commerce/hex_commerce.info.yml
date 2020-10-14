@@ -78,6 +78,7 @@ install:
   - field_group
   - imagefield_slideshow # Product gallery style.
   - logo_image_style
+  - metatag
   - pathauto
   - redirect
   - redis
