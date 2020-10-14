@@ -35,6 +35,7 @@
         "drupal/fast_404": "^2.0@alpha",
         "drupal/field_group": "^3.1",
         "drupal/flexi_cart": "^1.2",
+        "drupal/hreflang": "^1.3",
         "drupal/imagefield_slideshow": "^1.10",
         "drupal/logo_image_style": "^2.3",
         "drupal/metatag": "^1.14",
