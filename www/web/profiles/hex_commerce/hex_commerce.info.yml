@@ -90,6 +90,7 @@ install:
   - logo_image_style
   - metatag
   - pathauto
+  - quicklink
   - redirect
   - redis
   - seckit
