@@ -86,6 +86,7 @@ install:
   # Advanced configuration used (which doesn't need the module installation).
   # - fast_404
   - field_group
+  - google_analytics
   # Not need for now as the website isn't multi-language.
   # - hreflang
   - imagefield_slideshow # Product gallery style.
