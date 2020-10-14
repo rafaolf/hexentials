@@ -54,8 +54,10 @@ install:
   - quickedit
   - responsive_image
   - rdf
-  # Core's search isn't needed - improve performance (also, Solr is being used).
-  # - search
+  # Core's search isn't needed as Solr is being used. However, we can't disable
+  # it here due to the flexi_cart theme config dependency. So, we disable it
+  # through hex_commerce_prepare_theme_structure().
+  - search
   - serialization
   - shortcut
   - syslog
@@ -80,7 +82,8 @@ install:
   - redirect
   - redis
   - seckit
-  - search_api_solr
+  # @TODO: temporarily disabled as it needs configuration.
+  # - search_api_solr
   - simple_sitemap
   - simple_sitemap_views
   - single_image_formatter # Products thumbnail exhibition.

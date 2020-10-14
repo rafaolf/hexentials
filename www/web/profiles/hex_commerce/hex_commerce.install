@@ -84,7 +84,8 @@ function hex_commerce_define_theme() {
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_prepare_theme_structure() {
-
+  \Drupal::configFactory()->getEditable('flexi_cart_search')->delete();
+  \Drupal::service('module_installer')->uninstall(['search']);
 }
 
 /** Callback function to prepare the theme structure.
