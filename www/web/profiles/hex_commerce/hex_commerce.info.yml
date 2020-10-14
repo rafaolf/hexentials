@@ -80,9 +80,9 @@ install:
   - better_exposed_filters
   - block_content_machine_name
   - config_split
-  - current_page_crumb
   - default_content
   - diff
+  - easy_breadcrumb
   # Advanced configuration used (which doesn't need the module installation).
   # - fast_404
   - field_group
