@@ -18,6 +18,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^2.3",
+        "drupal/advagg": "^4.1",
         "drupal/better_exposed_filters": "^5.0@beta",
         "drupal/block_content_machine_name": "^1.6",
         "drupal/commerce": "^2.20",

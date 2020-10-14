@@ -1,0 +1,8 @@
+active: true
+css:
+  max: 4
+  logic: 0
+js:
+  max: 4
+  logic: 0
+langcode: pt-br
