@@ -111,6 +111,8 @@ install:
   - panels
   - page_manager
   - page_manager_ui
+# Validations
+  # - seo_checklist
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.

@@ -47,6 +47,7 @@
         "drupal/search_api_solr": "^4.1",
         "drupal/seckit": "^2.0",
         "drupal/security_review": "^1.0@alpha",
+        "drupal/seo_checklist": "^4.1",
         "drupal/simple_sitemap": "^3.7",
         "drupal/single_image_formatter": "^1.6",
         "drupal/twig_tweak": "^2.6",
