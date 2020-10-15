@@ -12,7 +12,7 @@ path:
 cache_level: 2
 cron_frequency: 86400
 enabled: true
-global_counter: 0
+global_counter: 1
 immutable: true
 js:
   brotli: true

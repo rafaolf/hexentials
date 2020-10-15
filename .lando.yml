@@ -3,6 +3,8 @@ recipe: drupal8
 config:
   webroot: www/web
   php: 7.4
+  config:
+    php: config/php.ini
   # drush: 10
 
 proxy:
@@ -17,6 +19,9 @@ services:
   appserver:
     build:
       - cd www && composer install
+    build_as_root:
+      # PHP extension needed to improve the JS minify process.
+      - pecl install jsmin
 
   database:
     type: mariadb:10.4
