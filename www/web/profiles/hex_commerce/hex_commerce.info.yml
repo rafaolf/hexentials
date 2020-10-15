@@ -117,6 +117,7 @@ install:
   - page_manager
   - page_manager_ui
 # Validations
+  # - security_review
   # - seo_checklist
   # - w3c_validator
 
