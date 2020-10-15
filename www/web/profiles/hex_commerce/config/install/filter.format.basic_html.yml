@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - lazy
 name: 'HTML básico'
 format: basic_html
 weight: 0
@@ -40,4 +41,10 @@ filters:
     provider: editor
     status: true
     weight: 11
+    settings: {  }
+  lazy_filter:
+    id: lazy_filter
+    provider: lazy
+    status: true
+    weight: 20
     settings: {  }

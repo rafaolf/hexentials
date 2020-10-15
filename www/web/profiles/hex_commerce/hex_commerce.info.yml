@@ -91,6 +91,7 @@ install:
   # Not need for now as the website isn't multi-language.
   # - hreflang
   - imagefield_slideshow # Product gallery style.
+  - lazy
   - linkit
   - logo_image_style
   - metatag

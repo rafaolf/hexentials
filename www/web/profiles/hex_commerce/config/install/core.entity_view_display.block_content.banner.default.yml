@@ -13,6 +13,7 @@ dependencies:
     - image.style.banner_block
   module:
     - image
+    - lazy
     - link
     - text
 id: block_content.banner.default
@@ -33,7 +34,11 @@ content:
     settings:
       image_style: banner_block
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+        placeholder_style: ''
+        data_uri: false
     type: image
     region: content
   field_block_banner_link:

@@ -232,6 +232,7 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
       '#description' => t('Use same size for all the slideshow images(Recommented size : 1900 x 720).'),
       '#default_value' => theme_get_setting("slide_image_{$i}", "hex"),
       '#upload_location' => 'public://',
+      'data-lazy' => TRUE,
     ];
     $form['hex_settings']['slideshow']['slide' . $i]['slide_url_' . $i] = [
       '#type' => 'textfield',

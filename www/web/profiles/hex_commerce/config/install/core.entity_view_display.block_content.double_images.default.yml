@@ -11,6 +11,7 @@ dependencies:
     - field.field.block_content.double_images.field_block_double_image_text_s
     - responsive_image.styles.breakpoint_block_double_images
   module:
+    - lazy
     - responsive_image
     - text
 id: block_content.double_images.default
@@ -31,7 +32,11 @@ content:
     settings:
       responsive_image_style: breakpoint_block_double_images
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+        placeholder_style: ''
+        data_uri: false
     type: responsive_image
     region: content
   field_block_double_image_second:
@@ -40,7 +45,11 @@ content:
     settings:
       responsive_image_style: breakpoint_block_double_images
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+        placeholder_style: ''
+        data_uri: false
     type: responsive_image
     region: content
   field_block_double_image_text_f:

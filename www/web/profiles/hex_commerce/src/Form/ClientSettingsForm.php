@@ -38,6 +38,7 @@ class ClientSettingsForm extends FormBase {
       // '#type' => 'managed_file',
       // '#title' => t('Company logo.'),
       // '#default_value' => theme_get_setting('image'),
+      // 'data-lazy' => TRUE,
       // '#progress_indicator' => 'bar',
       // '#progress_message'   => t('Please wait...'),
       // '#upload_location' => 'public://',
