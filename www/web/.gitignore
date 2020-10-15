@@ -19,6 +19,10 @@ core
 modules/contrib
 themes/contrib
 
+# Ignore libraries that are managed with Composer. Manually included ones should
+# be forced with "git add --force <file/folder>".
+libraries
+
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 sites/*/services*.yml
