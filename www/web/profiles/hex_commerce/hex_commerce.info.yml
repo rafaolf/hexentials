@@ -90,6 +90,7 @@ install:
   - google_analytics
   # Not need for now as the website isn't multi-language.
   # - hreflang
+  - http_cache_control
   - imagefield_slideshow # Product gallery style.
   - lazy
   - linkit
