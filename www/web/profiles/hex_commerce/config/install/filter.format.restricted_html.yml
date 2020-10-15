@@ -1,11 +1,10 @@
-langcode: en
+uuid: 519449a3-69fc-4ff3-a8ff-76ad6efd1a85
+langcode: pt-br
 status: true
 dependencies: {  }
-name: 'Restricted HTML'
+name: 'HTML restrito'
 format: restricted_html
 weight: 1
-roles:
-  - anonymous
 filters:
   filter_html:
     id: filter_html

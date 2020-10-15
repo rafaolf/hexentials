@@ -1,0 +1,58 @@
+uuid: 31112389-c429-4be4-b90a-0861a563cc69
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: default
+label: Padrão
+description: ''
+attributes:
+  title:
+    id: title
+    weight: 0
+    settings:
+      automatic_title: true
+matchers:
+  2c26c750-13ce-4ced-ba25-e4268ca2f491:
+    uuid: 2c26c750-13ce-4ced-ba25-e4268ca2f491
+    id: 'entity:block_content'
+    weight: -5
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+  2a632066-951c-4e48-98f6-f059cf21a287:
+    uuid: 2a632066-951c-4e48-98f6-f059cf21a287
+    id: 'entity:node'
+    weight: -10
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false
+  6bf20eb6-cf66-472a-89ea-14029b9e85ab:
+    uuid: 6bf20eb6-cf66-472a-89ea-14029b9e85ab
+    id: 'entity:commerce_product'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+  771e82e1-b74e-4bdb-8b03-2179a42eba70:
+    uuid: 771e82e1-b74e-4bdb-8b03-2179a42eba70
+    id: 'entity:taxonomy_term'
+    weight: 5
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+  d8f4c941-d231-4030-aff7-1397025da83f:
+    uuid: d8f4c941-d231-4030-aff7-1397025da83f
+    id: 'entity:menu_link_content'
+    weight: 10
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false

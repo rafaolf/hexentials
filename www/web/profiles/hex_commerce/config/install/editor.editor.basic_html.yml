@@ -1,4 +1,5 @@
-langcode: en
+uuid: 8f331e02-8202-4dfe-afbf-d4f2349463c9
+langcode: pt-br
 status: true
 dependencies:
   config:
@@ -19,6 +20,7 @@ settings:
         -
           name: Linking
           items:
+            - Linkit
             - DrupalLink
             - DrupalUnlink
         -
@@ -42,11 +44,15 @@ settings:
   plugins:
     stylescombo:
       styles: ''
+    language:
+      language_list: un
+    linkit:
+      linkit_profile: default
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

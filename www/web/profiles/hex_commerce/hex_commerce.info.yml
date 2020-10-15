@@ -83,6 +83,7 @@ install:
   - default_content
   - diff
   - easy_breadcrumb
+  - editor_advanced_link
   # Advanced configuration used (which doesn't need the module installation).
   # - fast_404
   - field_group
@@ -90,6 +91,7 @@ install:
   # Not need for now as the website isn't multi-language.
   # - hreflang
   - imagefield_slideshow # Product gallery style.
+  - linkit
   - logo_image_style
   - metatag
   - pathauto
@@ -116,6 +118,7 @@ install:
   - page_manager_ui
 # Validations
   # - seo_checklist
+  # - w3c_validator
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
