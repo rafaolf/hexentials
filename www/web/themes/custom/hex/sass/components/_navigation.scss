@@ -1,4 +1,16 @@
 .navigation {
+  &.menu--main {
+    margin: 0;
+
+    .menu {
+      .menu-item {
+        a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
   &.menu--footer {
     display: flex;
 
