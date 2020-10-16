@@ -47,6 +47,7 @@
 
                 @include xl {
                   width: 100%;
+                  max-width: 500px;
                 }
               }
             }
@@ -160,6 +161,10 @@
         img {
           height: auto;
           width: auto;
+
+          @include xl {
+            max-width: 500px;
+          }
         }
       }
 
