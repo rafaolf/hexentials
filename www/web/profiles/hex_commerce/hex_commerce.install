@@ -62,6 +62,10 @@ function hex_commerce_install_tasks(&$install_state) {
       'display_name' => t('Prepare the banner block type'),
       'type' => 'normal',
     ],
+    'hex_commerce_optimization' => [
+      'display_name' => t('Configure the optimization-related options'),
+      'type' => 'normal',
+    ],
   ];
 
   return $tasks;
@@ -73,10 +77,7 @@ function hex_commerce_install_tasks(&$install_state) {
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_define_theme() {
-  \Drupal::configFactory()
-    ->getEditable('system.theme')
-    ->set('default', 'hex')
-    ->save();
+  \Drupal::configFactory()->getEditable('system.theme')->set('default', 'hex')->save();
 }
 
 /** Callback function to prepare the theme structure.
@@ -191,4 +192,13 @@ function hex_commerce_prepare_block_content() {
       $block->save();
     }
   }
+}
+
+/**
+ * Configure optimization-related options.
+ */
+function hex_commerce_optimization() {
+  // Force the minifier to use the C compile version of JSMin as the config
+  // isn't working properly.
+  \Drupal::configFactory()->getEditable('advagg_js_minify.settings')->set('minifier', 3)->save();
 }
