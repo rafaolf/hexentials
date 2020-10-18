@@ -80,6 +80,7 @@ install:
   - better_exposed_filters
   - block_content_machine_name
   - config_split
+  - csp
   - default_content
   - diff
   - easy_breadcrumb
@@ -87,7 +88,9 @@ install:
   # Advanced configuration used (which doesn't need the module installation).
   # - fast_404
   - field_group
-  - google_analytics
+  # Replacing Google Analytics to integrate with Content Security Policy.
+  # @see https://www.drupal.org/docs/8/modules/content-security-policy/module-compatibility.
+  - ga
   # Not need for now as the website isn't multi-language.
   # - hreflang
   - http_cache_control
@@ -100,7 +103,6 @@ install:
   - quicklink
   - redirect
   - redis
-  - seckit
   # @TODO: temporarily disabled as it needs configuration.
   # - search_api_solr
   - simple_sitemap

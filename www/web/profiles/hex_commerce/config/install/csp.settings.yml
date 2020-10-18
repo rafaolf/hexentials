@@ -1,0 +1,52 @@
+_core:
+  default_config_hash: o4-eDkmTmVdUICtL1VxWD3S9Ze8kNq_lHj6DskF8U8o
+langcode: pt-br
+report-only:
+  enable: false
+  directives:
+    script-src:
+      base: self
+    script-src-attr:
+      base: self
+    script-src-elem:
+      base: self
+    style-src:
+      base: self
+    style-src-attr:
+      base: self
+    style-src-elem:
+      base: self
+    frame-ancestors:
+      base: self
+  reporting:
+    plugin: none
+enforce:
+  enable: true
+  directives:
+    object-src:
+      base: none
+    script-src:
+      flags:
+        - unsafe-inline
+        - unsafe-eval
+      base: self
+    script-src-elem:
+      sources:
+        - 'https://ajax.googleapis.com'
+      flags:
+        - unsafe-inline
+      base: self
+    style-src:
+      flags:
+        - unsafe-inline
+      base: self
+    style-src-elem:
+      flags:
+        - unsafe-inline
+      base: self
+    base-uri:
+      base: none
+    frame-ancestors:
+      base: self
+  reporting:
+    plugin: none
