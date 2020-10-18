@@ -95,6 +95,7 @@ install:
   # - hreflang
   - http_cache_control
   - imagefield_slideshow # Product gallery style.
+  - imagemagick # Use this tool instead of GD2.
   - lazy
   - linkit
   - logo_image_style
@@ -109,6 +110,7 @@ install:
   - simple_sitemap_views
   - single_image_formatter # Products thumbnail exhibition.
   - single_image_formatter_responsive
+  - webp
 # Profile modules
   - hex_commerce_default_content
 # Theme-related modules - required
