@@ -1,3 +1,7 @@
+@import "normalize/breakpoints";
+@import "normalize/mixins";
+@import "normalize/variables";
+
 // Color preparation for the color scheme.
 $primary: #111111;
 $active: #f51167;
@@ -18,6 +22,10 @@ $text: #000000;
 // Page structure.
 body {
   background-color: $background;
+}
+
+p, a, span, label, summary, h1, h2, h3, h4, h5, form {
+  color: $text;
 }
 
 // Font-awesome icons.
@@ -60,6 +68,10 @@ body {
       a {
         color: $top-menu-item;
 
+        @include xs {
+          color: $text;
+        }
+
         &.is-active {
           color: $active;
         }
@@ -69,8 +81,14 @@ body {
 }
 
 .breadcrumb {
-  a {
-    color: $text;
+  li {
+    &:before {
+      color: $active;
+    }
+
+    a {
+      color: $text;
+    }
   }
 }
 
@@ -94,11 +112,30 @@ body {
             }
           }
         }
+
+        .js-form-type-radio {
+          > input[type="radio"]:checked {
+            + label {
+              &:before {
+                background-color: $active;
+                border-color: $active;
+              }
+            }
+          }
+        }
       }
     }
 
     .view-content {
       background-color: $view;
+    }
+  }
+}
+
+.view {
+  .view-data {
+    .field__item {
+      color: $text;
     }
   }
 }
@@ -230,6 +267,3 @@ body {
   }
 }
 
-p {
-  color: $text;
-}

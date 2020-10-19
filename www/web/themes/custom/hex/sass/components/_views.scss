@@ -99,14 +99,6 @@
     .view-content {
       flex: 0 0 86%;
 
-      @include lg {
-        padding-left: 2em;
-      }
-
-      @include xl {
-        padding-left: 2em;
-      }
-
       .grd-list {
         .views-row {
           margin-bottom: 0;
