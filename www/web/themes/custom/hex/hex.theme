@@ -203,7 +203,13 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
     '#type' => 'checkbox',
     '#title' => t('Show slideshow'),
     '#default_value' => theme_get_setting('slideshow_display', 'hex'),
-    '#description'   => t("Check this option to show Slideshow in front page. Uncheck to hide."),
+    '#description'   => t('Check this option to show Slideshow in front page. Uncheck to hide.'),
+  ];
+  $form['hex_settings']['slideshow']['slideshow_show_single'] =[
+    '#type' => 'checkbox',
+    '#title' => t('Show single slide'),
+    '#default_value' => theme_get_setting('slideshow_show_single', 'hex'),
+    '#description'   => t('Check this option to show a single slide in front page. Uncheck to show multiple.'),
   ];
   $form['hex_settings']['slideshow']['slide'] = [
     '#markup' => t('You can change the title, url and image of each slide in the following Slide Setting fieldsets.'),
@@ -306,8 +312,13 @@ function hex_prepare_slider(&$variables) {
   }
 
   $variables['slider'] = array();
+  $slideshow_show_single = theme_get_setting('slideshow_show_single', 'hex');
 
   for ($i = 1; $i <= SLIDESHOW_AMOUNT; $i++) {
+    if ($slideshow_show_single && $i > 1) {
+      break;
+    }
+
     $fid = theme_get_setting("slide_image_{$i}", "hex");
     $file = isset($fid[0]) ? File::load($fid[0]) : [];
 
