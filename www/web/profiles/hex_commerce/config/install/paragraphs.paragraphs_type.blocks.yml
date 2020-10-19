@@ -1,0 +1,10 @@
+uuid: 43540676-d1da-49e0-8016-e135580dd43a
+langcode: pt-br
+status: true
+dependencies: {  }
+id: blocks
+label: Blocos
+icon_uuid: null
+icon_default: null
+description: 'Lista ilimitada de blocos. '
+behavior_plugins: {  }

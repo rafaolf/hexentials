@@ -1,0 +1,25 @@
+uuid: afafdedd-3878-457c-8b63-b87cfab37b2d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocks.field_blocks_list
+    - paragraphs.paragraphs_type.blocks
+id: paragraph.blocks.default
+targetEntityType: paragraph
+bundle: blocks
+mode: default
+content:
+  field_blocks_list:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

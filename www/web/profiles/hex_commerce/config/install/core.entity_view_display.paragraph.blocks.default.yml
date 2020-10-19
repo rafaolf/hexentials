@@ -1,0 +1,22 @@
+uuid: 7b05daaa-d43f-490e-91c9-0d15978cd580
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocks.field_blocks_list
+    - paragraphs.paragraphs_type.blocks
+id: paragraph.blocks.default
+targetEntityType: paragraph
+bundle: blocks
+mode: default
+content:
+  field_blocks_list:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

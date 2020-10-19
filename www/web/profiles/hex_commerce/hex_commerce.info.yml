@@ -101,6 +101,7 @@ install:
   - logo_image_style
   - metatag
   - pathauto
+  - paragraphs
   - quicklink
   - redirect
   - redis
