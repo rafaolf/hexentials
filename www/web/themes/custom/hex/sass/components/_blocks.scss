@@ -19,15 +19,21 @@
         .grd-list {
           .views-row {
             margin: 0;
-            padding: 0;
+            padding: 1em 0;
             @include flex-one-column;
+
+            @include md {
+              padding: 0;
+            }
 
             @include lg {
               @include flex-three-columns;
+              padding: 0;
             }
 
             @include xl {
               @include flex-three-columns;
+              padding: 0;
             }
 
             &:first-child {
