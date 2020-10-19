@@ -1,15 +1,30 @@
 uuid: 454fad7f-b75c-498a-98dd-845e545ccac1
 langcode: pt-br
-status: false
+status: true
 dependencies: {  }
 id: live
 label: Live
 description: ''
 folder: config_split/live
-module: {  }
+module:
+  advagg: 0
+  big_pipe: 0
+  csp: 0
+  dynamic_page_cache: 0
+  http_cache_control: 0
+  page_cache: 0
+  syslog: 0
+  advagg_bundler: 0
+  advagg_cdn: 0
+  advagg_css_minify: 0
+  advagg_js_minify: 0
+  advagg_mod: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - advagg_ext_minify.settings
+  - automated_cron.settings
+  - core.extension
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0
+weight: -5

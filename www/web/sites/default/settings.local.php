@@ -5,6 +5,7 @@ if (getenv('LANDO') === 'ON') {
   $settings['hash_salt'] = md5(getenv('LANDO_HOST_IP'));
 
   // Configuration setup.
+  $config['config_split.config_split.live']['status'] = FALSE;
   $config['config_split.config_split.dev']['status'] = TRUE;
 
   $lando_info = json_decode(getenv('LANDO_INFO'), TRUE);

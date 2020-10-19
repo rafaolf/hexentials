@@ -778,6 +778,9 @@ $settings['entity_update_backup'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.live']['status'] = TRUE;
+
 /**
  * Load local development override configuration, if available.
  *

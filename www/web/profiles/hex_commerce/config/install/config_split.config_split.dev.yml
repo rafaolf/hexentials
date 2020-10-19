@@ -9,12 +9,10 @@ folder: config_split/dev
 module:
   dblog: 0
   devel: 0
-  field_ui: 0
-  menu_ui: 0
-  page_manager_ui: 0
   views_ui: 0
 theme: {  }
-blacklist: {  }
+blacklist:
+  - core.extension
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
