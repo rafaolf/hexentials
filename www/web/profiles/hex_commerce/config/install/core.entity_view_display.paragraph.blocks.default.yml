@@ -3,20 +3,20 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blocks.field_blocks_list
+    - field.field.paragraph.blocks.field_block_list
     - paragraphs.paragraphs_type.blocks
+  module:
+    - block_field
 id: paragraph.blocks.default
 targetEntityType: paragraph
 bundle: blocks
 mode: default
 content:
-  field_blocks_list:
+  field_block_list:
     weight: 0
     label: hidden
-    settings:
-      link: true
-      view_mode: default
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: block_field
     region: content
 hidden: {  }

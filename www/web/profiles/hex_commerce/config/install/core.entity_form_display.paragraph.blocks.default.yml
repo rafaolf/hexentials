@@ -3,22 +3,23 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blocks.field_blocks_list
+    - field.field.paragraph.blocks.field_block_list
     - paragraphs.paragraphs_type.blocks
+  module:
+    - block_field
 id: paragraph.blocks.default
 targetEntityType: paragraph
 bundle: blocks
 mode: default
 content:
-  field_blocks_list:
+  field_block_list:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      configuration_form: hidden
+      plugin_id: ''
+      settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: block_field_default
     region: content
 hidden:
   created: true

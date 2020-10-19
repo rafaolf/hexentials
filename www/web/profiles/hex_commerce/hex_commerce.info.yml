@@ -79,6 +79,7 @@ install:
   # - advagg_validator
   - better_exposed_filters
   - block_content_machine_name
+  - block_field
   - config_split
   - csp
   - default_content

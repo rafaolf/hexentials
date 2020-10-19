@@ -26,6 +26,7 @@
         "drupal/advagg": "^4.1",
         "drupal/better_exposed_filters": "^5.0@beta",
         "drupal/block_content_machine_name": "^1.6",
+        "drupal/block_field": "^1.0@RC",
         "drupal/commerce": "^2.20",
         "drupal/commerce_cart_flyout": "^1.8",
         "drupal/config_split": "^1.6",
