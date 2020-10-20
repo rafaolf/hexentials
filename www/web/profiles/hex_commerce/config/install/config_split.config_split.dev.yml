@@ -1,4 +1,4 @@
-uuid: 6d37deae-261a-45ba-91c2-e7ae73891a28
+uuid: c39844e2-7afb-426e-ba8e-433b3071a4c3
 langcode: pt-br
 status: true
 dependencies: {  }
@@ -11,9 +11,11 @@ module:
   devel: 0
   views_ui: 0
 theme: {  }
-blacklist:
+blacklist: {  }
+graylist:
   - core.extension
-graylist: {  }
+  - system.logging
+  - system.performance
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
