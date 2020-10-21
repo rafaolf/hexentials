@@ -80,6 +80,8 @@ install:
   - better_exposed_filters
   - block_content_machine_name
   - block_field
+  - config_filter
+  - config_ignore
   - config_split
   - csp
   - default_content
