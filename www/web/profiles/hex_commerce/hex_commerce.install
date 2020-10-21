@@ -4,7 +4,47 @@
  * Install, update and uninstall functions for the hex_commerce install profile.
  */
 
+define('HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME', 'drupal-8.9.7.pt-br.po');
+
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormState;
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function hex_commerce_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_download_translation']['function'] = 'hex_commerce_install_download_translation';
+}
+
+/**
+ * Prepare the default translation file.
+ *
+ * @see install_check_translations().
+ */
+function hex_commerce_install_download_translation(&$install_state) {
+  $site_path = \Drupal::service('site.path');
+  $files_directory = $site_path . '/files';
+  $translations_directory = $site_path . '/files/translations';
+
+  // First attempt to create or make writable the files directory.
+  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
+  $file_system = \Drupal::service('file_system');
+  $file_system->prepareDirectory($files_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+  // Then, attempt to create or make writable the translations directory.
+  $file_system->prepareDirectory($translations_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+  if ($existing_file = glob($translations_directory . '/' . HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME)) {
+    return;
+  }
+
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+  $translation_file_path = \Drupal::service('file_system')->realpath('public://translations');
+
+  copy($profile_path . '/translations/' . HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME, $translation_file_path . '/' . HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME);
+
+  install_goto(install_redirect_url($install_state));
+}
 
 /**
  * Implements hook_install().
@@ -42,12 +82,12 @@ function hex_commerce_install_tasks(&$install_state) {
       'function' => 'Drupal\hex_commerce\Form\ClientSettingsForm',
     ],
     'hex_commerce_store_settings_form' => [
-      'display_name' => t('Create the default store'),
+      'display_name' => t('Create the main store'),
       'type' => 'form',
       'function' => 'Drupal\hex_commerce\Form\StoreSettingsForm',
     ],
     'hex_commerce_prepare_store' => [
-      'display_name' => t('Prepare the first store'),
+      'display_name' => t('Prepare the main store'),
       'type' => 'normal',
     ],
     'hex_commerce_import_default_content' => [

@@ -128,8 +128,8 @@ class ClientSettingsForm extends FormBase {
 
     $form['copyrights'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('copyrights'),
-      '#description' => $this->t('copyrights to display for the users.'),
+      '#title' => $this->t('Copyrights'),
+      '#description' => $this->t('Copyrights to display for the users.'),
       '#default_value' => t('© Copyright 2020 - Company name here'),
       '#required' => FALSE,
       '#maxlength' => UserInterface::USERNAME_MAX_LENGTH,
