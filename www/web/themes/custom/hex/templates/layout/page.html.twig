@@ -164,9 +164,15 @@
         <li>
           <img src="{{ slide.src }}" />
           <div class="slider-caption">
-            <h2 class="hex-caption">{{ slide.title }}</h2>
-            <p class="hex-desc">{{ slide.desc }}</p>
-            <a href="{{ slide.url }}">{{ slide.button_text }}</a>
+            {% if slide.title %}
+              <h2 class="hex-caption">{{ slide.title }}</h2>
+            {% endif %}
+            {% if slide.desc %}
+              <p class="hex-desc">{{ slide.desc }}</p>
+            {% endif %}
+            {% if slide.button_text %}
+              <a href="{{ slide.url }}">{{ slide.button_text }}</a>
+            {% endif %}
           </div>
         </li>
       {% endfor %}
