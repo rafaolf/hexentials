@@ -1,9 +1,10 @@
 .navigation {
   z-index: 100;
-  height: auto;
+  height: 100%;
+  width: 100%;
 
   &.menu--main {
-    margin: 0;
+    margin: 1em 0;
 
     .menu {
       .menu-item {

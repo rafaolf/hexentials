@@ -8,6 +8,18 @@
 
 .header-second {
   .container {
+    .mob-icon {
+      @include xs {
+        padding: 6px 15px;
+        top: 27px;
+      }
+
+      @include sm {
+        padding: 6px 15px;
+        top: 27px;
+      }
+    }
+
     .header-left {
       .header-logo {
         .site__logo {
