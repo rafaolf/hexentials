@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 956358ba-eb56-4362-97e9-d74b26513d7a
+  bundle: menu_link_content
+  default_langcode: pt-br
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Perguntas e respostas'
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/faq'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: contact.site_page
+  revision_translation_affected:
+    -
+      value: true

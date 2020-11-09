@@ -1,10 +1,14 @@
 .navigation {
   z-index: 100;
-  height: 100%;
-  width: 100%;
+  height: auto;
+
+  @include sm {
+    height: 100%;
+    width: 100%;
+  }
 
   &.menu--main {
-    margin: 1em 0;
+    margin: 0;
 
     .menu {
       .menu-item {

@@ -14049,6 +14049,12 @@ msgid "Fill out the postal code."
 msgstr "Preencha o CEP."
 msgid "The state is too long. Please use the abbreviation."
 msgstr "O campo estado utilizou muitos caracteres. Por favor utilize a abreviação."
+msgid "Select the profile type"
+msgstr "Selecione o tipo do perfil"
+msgid "This option will determine which way to proceed during the installation."
+msgstr "Essa opção irá determinar qual caminho seguir durante a instalação."
+msgid "Honeypot installed successfully. Please <a href=\":url\">configure Honeypot</a> to protect your forms from spam bots."
+msgstr "Honeypot instalado com sucesso. Por favor <a href=\":url\">configure o Honeypot</a> para proteger seus formulários contra spam."
 
 # Core-related.
 msgid "Installed %module module."

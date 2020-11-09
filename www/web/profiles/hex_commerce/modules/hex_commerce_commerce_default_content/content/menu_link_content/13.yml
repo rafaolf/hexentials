@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 28148ef2-6421-433a-8836-388cd0ab625a
+  bundle: menu_link_content
+  default_langcode: pt-br
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Clientes
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/customers'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: f3ec0d82-2157-4626-9f8b-9de1516b3304
+  bundle: menu_link_content
+  default_langcode: pt-br
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Produtos
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/products'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true

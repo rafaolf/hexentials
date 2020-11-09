@@ -1,0 +1,7 @@
+name: 'Hexentials default content for brochure profile type'
+type: module
+description: 'Default content export'
+core_version_requirement: ^8 || ^9
+package: 'HC'
+dependencies:
+  - default_content

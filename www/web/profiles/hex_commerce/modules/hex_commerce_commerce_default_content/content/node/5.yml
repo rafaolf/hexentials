@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 162a6e96-cafc-462f-8f9c-e6da9aad071d
+  bundle: page
+  default_langcode: pt-br
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Acessiblidade
+  created:
+    -
+      value: 1599174829
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /accessibility
+      langcode: pt-br
+  body:
+    -
+      value: "<p>Lorem ipsum dolor sit amet, ne mea probatus singulis, magna nulla deserunt ut mel. Error discere patrioque his te, his ad percipit indoctum. Persius virtute mea ex. No eam mazim vivendum. His in doming utroque inciderint, his id odio petentium.</p>\r\n\r\n<p>An primis animal sea, an natum ceteros definiebas sit. Vix cu nisl etiam aliquid. Vel no probo prima discere, an eam labore copiosae concludaturque, splendide liberavisse mediocritatem id mel. Mel in clita blandit copiosae, eu incorrupte referrentur eum, alii nostrud fabulas ius an. Ut vim elit alienum sententiae, id option nostrum periculis vim. Ex usu cibo nostro.</p>\r\n\r\n<p>Cu vel atqui utamur consequuntur. Pri maiorum verterem ea, pri libris audiam euismod et, qui debet saepe perpetua ei. Ei luptatum mandamus iracundia sea, ea pro iusto nostro quaerendum, modo clita sanctus est ne. Quo recusabo suavitate te, explicari tincidunt at mel, nisl vivendo atomorum sit in. Per ne malis detraxit, te dolores recteque tractatos vix.</p>\r\n\r\n<p>Omnis solum tibique nec an, his tota vituperata deterruisset ei. Numquam maiorum voluptua ut sea. Diceret intellegat comprehensam vix at, omnium persius eruditi sed an. Eu munere doming accusam eos, quo fugit verterem electram eu. Te pri facete insolens pericula. Natum ullum in per, et eam dolore mollis appetere, wisi dolore copiosae ex pri.</p>\r\n"
+      format: basic_html
+      summary: ''

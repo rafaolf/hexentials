@@ -1,0 +1,46 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 839373e3-89b2-4534-ad34-587a5fbf28c5
+  bundle: banner
+  default_langcode: pt-br
+  depends:
+    7c9b2282-206f-4bdf-bd09-fe8be4abf957: file
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Exiba uma imagem com título e descrição'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  machine_name:
+    -
+      value: block_main_banner
+  template_suggestion:
+    -
+      value: block_main_banner
+  body:
+    -
+      value: "<p>Aqui é colocada a descrição desejada.</p>\r\n"
+      format: basic_html
+      summary: ''
+  field_block_banner_background:
+    -
+      value: white
+  field_block_banner_color:
+    -
+      value: black
+  field_block_banner_full_width:
+    -
+      value: true
+  field_block_banner_link:
+    -
+      uri: 'internal:/'
+      title: 'Clique aqui'
+      options: {  }

@@ -97,6 +97,7 @@ install:
   # Not need for now as the website isn't multi-language.
   # - hreflang
   - http_cache_control
+  - honeypot # Spam control.
   - imagefield_slideshow # Product gallery style.
   - imagemagick # Use this tool instead of GD2.
   - lazy
@@ -116,8 +117,9 @@ install:
   - single_image_formatter_responsive
   - webp
 # Profile modules
-  - hex_commerce_default_content
-# Theme-related modules - required
+  # - hex_commerce_brochure_default_content
+  # - hex_commerce_commerce_default_content
+# Theme-related modules - required for commerce profile type.
   - commerce
   - commerce_cart_flyout
   - commerce_promotion

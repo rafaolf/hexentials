@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: fbfdf25c-4577-4b6b-99e1-f7054b6ec836
+  bundle: page
+  default_langcode: pt-br
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Termos de uso'
+  created:
+    -
+      value: 1599173045
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /terms-of-use
+      langcode: pt-br
+  body:
+    -
+      value: "<p>Lorem ipsum dolor sit amet, usu ad tritani scaevola persecuti. Has et paulo civibus adolescens, quod volutpat euripidis nec ea. Torquatos constituto id eam. Et probo utamur duo. Tollit placerat fabellas vix ut. Vix dicit apeirian conclusionemque in.</p>\r\n\r\n<p>Ad insolens hendrerit sed, ei alii aliquid has. Usu id ipsum perfecto, eos eu solum iusto fabulas. Mel an volutpat instructior, quodsi virtute duo et, putent intellegat intellegam in vel. Pri ex dico dicit putant, mel sale error ornatus ea. Usu copiosae apeirian efficiendi te, essent vivendo volutpat an mei, pro no nonumy dolores. Ad eam ubique detracto dissentias, vel te falli tacimates reprimique, sea cu facilis quaestio imperdiet.</p>\r\n\r\n<p>Quot quaerendum cu usu. Equidem consequuntur nam ad, an sit quidam molestiae, pri quas erant diceret ne. Eu vix quando luptatum aliquando, sit graece eirmod et. Labores fuisset atomorum his ea, ut mea lucilius tacimates interesset. Mei vocent liberavisse ut, ea pro eruditi praesent, ubique nusquam eu cum.</p>\r\n\r\n<p>Qui primis commodo aliquam at. Viris quidam possit quo in, has an illud philosophia. Accusata mediocrem ut mea. Sed quodsi disputando id. Nec petentium instructior at, novum numquam mei te, mel doming integre ei. Mentitum disputando ne mea, eirmod temporibus et vix.</p>\r\n\r\n<p>Mea id laudem invidunt, nullam facilis qui id. Laoreet fastidii pri cu, autem affert te ius, democritum reprimique ei ius. Tritani invenire consulatu ea eos, inani zril prompta mei in. Ei cibo quidam iudicabit cum, mei probo pericula an, prima nihil timeam eum te. Utroque comprehensam interpretaris nec ei, ei euismod aliquando sea. Oratio impedit maiorum at ius, at sea justo aperiri verterem.</p>\r\n\r\n<p>Et porro facilis his, id enim ipsum consequat nec. Vel ex suas vero vivendo, vis quaerendum definitionem ut. An odio elit posse nam. His modus antiopam dissentiet at.</p>\r\n"
+      format: basic_html
+      summary: ''

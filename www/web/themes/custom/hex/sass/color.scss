@@ -11,6 +11,7 @@ $hover-background: #f0e9e9;
 $background: #ffffff;
 $view: #a92727;
 $top-menu-item: #333333;
+$top-menu-item-small-devices: #666666;
 $header-second: #222222;
 $footer-menu-item: #444444;
 $text: #000000;
@@ -79,7 +80,11 @@ p, a, span, label, summary, h1, h2, h3, h4, h5, form {
         color: $top-menu-item;
 
         @include xs {
-          color: $text;
+          color: $top-menu-item-small-devices;
+        }
+
+        @include xs {
+          color: $top-menu-item-small-devices;
         }
 
         &.is-active {

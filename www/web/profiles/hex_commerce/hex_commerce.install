@@ -64,6 +64,11 @@ function hex_commerce_install() {
  */
 function hex_commerce_install_tasks(&$install_state) {
   $tasks = [
+    'hex_commerce_select_profile_type' => [
+      'display_name' => t('Select the profile type'),
+      'type' => 'form',
+      'function' => 'Drupal\hex_commerce\Form\ProfileTypeForm',
+    ],
     'hex_commerce_define_theme' => [
       'display_name' => t('Enable the default theme'),
       'type' => 'normal',
@@ -81,15 +86,6 @@ function hex_commerce_install_tasks(&$install_state) {
       'type' => 'form',
       'function' => 'Drupal\hex_commerce\Form\ClientSettingsForm',
     ],
-    'hex_commerce_store_settings_form' => [
-      'display_name' => t('Create the main store'),
-      'type' => 'form',
-      'function' => 'Drupal\hex_commerce\Form\StoreSettingsForm',
-    ],
-    'hex_commerce_prepare_store' => [
-      'display_name' => t('Prepare the main store'),
-      'type' => 'normal',
-    ],
     'hex_commerce_import_default_content' => [
       'display_name' => t('Install default content'),
       'type' => 'normal',
@@ -106,9 +102,69 @@ function hex_commerce_install_tasks(&$install_state) {
       'display_name' => t('Configure the optimization-related options'),
       'type' => 'normal',
     ],
+    // We need to create the store for both profile types as at this point the
+    // list of install tasks can't be changed.
+    'hex_commerce_store_settings_form' => [
+      'display_name' => t('Create the main store'),
+      'type' => 'form',
+      'function' => 'Drupal\hex_commerce\Form\StoreSettingsForm',
+    ],
+    'hex_commerce_prepare_install_tasks' => [
+      'display_name' => t('Prepare the install tasks based on the profile type'),
+      'type' => 'normal',
+    ],
   ];
 
   return $tasks;
+}
+
+/**
+ * Prepare the install tasks based on the profile type.
+ *
+ * @see hex_commerce_install_tasks()
+ */
+function hex_commerce_prepare_install_tasks(&$tasks) {
+  $profile_type = \Drupal::state()->get('profile_type');
+  $function_name = sprintf('hex_commerce_prepare_%s_profile_type', $profile_type);
+
+  $function_name();
+}
+
+/**
+ * Prepare the brochure profile type.
+ */
+function hex_commerce_prepare_brochure_profile_type() {
+  \Drupal::configFactory()->getEditable('cartflyout')->delete();
+  \Drupal::configFactory()->getEditable('commerce_order_item.add_to_cart')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.body')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.default.default')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.default.products')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.default.teaser')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.default.field_product_image ')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.field_image')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.field_product_image')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product.teaser')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product_variation.attribute_color')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product_variation.attribute_size')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product_variation.default.attribute_color')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product_variation.default.attribute_size')->delete();
+  \Drupal::configFactory()->getEditable('commerce_product_variation.default.default')->delete();
+  \Drupal::configFactory()->getEditable('product_pattern')->delete();
+  \Drupal::configFactory()->getEditable('products')->delete();
+  \Drupal::configFactory()->getEditable('simple_sitemap.settings')->delete();
+
+  \Drupal::service('module_installer')->uninstall(['commerce_cart']);
+  \Drupal::service('module_installer')->uninstall(['commerce_number_pattern']);
+  \Drupal::service('module_installer')->uninstall(['commerce_order']);
+}
+
+/**
+ * Prepare the commerce profile type.
+ */
+function hex_commerce_prepare_commerce_profile_type() {
+  module_load_include('inc', 'hex_commerce', 'hex_commerce.products');
+
+  hex_commerce_prepare_products();
 }
 
 /**
@@ -137,23 +193,21 @@ function hex_commerce_prepare_menu_structure() {
   \Drupal::service('router.builder')->rebuildIfNeeded();
 }
 
-/** Callback function to prepare the store.
- *
- * @see hex_commerce_install_tasks()
- */
-function hex_commerce_prepare_store() {
-  module_load_include('inc', 'hex_commerce', 'hex_commerce.products');
-
-  hex_commerce_prepare_products();
-}
-
 /**
  * Callback function to install default profile content.
  *
  * @see hex_commerce_install_tasks()
  */
 function hex_commerce_import_default_content() {
-  \Drupal::service('default_content.importer')->importContent('hex_commerce_default_content');
+  if (\Drupal::state()->get('profile_type') == 'brochure') {
+    \Drupal::service('default_content.importer')->importContent('hex_commerce_brochure_default_content');
+    \Drupal::service('module_installer')->uninstall(['hex_commerce_commerce_default_content']);
+
+    return;
+  }
+
+  \Drupal::service('default_content.importer')->importContent('hex_commerce_commerce_default_content');
+  \Drupal::service('module_installer')->uninstall(['hex_commerce_brochure_default_content']);
 }
 
 /**
@@ -177,6 +231,7 @@ function hex_commerce_update_theme_settings() {
       'background' => '#ffffff',
       'view' => '#ffffff',
       'top_menu_item' => '#111111',
+      'top_menu_item_small_devices' => '#ffffff',
       'header_second' => '#ffffff',
       'footer_menu_item' => '#ffffff',
       'text' => '#000000',

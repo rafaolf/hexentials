@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 684fb7b1-328c-461c-8ab3-4cd2b25fe28d
+  bundle: menu_link_content
+  default_langcode: pt-br
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Acessibilidade
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      uri: 'internal:/accessibility'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -47
+  expanded:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

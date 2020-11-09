@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 3f3894b9-67db-4d7f-875a-11fb643acc07
+  bundle: text
+  default_langcode: pt-br
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Exibição de texto simples'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  machine_name:
+    -
+      value: block_text_simple
+  body:
+    -
+      value: "<h4>Neque quisquam est qui dolorem</h4>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa erat, mollis vitae ultrices nec, luctus eu ante. Duis porttitor ex ex. Sed sed magna leo. Duis dictum, purus ac auctor pretium, ante leo ornare quam, et fermentum magna ex ut lectus. Nunc orci ex, posuere sit amet dolor hendrerit, dignissim tempus nisl. Maecenas eu nisi feugiat, lacinia nulla facilisis, luctus turpis. Nam a lacinia magna. Fusce rutrum semper metus, in facilisis turpis pulvinar vel. Nullam id posuere magna, vel rhoncus enim. Cras dapibus vehicula est, nec gravida eros auctor ultricies. Sed ullamcorper molestie suscipit. Nulla lorem nibh, convallis quis consectetur lobortis, maximus quis felis. Suspendisse nec mi dapibus est tincidunt volutpat. Fusce eget luctus augue.</p>\r\n"
+      format: basic_html
+      summary: ''

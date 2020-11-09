@@ -128,7 +128,7 @@ function hex_prepare_class_name($field_name, $value) {
  *   The form state.
  */
 function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
-  // Use the settings set by the hex_commerce profile instead of Flexi Cart one.
+  // Use the settings set by the profile instead of Flexi's one.
   unset($form['flexi_cart_settings']);
 
   $form['hex_settings']['client_info'] = [
