@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for the hex_commerce install profile.
+ * Install, update and uninstall functions for the Hexentials install profile.
  */
 
-define('HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME', 'drupal-8.9.7.pt-br.po');
+define('HEXENTIALS_DEFAULT_TRANSLATION_FILENAME', 'drupal-8.9.7.pt-br.po');
 
 use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormState;
@@ -12,8 +12,8 @@ use Drupal\Core\Form\FormState;
 /**
  * Implements hook_install_tasks_alter().
  */
-function hex_commerce_install_tasks_alter(&$tasks, $install_state) {
-  $tasks['install_download_translation']['function'] = 'hex_commerce_install_download_translation';
+function hexentials_install_tasks_alter(&$tasks, $install_state) {
+  $tasks['install_download_translation']['function'] = 'hexentials_install_download_translation';
 }
 
 /**
@@ -21,7 +21,7 @@ function hex_commerce_install_tasks_alter(&$tasks, $install_state) {
  *
  * @see install_check_translations().
  */
-function hex_commerce_install_download_translation(&$install_state) {
+function hexentials_install_download_translation(&$install_state) {
   $site_path = \Drupal::service('site.path');
   $files_directory = $site_path . '/files';
   $translations_directory = $site_path . '/files/translations';
@@ -34,14 +34,14 @@ function hex_commerce_install_download_translation(&$install_state) {
   // Then, attempt to create or make writable the translations directory.
   $file_system->prepareDirectory($translations_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
 
-  if ($existing_file = glob($translations_directory . '/' . HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME)) {
+  if ($existing_file = glob($translations_directory . '/' . HEXENTIALS_DEFAULT_TRANSLATION_FILENAME)) {
     return;
   }
 
-  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hexentials'));
   $translation_file_path = \Drupal::service('file_system')->realpath('public://translations');
 
-  copy($profile_path . '/translations/' . HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME, $translation_file_path . '/' . HEX_COMMERCE_DEFAULT_TRANSLATION_FILENAME);
+  copy($profile_path . '/translations/' . HEXENTIALS_DEFAULT_TRANSLATION_FILENAME, $translation_file_path . '/' . HEXENTIALS_DEFAULT_TRANSLATION_FILENAME);
 
   install_goto(install_redirect_url($install_state));
 }
@@ -53,7 +53,7 @@ function hex_commerce_install_download_translation(&$install_state) {
  *
  * @see system_install()
  */
-function hex_commerce_install() {
+function hexentials_install() {
   // First, do everything in standard profile.
   include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
   standard_install();
@@ -62,54 +62,54 @@ function hex_commerce_install() {
 /**
  * Implements hook_install_tasks().
  */
-function hex_commerce_install_tasks(&$install_state) {
+function hexentials_install_tasks(&$install_state) {
   $tasks = [
-    'hex_commerce_select_profile_type' => [
+    'hexentials_select_profile_type' => [
       'display_name' => t('Select the profile type'),
       'type' => 'form',
-      'function' => 'Drupal\hex_commerce\Form\ProfileTypeForm',
+      'function' => 'Drupal\hexentials\Form\ProfileTypeForm',
     ],
-    'hex_commerce_define_theme' => [
+    'hexentials_define_theme' => [
       'display_name' => t('Enable the default theme'),
       'type' => 'normal',
     ],
-    'hex_commerce_prepare_theme_structure' => [
+    'hexentials_prepare_theme_structure' => [
       'display_name' => t('Prepare the theme structure'),
       'type' => 'normal',
     ],
-    'hex_commerce_prepare_menu_structure' => [
+    'hexentials_prepare_menu_structure' => [
       'display_name' => t('Prepare the menu structure'),
       'type' => 'normal',
     ],
-    'hex_commerce_client_settings_form' => [
+    'hexentials_client_settings_form' => [
       'display_name' => t('Define the client settings'),
       'type' => 'form',
-      'function' => 'Drupal\hex_commerce\Form\ClientSettingsForm',
+      'function' => 'Drupal\hexentials\Form\ClientSettingsForm',
     ],
-    'hex_commerce_import_default_content' => [
+    'hexentials_import_default_content' => [
       'display_name' => t('Install default content'),
       'type' => 'normal',
     ],
-    'hex_commerce_update_theme_settings' => [
+    'hexentials_update_theme_settings' => [
       'display_name' => t('Update theme settings to generate the structure'),
       'type' => 'normal',
     ],
-    'hex_commerce_prepare_block_content' => [
+    'hexentials_prepare_block_content' => [
       'display_name' => t('Prepare the banner block type'),
       'type' => 'normal',
     ],
-    'hex_commerce_optimization' => [
+    'hexentials_optimization' => [
       'display_name' => t('Configure the optimization-related options'),
       'type' => 'normal',
     ],
     // We need to create the store for both profile types as at this point the
     // list of install tasks can't be changed.
-    'hex_commerce_store_settings_form' => [
+    'hexentials_store_settings_form' => [
       'display_name' => t('Create the main store'),
       'type' => 'form',
-      'function' => 'Drupal\hex_commerce\Form\StoreSettingsForm',
+      'function' => 'Drupal\hexentials\Form\StoreSettingsForm',
     ],
-    'hex_commerce_prepare_install_tasks' => [
+    'hexentials_prepare_install_tasks' => [
       'display_name' => t('Prepare the install tasks based on the profile type'),
       'type' => 'normal',
     ],
@@ -121,11 +121,11 @@ function hex_commerce_install_tasks(&$install_state) {
 /**
  * Prepare the install tasks based on the profile type.
  *
- * @see hex_commerce_install_tasks()
+ * @see hexentials_install_tasks()
  */
-function hex_commerce_prepare_install_tasks(&$tasks) {
+function hexentials_prepare_install_tasks(&$tasks) {
   $profile_type = \Drupal::state()->get('profile_type');
-  $function_name = sprintf('hex_commerce_prepare_%s_profile_type', $profile_type);
+  $function_name = sprintf('hexentials_prepare_%s_profile_type', $profile_type);
 
   $function_name();
 }
@@ -133,7 +133,7 @@ function hex_commerce_prepare_install_tasks(&$tasks) {
 /**
  * Prepare the brochure profile type.
  */
-function hex_commerce_prepare_brochure_profile_type() {
+function hexentials_prepare_brochure_profile_type() {
   \Drupal::configFactory()->getEditable('cartflyout')->delete();
   \Drupal::configFactory()->getEditable('commerce_order_item.add_to_cart')->delete();
   \Drupal::configFactory()->getEditable('commerce_product.body')->delete();
@@ -161,59 +161,59 @@ function hex_commerce_prepare_brochure_profile_type() {
 /**
  * Prepare the commerce profile type.
  */
-function hex_commerce_prepare_commerce_profile_type() {
-  module_load_include('inc', 'hex_commerce', 'hex_commerce.products');
+function hexentials_prepare_commerce_profile_type() {
+  module_load_include('inc', 'hexentials', 'hexentials.products');
 
-  hex_commerce_prepare_products();
+  hexentials_prepare_products();
 }
 
 /**
  * Callback function to enable the default theme.
  *
- * @see hex_commerce_install_tasks()
+ * @see hexentials_install_tasks()
  */
-function hex_commerce_define_theme() {
+function hexentials_define_theme() {
   \Drupal::configFactory()->getEditable('system.theme')->set('default', 'hex')->save();
 }
 
 /** Callback function to prepare the theme structure.
  *
- * @see hex_commerce_install_tasks()
+ * @see hexentials_install_tasks()
  */
-function hex_commerce_prepare_theme_structure() {
+function hexentials_prepare_theme_structure() {
   \Drupal::configFactory()->getEditable('flexi_cart_search')->delete();
   \Drupal::service('module_installer')->uninstall(['search']);
 }
 
 /** Callback function to prepare the theme structure.
  *
- * @see hex_commerce_install_tasks()
+ * @see hexentials_install_tasks()
  */
-function hex_commerce_prepare_menu_structure() {
+function hexentials_prepare_menu_structure() {
   \Drupal::service('router.builder')->rebuildIfNeeded();
 }
 
 /**
  * Callback function to install default profile content.
  *
- * @see hex_commerce_install_tasks()
+ * @see hexentials_install_tasks()
  */
-function hex_commerce_import_default_content() {
+function hexentials_import_default_content() {
   if (\Drupal::state()->get('profile_type') == 'brochure') {
-    \Drupal::service('default_content.importer')->importContent('hex_commerce_brochure_default_content');
-    \Drupal::service('module_installer')->uninstall(['hex_commerce_commerce_default_content']);
+    \Drupal::service('default_content.importer')->importContent('hexentials_brochure_default_content');
+    \Drupal::service('module_installer')->uninstall(['hexentials_commerce_default_content']);
 
     return;
   }
 
-  \Drupal::service('default_content.importer')->importContent('hex_commerce_commerce_default_content');
-  \Drupal::service('module_installer')->uninstall(['hex_commerce_brochure_default_content']);
+  \Drupal::service('default_content.importer')->importContent('hexentials_commerce_default_content');
+  \Drupal::service('module_installer')->uninstall(['hexentials_brochure_default_content']);
 }
 
 /**
  * Update the theme settings with flexi_cart colors.
  */
-function hex_commerce_update_theme_settings() {
+function hexentials_update_theme_settings() {
   global $base_url;
   $theme = \Drupal::theme()->getActiveTheme();
   $css_path = $base_url.'/'. $theme->getPath() .'/css/hc.color.css';
@@ -249,8 +249,8 @@ function hex_commerce_update_theme_settings() {
 /**
  * Prepare the banner block type.
  */
-function hex_commerce_prepare_block_content() {
-  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+function hexentials_prepare_block_content() {
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hexentials'));
   $info = [
     '839373e3-89b2-4534-ad34-587a5fbf28c5' => [
       0 => [
@@ -292,7 +292,7 @@ function hex_commerce_prepare_block_content() {
 /**
  * Configure optimization-related options.
  */
-function hex_commerce_optimization() {
+function hexentials_optimization() {
   // Force the minifier to use the C compile version of JSMin as the config
   // isn't working properly.
   \Drupal::configFactory()->getEditable('advagg_js_minify.settings')->set('minifier', 3)->save();

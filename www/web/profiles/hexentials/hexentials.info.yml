@@ -1,6 +1,6 @@
-name: Hexentials E-Commerce
+name: Hexentials
 type: profile
-description: 'Build an e-commerce site to display/shop the company products.'
+description: 'Build a brochure and/or e-commerce site to display/shop the company products/services.'
 core_version_requirement: '^8.8 || ^9'
 version: '8.x-1.0'
 
@@ -56,7 +56,7 @@ install:
   - rdf
   # Core's search isn't needed as Solr is being used. However, we can't disable
   # it here due to the flexi_cart theme config dependency. So, we disable it
-  # through hex_commerce_prepare_theme_structure().
+  # through hexentials_prepare_theme_structure().
   - search
   - serialization
   - shortcut
@@ -117,8 +117,8 @@ install:
   - single_image_formatter_responsive
   - webp
 # Profile modules
-  # - hex_commerce_brochure_default_content
-  # - hex_commerce_commerce_default_content
+  # - hexentials_brochure_default_content
+  # - hexentials_commerce_default_content
 # Theme-related modules - required for commerce profile type.
   - commerce
   - commerce_cart_flyout
@@ -148,5 +148,5 @@ themes:
   - flexi_cart
   - hex
 
-interface translation project: hex_commerce
-interface translation server pattern: profiles/hex_commerce/translations/%project-%version.%language.po
+interface translation project: hexentials
+interface translation server pattern: profiles/hexentials/translations/%project-%version.%language.po

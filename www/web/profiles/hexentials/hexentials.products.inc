@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Product-related functions for the hex_commerce install tasks.
+ * Product-related functions for the Hexentials install tasks.
  */
 
 use Drupal\commerce_price\Price;
@@ -16,7 +16,7 @@ use Drupal\commerce_store\Entity\Store;
 /**
  * Create the product variation and attributes.
  */
-function hex_commerce_prepare_products() {
+function hexentials_prepare_products() {
   // Use the default variation type instead of creating a new one.
   // $variation_type = ProductVariationType::create([
     // 'status' => 1,
@@ -28,7 +28,7 @@ function hex_commerce_prepare_products() {
   // $variation_type>save();
 
   $variation_type = ProductVariationType::load('default');
-  $attributes = hex_commerce_create_product_attributes($variation_type);
+  $attributes = hexentials_create_product_attributes($variation_type);
 
   $price = new Price('24.99', 'BRL');
   $price2 = new Price('39.99', 'BRL');
@@ -53,13 +53,13 @@ function hex_commerce_prepare_products() {
   ]);
   $variation2->save();
 
-  hex_commerce_create_product_types([$variation, $variation2]);
+  hexentials_create_product_types([$variation, $variation2]);
 }
 
 /**
  * Create the product attributes.
  */
-function hex_commerce_create_product_attributes(ProductVariationType $variation_type) {
+function hexentials_create_product_attributes(ProductVariationType $variation_type) {
   // This creation is not needed as we are using a config for it.
   // $color_attribute = ProductAttribute::create([
   //   'id' => 'color',
@@ -137,7 +137,7 @@ function hex_commerce_create_product_attributes(ProductVariationType $variation_
 /**
  * Create the product types.
  */
-function hex_commerce_create_product_types(array $variations) {
+function hexentials_create_product_types(array $variations) {
   // $product_type = ProductType::create([
   //   'id' => 'dress',
   //   'label' => 'Dress - color and size',
@@ -154,7 +154,7 @@ function hex_commerce_create_product_types(array $variations) {
 
   $store = Store::load(1);
 
-  $images = hex_commerce_prepare_images([['bottle.png'], ['button.png'], ['dress.png'], ['headphone.png'], ['lipstick.png', 'mirror.png', 'towel.png']]);
+  $images = hexentials_prepare_images([['bottle.png'], ['button.png'], ['dress.png'], ['headphone.png'], ['lipstick.png', 'mirror.png', 'towel.png']]);
 
   $i = 0;
   $variation_key = 0;
@@ -170,7 +170,7 @@ function hex_commerce_create_product_types(array $variations) {
       'title' => 'Product' . $i,
       'stores' => [$store],
       'variations' => [$variations[$variation_key]],
-      'body' => hex_commerce_get_dummy_text(),
+      'body' => hexentials_get_dummy_text(),
       'field_product_image' => $image,
     ]);
 
@@ -185,9 +185,9 @@ function hex_commerce_create_product_types(array $variations) {
 /**
  * Save the images to file system and returns the File object.
  */
-function hex_commerce_prepare_images($image_list) {
+function hexentials_prepare_images($image_list) {
   foreach ($image_list as $filenames) {
-    $images[] = hex_commerce_get_files($filenames);
+    $images[] = hexentials_get_files($filenames);
   }
 
   return $images;
@@ -196,8 +196,8 @@ function hex_commerce_prepare_images($image_list) {
 /**
  * Save the files and get its data.
  */
-function hex_commerce_get_files($filenames) {
-  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hex_commerce'));
+function hexentials_get_files($filenames) {
+  $profile_path = \Drupal::service('file_system')->realpath(drupal_get_path('profile', 'hexentials'));
   $files = array();
 
   foreach ($filenames as $filename) {
@@ -220,6 +220,6 @@ function hex_commerce_get_files($filenames) {
 /**
  * Get dummy text for description field.
  */
-function hex_commerce_get_dummy_text() {
+function hexentials_get_dummy_text() {
   return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 }

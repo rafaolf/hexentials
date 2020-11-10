@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hex_commerce\Form;
+namespace Drupal\hexentials\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -15,7 +15,7 @@ class StoreSettingsForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'hex_commerce_store_settings_form';
+    return 'hexentials_store_settings_form';
   }
 
   /**
