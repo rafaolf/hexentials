@@ -131,6 +131,24 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
   // Use the settings set by the profile instead of Flexi's one.
   unset($form['flexi_cart_settings']);
 
+  $form['hex_settings']['profile_settings'] = [
+    '#type' => 'details',
+    '#title' => t('Profile Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'tabs',
+  ];
+
+  $form['hex_settings']['profile_settings']['profile_type'] = [
+    '#title' => t('Profile type'),
+    '#type' => 'radios',
+    '#options' => [
+      'brochure' => t('Brochure'),
+      'commerce' => t('Commerce'),
+    ],
+    '#default_value' => theme_get_setting('profile_type', 'hex'),
+  ];
+
   $form['hex_settings']['client_info'] = [
     '#type' => 'details',
     '#title' => t('Client Info'),
@@ -295,8 +313,10 @@ function hex_prepare_main_variables(&$variables) {
   $variables['email'] = theme_get_setting('email', 'hex');
   $variables['address'] = theme_get_setting('address', 'hex');
   $variables['copyrights'] = theme_get_setting('copyrights', 'hex');
+  $variables['profile_type'] = theme_get_setting('profile_type', 'hex');
 
   $variables['company_name'] = \Drupal::config('system.site')->get('name');
+
 }
 
 /**

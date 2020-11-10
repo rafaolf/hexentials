@@ -99,9 +99,11 @@
                     </ul>
                   {% endif %}
                 </div>
-                <div class="d-inline-block cart-icon">
-                  {{ page.header_top }}
-                </div>
+                {% if page.header_top %}
+                  <div class="d-inline-block cart-icon">
+                    {{ page.header_top }}
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -111,7 +113,7 @@
   </div>
 
   {% if page.header or page.search_area or page.navigation %}
-    <div id="header-second" class="header-second clearfix">
+    <div id="header-second" class="header-second {{ profile_type }} clearfix">
       {% if page.header or page.search_area or page.navigation %}
         <div class="container">
           <div id="container-wrap" class="container-wrap">

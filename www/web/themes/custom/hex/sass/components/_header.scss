@@ -2,11 +2,95 @@
   .header-top {
     .header-top-area {
       height: 1.75em;
+
+      .usr-log-info {
+        margin-right: 0;
+      }
+
+      .cart-icon {
+        margin-left: 1em;
+      }
     }
   }
 }
 
 .header-second {
+  &.brochure {
+    .container {
+      .container-wrap {
+        display: flex;
+
+        .header-left {
+          .header-logo {
+            .site__logo {
+              a {
+                img {
+                  max-height: $image-sm;
+
+                  @include sm {
+                    max-height: $image-md;
+                  }
+
+                  @include md {
+                    max-height: $image-md;
+                  }
+
+                  @include lg {
+                    max-height: $image-lg;
+                  }
+
+                  @include xl {
+                    max-height: $image-lg;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .header-right {
+          margin: 0;
+          text-align: right;
+
+          @include rwd(480) {
+            margin: auto 0;
+          }
+
+          ul.menu {
+            @include rwd(480) {
+              font-size: $menu-font-size;
+              font-weight: $bold;
+              text-transform: uppercase;
+            }
+
+            li.menu-item {
+              a {
+                padding: 0;
+                padding-left: 2em;
+              }
+            }
+          }
+        }
+
+        .header-left, .header-right {
+          flex: none;
+
+          @include md {
+            @include flex-two-columns;
+          }
+
+          @include lg {
+            @include flex-two-columns;
+          }
+
+          @include xl {
+            @include flex-two-columns;
+          }
+        }
+      }
+    }
+  }
+
   .container {
     .mob-icon {
       @include xs {
