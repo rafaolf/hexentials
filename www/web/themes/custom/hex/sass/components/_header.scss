@@ -58,7 +58,7 @@
 
           ul.menu {
             @include rwd(480) {
-              font-size: $menu-font-size;
+              font-size: $default;
               font-weight: $bold;
               text-transform: uppercase;
             }

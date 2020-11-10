@@ -280,8 +280,12 @@ function hex_form_system_theme_settings_alter(&$form, FormStateInterface $form_s
  * Custom submit handler for integrity settings form.
 */
 function hex_settings_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  $account = \Drupal::currentUser();
   $values = $form_state->getValues();
+  hex_prepare_profile_type($values['profile_type']);
+
+  $account = \Drupal::currentUser();
+
+  // Using the logic from parent's theme.
   for ($i = 0; $i <= SLIDESHOW_AMOUNT; $i++) {
     if (isset($values["slide_image_{$i}"]) && !empty($values["slide_image_{$i}"])) {
       if ($file = \Drupal\file\Entity\File::load($values["slide_image_{$i}"][0])) {
@@ -359,4 +363,25 @@ function hex_prepare_slider(&$variables) {
       'button_text' => theme_get_setting("slide_button_text_{$i}", "hex"),
     );
   }
+}
+
+/**
+ * Prepare the profile type.
+ */
+function hex_prepare_profile_type($type) {
+  $function_name = sprintf('hex_prepare_%s_profile_type', $type);
+
+  $function_name();
+}
+
+/**
+ * Prepare the brochure profile type.
+ */
+function hex_prepare_brochure_profile_type() {
+}
+
+/**
+ * Prepare the commerce profile type.
+ */
+function hex_prepare_commerce_profile_type() {
 }
