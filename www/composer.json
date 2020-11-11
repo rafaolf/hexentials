@@ -69,7 +69,7 @@
         "drupal/twig_tweak": "^2.6",
         "drupal/webp": "^1.0@beta",
         "drush/drush": "^10.3",
-        "oomphinc/composer-installers-extender": "^1.0"
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
