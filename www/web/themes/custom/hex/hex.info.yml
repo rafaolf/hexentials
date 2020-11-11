@@ -6,6 +6,8 @@ dependencies:
   - drupal:flexi_cart
 base theme: flexi_cart
 
+logo: logo.png
+
 libraries:
   - hex/front-style
 
