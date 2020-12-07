@@ -58,7 +58,7 @@ p, a, span, label, summary, h1, h2, h3, h4, h5, form {
 
 .header-second {
   background: $header-second;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 $shadow;
+  @include box-shadow;
 }
 
 .cart-flyout {

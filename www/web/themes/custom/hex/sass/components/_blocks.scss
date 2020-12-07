@@ -1,74 +1,81 @@
-.block-views-blockproducts-highlighted {
-  margin: 0 0 $space 0;
+.block-region-content {
+  > div {
+    margin-top: $space;
 
-  h2 {
-    font-size: 2em;
-    text-align: center;
-    margin: 0 0 1em;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
-  div {
-    .view-data {
-      display: block;
-      width: 100%;
+  .block-views-blockproducts-highlighted {
+    h2 {
+      @include block-title;
+      margin: 0 0 1em;
+    }
 
-      .view-content {
+    div {
+      .view-data {
         display: block;
-        flex: none;
+        width: 100%;
 
-        .grd-list {
-          .views-row {
-            margin: 0;
-            padding: 1em 0;
-            @include flex-one-column;
+        .view-content {
+          display: block;
+          flex: none;
 
-            @include md {
-              padding: 0;
-            }
+          .grd-list {
+            .views-row {
+              margin: 0;
+              padding: 1em 0;
+              @include flex-one-column;
 
-            @include lg {
-              @include flex-three-columns;
-              padding: 0;
-            }
-
-            @include xl {
-              @include flex-three-columns;
-              padding: 0;
-            }
-
-            &:first-child {
-              padding-top: 0;
-            }
-
-            .product__image {
-              margin-bottom: 2em;
-
-              img {
-                height: auto;
-                width: auto;
-
-                @include lg {
-                  width: 100%;
-                }
-
-                @include xl {
-                  width: 100%;
-                  max-width: 500px;
-                }
+              @include md {
+                padding: 0;
               }
-            }
 
-            .product__info {
-              .product__item--body {
-                margin: 0 3em;
+              @include lg {
+                @include flex-three-columns;
+                padding: 0;
+              }
 
-                p {
-                  font-weight: $lighter;
+              @include xl {
+                @include flex-three-columns;
+                padding: 0;
+              }
+
+              &:first-child {
+                padding-top: 0;
+              }
+
+              .product__image {
+                margin-bottom: 2em;
+
+                img {
+                  height: auto;
+                  width: auto;
+
+                  @include lg {
+                    width: 100%;
+                  }
+
+                  @include xl {
+                    width: 100%;
+                    max-width: 500px;
+                  }
                 }
               }
 
-              .product__item--variation-price {
-                font-weight: $light;
+              .product__info {
+                .product__item--body {
+                  margin: 0 3em;
+
+                  p {
+                    font-weight: $lighter;
+                  }
+                }
+
+                .product__item--variation-price {
+                  font-weight: $light;
+                }
               }
             }
           }
@@ -76,33 +83,11 @@
       }
     }
   }
-}
 
-.block--type-banner {
-  margin-bottom: $space;
-  position: relative;
-
-  &.full-width {
-    width: 100vw;
-    margin-left: calc(-50vw + 50% - -7px);
-  }
-
-  .block__content--image {
-    img {
-      width: 100%;
-    }
-  }
-
-  .block__content--details {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+  .block--type-basic {
     h2 {
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: $bold;
+      @include block-title;
+      margin-top: 0;
     }
 
     .field--name-body {
@@ -112,76 +97,109 @@
         text-align: center;
       }
     }
-
-    .field--name-field-block-banner-link {
-      text-align: center;
-
-      a {
-        @include button-appearence;
-      }
-    }
   }
-}
 
-.block--type-text {
-  text-align: center;
-  margin-top: $space;
+  .block--type-banner {
+    position: relative;
 
-  .field--name-body {
-    width: 65%;
-    margin: 0 auto;
-    font-weight: $lighter;
-  }
-}
-
-.block--type-double-images {
-  .block-content__content {
-    margin-top: $space;
-    display: block;
-
-    @include lg {
-      display: flex;
+    &.full-width {
+      width: 100vw;
+      margin-left: calc(-50vw + 50% - -7px);
     }
 
-    @include xl {
-      display: flex;
+    .block__content--image {
+      img {
+        width: 100%;
+      }
     }
 
-    .block-content__item {
-      margin-bottom: 2em;
-      @include flex-one-column;
+    .block__content--details {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-      @include lg {
-        margin-bottom: 0;
-        @include flex-two-columns;
+      h2 {
+        @include block-title;
       }
 
-      @include xl {
-        margin-bottom: 0;
-        @include flex-two-columns;
-      }
+      .field--name-body {
+        margin: 1.5em;
 
-      .field--type-image {
-        text-align: center;
-
-        img {
-          height: auto;
-          width: auto;
-
-          @include xl {
-            max-width: 500px;
-          }
+        p {
+          text-align: center;
         }
       }
 
-      .field--type-text-long {
+      .field--name-field-block-banner-link {
         text-align: center;
+
+        a {
+          @include button-appearence;
+        }
       }
     }
   }
 
-  .block-content__body {
-    margin: 0 20%;
-    font-weight: $lighter;
+  .block--type-text {
+    text-align: center;
+    margin-top: $space;
+
+    .field--name-body {
+      width: 65%;
+      margin: 0 auto;
+      font-weight: $lighter;
+    }
+  }
+
+  .block--type-double-images {
+    .block-content__content {
+      display: block;
+
+      @include lg {
+        display: flex;
+      }
+
+      @include xl {
+        display: flex;
+      }
+
+      .block-content__item {
+        margin-bottom: 2em;
+        @include flex-one-column;
+
+        @include lg {
+          margin-bottom: 0;
+          @include flex-two-columns;
+        }
+
+        @include xl {
+          margin-bottom: 0;
+          @include flex-two-columns;
+        }
+
+        .field--type-image {
+          text-align: center;
+
+          img {
+            height: auto;
+            width: auto;
+
+            @include xl {
+              max-width: 500px;
+            }
+          }
+        }
+
+        .field--type-text-long {
+          text-align: center;
+        }
+      }
+    }
+
+    .block-content__body {
+      margin: 0 20%;
+      font-weight: $lighter;
+    }
   }
 }
