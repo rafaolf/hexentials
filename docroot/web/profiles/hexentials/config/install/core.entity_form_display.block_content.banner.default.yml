@@ -10,11 +10,13 @@ dependencies:
     - field.field.block_content.banner.field_block_banner_full_width
     - field.field.block_content.banner.field_block_banner_image
     - field.field.block_content.banner.field_block_banner_link
+    - field.field.block_content.banner.field_block_banner_title
     - image.style.thumbnail
   module:
     - image
     - link
     - machine_name_widget
+    - path
     - text
 id: block_content.banner.default
 targetEntityType: block_content
@@ -23,7 +25,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 5
     settings:
       rows: 9
       summary_rows: 3
@@ -32,26 +34,26 @@ content:
     third_party_settings: {  }
     region: content
   field_block_banner_background:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_block_banner_color:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_block_banner_full_width:
-    weight: 7
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_block_banner_image:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -59,16 +61,24 @@ content:
     type: image_image
     region: content
   field_block_banner_link:
-    weight: 6
+    weight: 7
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
+  field_block_banner_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   info:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -76,14 +86,14 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 4
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   machine_name:
     type: machine_name
-    weight: 2
+    weight: 3
     settings:
       source:
         - info
@@ -98,9 +108,15 @@ content:
       replace: ''
     region: content
     third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   template_suggestion:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60

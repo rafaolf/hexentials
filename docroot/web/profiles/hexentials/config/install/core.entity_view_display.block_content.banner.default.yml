@@ -10,6 +10,7 @@ dependencies:
     - field.field.block_content.banner.field_block_banner_full_width
     - field.field.block_content.banner.field_block_banner_image
     - field.field.block_content.banner.field_block_banner_link
+    - field.field.block_content.banner.field_block_banner_title
     - image.style.banner_block
   module:
     - image
@@ -24,12 +25,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_block_banner_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       image_style: banner_block
@@ -42,7 +43,7 @@ content:
     type: image
     region: content
   field_block_banner_link:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -52,6 +53,14 @@ content:
       target: '0'
     third_party_settings: {  }
     type: link
+    region: content
+  field_block_banner_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden:
   field_block_banner_background: true

@@ -1,0 +1,21 @@
+uuid: 45f96686-bc18-44b2-a4d3-440ab5bc461e
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_block_banner_title
+field_name: field_block_banner_title
+entity_type: block_content
+type: string
+settings:
+  max_length: 100
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
