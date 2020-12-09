@@ -40,6 +40,10 @@ settings:
             - DrupalImage
             - Table
             - HorizontalRule
+            - JustifyLeft
+            - JustifyRight
+            - JustifyCenter
+            - JustifyBlock
         -
           name: 'Block Formatting'
           items:

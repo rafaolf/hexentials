@@ -7,7 +7,7 @@ dependencies:
     - lazy
 name: 'HTML completo'
 format: full_html
-weight: 2
+weight: -10
 filters:
   filter_align:
     id: filter_align
