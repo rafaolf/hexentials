@@ -1,7 +1,7 @@
 name: hexentials
 recipe: drupal8
 config:
-  webroot: www/web
+  webroot: docroot/web
   php: 7.4
   config:
     php: config/php.ini
@@ -18,7 +18,7 @@ proxy:
 services:
   appserver:
     build:
-      - cd www && composer install
+      - cd docroot && composer install
     build_as_root:
       # PHP extension needed to improve the JS minify process.
       - pecl install jsmin
@@ -38,7 +38,7 @@ services:
     portforward: true
     core: hex
     config:
-      dir: www/solr-config
+      dir: docroot/solr-config
 
   cache:
     type: redis

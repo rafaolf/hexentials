@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
+# Check if the parameter was passed.
+if [ $# -eq 0 ]; then
+  echo 'No arguments supplied. Please pass the domain.'
+  exit 1
+fi
+
 # Update the system and patch.
 sudo yum update -y
 sudo yum install -y make gcc wget
@@ -16,16 +22,16 @@ echo '########## Apache setup ##########'
 sudo yum install -y httpd
 sudo tee -a /etc/httpd/conf.d/001-hex.conf<<EOF
 <VirtualHost *:80>
-    ServerName hexentials.com.br
-    ServerAlias www.hexentials.com.br
-    DocumentRoot /var/www/hex/web
-<Directory "/var/www/hex">
+    ServerName $1
+    ServerAlias www.$1
+    DocumentRoot /var/www/hex/docroot/web
+<Directory "/var/www/hex/docroot">
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
 </Directory>
-    ErrorLog /var/log/httpd/hexentials.com.br-error.log
-    CustomLog /var/log/httpd/hexentials.com.br-access.log combined
+    ErrorLog /var/log/httpd/$1-error.log
+    CustomLog /var/log/httpd/$1-access.log combined
 </VirtualHost>
 EOF
 sudo systemctl enable httpd && sudo systemctl start httpd
@@ -123,14 +129,18 @@ cd hex
 
 ############################################## PROJECT-RELATED SETUP (MANUALLY DONE) ##############################################
 git clone --single-branch --branch master https://github.com/rafaolf/hexentials.git # Move the files to the current directory.
+cd hexentials
+mv * .git* .lando.yml ../
+cd ..
+rm -rf hexentials
 
 # Organize the repository folder and update the DocumentRoot directory from Apache and restart the service.
 
 #echo '########## Theme compilation with Compass ##########'
-cd /var/www/hex/web/themes/custom/hex
+cd /var/www/hex/docroot/web/themes/custom/hex
 gem install compass
 compass compile --force
-cd /var/www/hex
+cd /var/www/hex/docroot
 composer install
 
 # @TODO fix snap setup as it's currently not working.
@@ -146,6 +156,6 @@ wget -O epel.rpm –nv https://dl.fedoraproject.org/pub/epel/epel-release-latest
 sudo yum install -y ./epel.rpm
 sudo yum install -y python2-certbot-apache.noarch
 sudo systemctl restart httpd
-sudo certbot -i apache -a manual --preferred-challenges dns -d hexentials.com.br
+sudo certbot -i apache -a manual --preferred-challenges dns -d $1
 
-# Install the Hexentials distribution and Update the robots.txt file.
+echo 'Please follow-up to install the Hexentials distribution and update the robots.txt file.'
