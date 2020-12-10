@@ -127,16 +127,14 @@ cd /var/www
 mkdir hex
 cd hex
 
-############################################## PROJECT-RELATED SETUP (MANUALLY DONE) ##############################################
+echo '########## Clone the repository and organize it ##########'
 git clone --single-branch --branch master https://github.com/rafaolf/hexentials.git # Move the files to the current directory.
 cd hexentials
 mv * .git* .lando.yml ../
 cd ..
 rm -rf hexentials
 
-# Organize the repository folder and update the DocumentRoot directory from Apache and restart the service.
-
-#echo '########## Theme compilation with Compass ##########'
+echo '########## Theme compilation with Compass ##########'
 cd /var/www/hex/docroot/web/themes/custom/hex
 gem install compass
 compass compile --force
