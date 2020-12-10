@@ -10,9 +10,40 @@
   }
 
   .slick-list {
+    height: auto;
+    min-height: 200px;
+
     p {
       &.hex-desc {
         letter-spacing: 0.5px;
+      }
+    }
+
+    li.slick-slide {
+      @include xs {
+        height: auto;
+      }
+
+      @include sm {
+        height: auto;
+      }
+
+      @include md {
+        height: auto;
+      }
+
+      img {
+        @include xs {
+          width: 100%;
+        }
+
+        @include sm {
+          width: 100%;
+        }
+
+        @include md {
+          width: 100%;
+        }
       }
     }
   }
