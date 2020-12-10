@@ -34,6 +34,10 @@ p, a, span, label, summary, h1, h2, h3, h4, h5, form {
   color: $active;
 }
 
+.fa-bars {
+  color: $top-menu-item;
+}
+
 .is-menu-active {
   .mob-icon {
     background: $hover;
@@ -83,7 +87,7 @@ p, a, span, label, summary, h1, h2, h3, h4, h5, form {
           color: $top-menu-item-small-devices;
         }
 
-        @include xs {
+        @include sm {
           color: $top-menu-item-small-devices;
         }
 
