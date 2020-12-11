@@ -1,0 +1,15 @@
+uuid: 2149dd65-091a-43fd-aaa5-e0469c335703
+langcode: pt-br
+status: true
+dependencies: {  }
+name: content_big
+label: 'Conteúdo - Grande (800x800)'
+effects:
+  e95166d0-9e04-4198-9c1c-56f62b0f97f0:
+    uuid: e95166d0-9e04-4198-9c1c-56f62b0f97f0
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      upscale: false

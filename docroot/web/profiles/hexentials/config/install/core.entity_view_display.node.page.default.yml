@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_page_blocks
     - field.field.node.page.field_page_body
+    - field.field.node.page.field_page_twi
     - node.type.page
   module:
     - entity_reference_revisions
@@ -30,6 +31,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_page_twi:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   links:
     weight: 0

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_page_blocks
     - field.field.node.page.field_page_body
+    - field.field.node.page.field_page_twi
     - node.type.page
   module:
     - paragraphs
@@ -42,6 +43,18 @@ content:
       show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
+  field_page_twi:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
     region: content
   langcode:
     type: language_select

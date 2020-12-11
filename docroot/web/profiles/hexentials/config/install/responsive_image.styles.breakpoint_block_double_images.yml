@@ -3,9 +3,9 @@ langcode: pt-br
 status: true
 dependencies:
   config:
-    - image.style.large
     - image.style.media
     - image.style.medium
+    - image.style.product_large
     - image.style.teaser
   theme:
     - hex
@@ -31,7 +31,7 @@ image_style_mappings:
     breakpoint_id: hex.md
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: large
+    image_mapping: product_large
   -
     breakpoint_id: hex.sm
     multiplier: 1x

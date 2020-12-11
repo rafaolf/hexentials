@@ -1,0 +1,15 @@
+uuid: 8e6ca6d8-e30b-42d3-887c-27b3d827f465
+langcode: pt-br
+status: true
+dependencies: {  }
+name: content_regular
+label: 'Conteúdo - Regular (600x600)'
+effects:
+  05e434be-e610-42d9-bcfb-c35a65f1b4dd:
+    uuid: 05e434be-e610-42d9-bcfb-c35a65f1b4dd
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      upscale: false

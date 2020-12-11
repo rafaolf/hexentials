@@ -4,6 +4,7 @@
 ** Main Components.
 */
 
+@import "normalize/variables";
 
 @import "base/base";
 @import "base/init";
@@ -13,7 +14,6 @@
 // @import "normalize/big-pipe";
 @import "normalize/breakpoints";
 @import "normalize/mixins";
-@import "normalize/variables";
 
 @import "components/blocks";
 @import "components/breadcrumbs";
@@ -21,6 +21,7 @@
 @import "components/header";
 @import "components/navigation";
 @import "components/page";
+@import "components/paragraphs";
 @import "components/product";
 @import "components/slider";
 @import "components/views";

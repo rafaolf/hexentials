@@ -1,0 +1,24 @@
+.paragraph--type--text-with-images {
+  .field--name-field-twi-image {
+    margin: 2em auto;
+    text-align: center;
+
+    @include lg {
+      min-height: 354px;
+
+      img {
+        min-height: 354px;
+      }
+    }
+
+    img {
+      @include lg {
+        min-height: 354px;
+      }
+
+      @include xl {
+        min-height: 354px;
+      }
+    }
+  }
+}

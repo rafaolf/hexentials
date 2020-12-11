@@ -1,0 +1,10 @@
+uuid: 3db2d02e-df91-4528-933e-4b090de37e74
+langcode: pt-br
+status: true
+dependencies: {  }
+id: text_with_images
+label: 'Texto com imagem'
+icon_uuid: null
+icon_default: null
+description: 'Lista ilimitada de textos com imagens.'
+behavior_plugins: {  }

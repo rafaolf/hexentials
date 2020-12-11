@@ -1,9 +1,9 @@
-uuid: f7bc8b56-fa50-4b00-8f7c-ed539bd66aef
+uuid: 23bca5a5-35cb-4613-a7e4-350877fac771
 langcode: pt-br
 status: true
 dependencies: {  }
-name: large
-label: 'Grande (480×480)'
+name: product_large
+label: 'Produto - Grande (480×480)'
 effects:
   ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
     uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d

@@ -1,0 +1,15 @@
+uuid: bfd5c062-7125-49a8-b6c3-20641f3ea0a6
+langcode: pt-br
+status: true
+dependencies: {  }
+name: content_small
+label: 'Conteúdo - Pequeno (220x220)'
+effects:
+  8f608df6-bf59-4f1b-816c-eeab7b2eb62f:
+    uuid: 8f608df6-bf59-4f1b-816c-eeab7b2eb62f
+    id: image_scale
+    weight: 1
+    data:
+      width: 220
+      height: 220
+      upscale: false

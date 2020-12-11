@@ -1,7 +1,8 @@
 image_fields:
+  block_content--banner--default--field_block_banner_image: '1'
+  block_content--double_images--default--field_block_double_image_first: '1'
+  block_content--double_images--default--field_block_double_image_second: '1'
   block_content--banner--field_block_banner_image--default: '1'
-  block_content--double_images--field_block_double_image_first--default: '1'
-  block_content--double_images--field_block_double_image_second--default: '1'
 alter_tag:
   img: img
   iframe: iframe

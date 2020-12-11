@@ -1,0 +1,34 @@
+uuid: 5ec0bc95-4203-4037-928a-90c5d01e78e2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_twi
+    - node.type.page
+    - paragraphs.paragraphs_type.text_with_images
+  module:
+    - entity_reference_revisions
+id: node.page.field_page_twi
+field_name: field_page_twi
+entity_type: node
+bundle: page
+label: 'Texto com imagem'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text_with_images: text_with_images
+    target_bundles_drag_drop:
+      blocks:
+        weight: 3
+        enabled: false
+      text_with_images:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

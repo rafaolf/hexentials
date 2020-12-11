@@ -1,0 +1,36 @@
+uuid: 816bd286-e1cc-46cb-9885-f62a51aa20a6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_with_images.field_twi_image
+    - field.field.paragraph.text_with_images.field_twi_text
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.text_with_images
+  module:
+    - image
+    - text
+id: paragraph.text_with_images.default
+targetEntityType: paragraph
+bundle: text_with_images
+mode: default
+content:
+  field_twi_image:
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_twi_text:
+    weight: 0
+    settings:
+      rows: 10
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
