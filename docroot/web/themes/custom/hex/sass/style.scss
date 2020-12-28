@@ -6,8 +6,8 @@
 
 @import "normalize/variables";
 
-@import "base/base";
 @import "base/init";
+@import "base/base";
 
 // @TODO: include the Big Pipe style to the loading areas. Currently, Chrome has
 // an issue and this isn't working properly.

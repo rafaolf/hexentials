@@ -7,6 +7,7 @@ $light_grey_color: #9f9fa0;
 $light_sands_color: #dbcc8f;
 $light_grey_color: #cccccc;
 $dark_grey_color: #e9ecef;
+
 /*
 ** Text Color
 */
@@ -17,9 +18,10 @@ $link_h_color: $pink_color;
 $text_grey: $grey_color;
 $text_light_grey: $light_grey_color;
 
-
 /*
 ** Fonts
 */
-
-$base-font-family: 'Josefin Sans', sans-serif !default;
+$heading-font-family: 'Josefin Sans', sans-serif !default;
+$sub-heading-font-family: 'Josefin Sans', sans-serif !default;
+// $paragraph-font-family: 'Open Sans', sans-serif !default;
+$paragraph-font-family: 'Cardo', sans-serif !default;

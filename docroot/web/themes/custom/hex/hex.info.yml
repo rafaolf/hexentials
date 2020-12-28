@@ -9,6 +9,7 @@ base theme: flexi_cart
 logo: logo.png
 
 libraries:
+  - hex/fonts
   - hex/front-style
 
 regions:
