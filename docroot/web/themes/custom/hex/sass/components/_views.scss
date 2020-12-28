@@ -1,6 +1,5 @@
 .view-products { // Products page.
   .view-header {
-    font-size: $page-title;
     text-align: center;
   }
 
@@ -131,7 +130,6 @@
 
           .product__item--title {
             font-weight: $bold;
-            font-size: 1.1em;
           }
 
           .product__item--body {
