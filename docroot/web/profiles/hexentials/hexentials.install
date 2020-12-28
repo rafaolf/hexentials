@@ -109,8 +109,8 @@ function hexentials_install_tasks(&$install_state) {
       'type' => 'form',
       'function' => 'Drupal\hexentials\Form\StoreSettingsForm',
     ],
-    'hexentials_prepare_install_tasks' => [
-      'display_name' => t('Prepare the install tasks based on the profile type'),
+    'hexentials_run_profile_tasks' => [
+      'display_name' => t('Run the tasks based on the profile type'),
       'type' => 'normal',
     ],
   ];
@@ -119,11 +119,11 @@ function hexentials_install_tasks(&$install_state) {
 }
 
 /**
- * Prepare the install tasks based on the profile type.
+ * Run the tasks based on the profile type.
  *
  * @see hexentials_install_tasks()
  */
-function hexentials_prepare_install_tasks(&$tasks) {
+function hexentials_run_profile_tasks(&$tasks) {
   $profile_type = \Drupal::state()->get('profile_type');
   $function_name = sprintf('hexentials_prepare_%s_profile_type', $profile_type);
 
