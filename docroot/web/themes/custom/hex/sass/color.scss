@@ -252,36 +252,40 @@ button, .form-submit, input[type="button"] {
 
 .footer {
   .footer-top {
-    ul.menu-footer__list {
-      li.menu-footer__item {
-        a.menu-footer__link {
-          color: $footer-menu-item;
+    .menu--footer {
+      border-bottom-color: $active;
 
-          &.is-active {
-            color: $active;
+      ul.menu-footer__list {
+        li.menu-footer__item {
+          a.menu-footer__link {
+            color: $footer-menu-item;
+
+            &.is-active {
+              color: $active;
+            }
           }
-        }
 
-        & > a.menu-footer__link:after {
-          @include border-bottom-style;
-        }
-      }
-    }
-
-    .footer-contact-us {
-      .footer-contact-us__title {
-        p {
-          color: $footer-menu-item;
-
-          &:after {
+          & > a.menu-footer__link:after {
             @include border-bottom-style;
           }
         }
       }
 
-      .footer-contact-us__item {
-        p {
-          color: $footer-menu-item;
+      .footer-contact-us {
+        .footer-contact-us__title {
+          strong {
+            color: $footer-menu-item;
+
+            &:after {
+              @include border-bottom-style;
+            }
+          }
+        }
+
+        .footer-contact-us__item {
+          p {
+            color: $footer-menu-item;
+          }
         }
       }
     }

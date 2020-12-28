@@ -32,13 +32,13 @@
       .footer-contact-us__title {
         display: block;
 
-        p {
+        strong {
           font-weight: $light;
           margin: 0 0 0.5em;
 
           &:after {
-            @include pseudo-after-border(30%);
-            padding-bottom: 0.5em;
+            @include pseudo-after-border(35%);
+            padding-bottom: 0.25em;
           }
         }
       }
