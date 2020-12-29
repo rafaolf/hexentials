@@ -21,24 +21,34 @@
   }
 
   &.menu--footer {
-    display: flex;
+    display: block;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+
+    @include rwd(480) {
+      display: flex;
+    }
 
     .footer-contact-us {
-      display: list-item;
-      flex: 0 0 50%;
-      padding-right: 3em;
-      list-style-type: none;
+      display: block;
+
+      @include rwd(480) {
+        display: list-item;
+        flex: 0 0 50%;
+        padding-right: 3em;
+        list-style-type: none;
+      }
 
       .footer-contact-us__title {
         display: block;
 
-        p {
-          font-size: $block-font-size;
+        strong {
+          font-weight: $light;
           margin: 0 0 0.5em;
 
           &:after {
-            @include pseudo-after-border(30%);
-            padding-bottom: 0.5em;
+            @include pseudo-after-border(35%);
+            padding-bottom: 0.25em;
           }
         }
       }
@@ -59,22 +69,45 @@
     }
 
     ul.menu-footer__list {
-      display: flex;
-      flex-wrap: wrap;
-      text-align: left;
+      text-align: center;
+
+      @include xs {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 1em;
+        border-top: 2px dotted;
+      }
+
+      @include rwd(480) {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+      }
 
       li.menu-footer__item {
         @include flex-one-column;
 
+        @include xs {
+          flex: 0 0 25%;
+          margin-right: 1em;
+        }
+
         a.menu-footer__link {
           display: block;
-          font-size: $menu-font-size;
+
+          @include xs {
+            text-align: left;
+          }
         }
       }
 
       > li.menu-footer__item {
         > a.menu-footer__link:after {
           @include pseudo-after-border(3%);
+
+          @include xs {
+            margin: 0 auto;
+          }
         }
       }
 

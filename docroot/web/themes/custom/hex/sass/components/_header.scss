@@ -58,7 +58,6 @@
 
           ul.menu {
             @include rwd(480) {
-              font-size: $default;
               font-weight: $bold;
               text-transform: uppercase;
             }
@@ -130,16 +129,11 @@
 
             &.site__name {
               font-weight: $bold;
-              font-size: 1.15em;
               padding-right: 0.5em;
 
               a {
                 width: auto;
               }
-            }
-
-            &.site__slogan {
-              font-size: 0.85em;
             }
           }
         }
