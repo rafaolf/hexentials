@@ -4,8 +4,7 @@ fonts:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
   css:
     theme:
-      # //fonts.googleapis.com/css?family=Open+Sans:100,300,400,400i,600,700&display=swap: { type: external }
-      //fonts.googleapis.com/css?family=Cardo:100,300,400,400i,600,700&display=swap: { type: external }
+      //fonts.googleapis.com/css?family=Open+Sans:100,300,400,400i,600,700&display=swap: { type: external }
 
 front-style:
   version: 1.x
