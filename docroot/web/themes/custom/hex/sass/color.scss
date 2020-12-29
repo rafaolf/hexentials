@@ -256,6 +256,8 @@ button, .form-submit, input[type="button"] {
       border-bottom-color: $active;
 
       ul.menu-footer__list {
+        border-top-color: $active;
+
         li.menu-footer__item {
           a.menu-footer__link {
             color: $footer-menu-item;

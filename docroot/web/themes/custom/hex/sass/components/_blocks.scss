@@ -154,6 +154,10 @@
       width: 65%;
       margin: 0 auto;
       font-weight: $lightest;
+
+      @include xs {
+        width: 100%;
+      }
     }
   }
 
