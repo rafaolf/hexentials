@@ -1,0 +1,12 @@
+uuid: 8cee9a4c-ccda-4042-8a19-488882f49b09
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9Q4r3EsSzJ4YRixz_9FWA3r-fZt0tqNm7_740qmHdrU
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'
+  description: '[site:name] - [site:slogan]'

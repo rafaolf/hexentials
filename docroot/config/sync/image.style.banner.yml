@@ -1,0 +1,17 @@
+uuid: eebb67bb-f7e7-411a-9623-d1c8b6970413
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Fnsbu25PTrZxzD835_c_NpV5JN-QHi_h9Etmeu8qqwI
+name: banner
+label: 'Banner (1920x1080)'
+effects:
+  a34858dd-40eb-4033-805f-915f98f71f13:
+    uuid: a34858dd-40eb-4033-805f-915f98f71f13
+    id: image_scale
+    weight: 2
+    data:
+      width: 1920
+      height: 1080
+      upscale: false

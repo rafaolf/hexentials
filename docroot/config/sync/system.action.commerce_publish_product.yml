@@ -1,0 +1,13 @@
+uuid: 7cf7be3d-9dfa-4025-84e7-318696cd98f9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - commerce_product
+_core:
+  default_config_hash: 83abjxFWTlkso65OfwvUzv_VvAc9iIswF2kW_MGZmY8
+id: commerce_publish_product
+label: 'Publicar produto'
+type: commerce_product
+plugin: commerce_publish_product
+configuration: {  }

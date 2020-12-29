@@ -1,0 +1,14 @@
+uuid: 9f754763-46b1-4bcc-9076-90e4dd56a7e8
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BhNmZwAuQK0IQSljfq8vp2UB0EJnJc-IP3JXrFRBLvc
+id: feedback
+label: 'Feedback do site'
+recipients:
+  - oliveirafrafa@gmail.com
+reply: ''
+weight: 0
+message: 'Sua mensagem foi enviada.'
+redirect: ''

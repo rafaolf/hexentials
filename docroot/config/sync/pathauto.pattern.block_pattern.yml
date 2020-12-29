@@ -1,0 +1,28 @@
+uuid: b95c64b9-8c32-4c9a-9b52-fb1ad3d08947
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - ctools
+_core:
+  default_config_hash: b1ei0tW1lOzct5zQBtOW2Wtv8Upn_mXZaa9LdnvMdZE
+id: block_pattern
+label: 'Block pattern'
+type: 'canonical_entities:block_content'
+pattern: 'block/[block_content:info]'
+selection_criteria:
+  38e3206d-a32c-4586-8130-1579da671456:
+    id: 'entity_bundle:block_content'
+    bundles:
+      banner: banner
+      basic: basic
+      double_images: double_images
+      text: text
+    negate: false
+    context_mapping:
+      block_content: block_content
+    uuid: 38e3206d-a32c-4586-8130-1579da671456
+selection_logic: and
+weight: -5
+relationships: {  }

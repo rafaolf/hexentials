@@ -1,0 +1,17 @@
+uuid: b53b2799-4d97-4bed-8a85-e36a2b948476
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mklhypEpUFzF54nCngm_w2A8dnIN5z8u3n2sY43NiI0
+name: product
+label: 'Produto (600x600)'
+effects:
+  a778126f-8dfa-4ae0-8dd2-37164b0232e7:
+    uuid: a778126f-8dfa-4ae0-8dd2-37164b0232e7
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 600
+      upscale: false

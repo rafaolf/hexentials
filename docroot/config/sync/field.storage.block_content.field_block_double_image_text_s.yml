@@ -1,0 +1,21 @@
+uuid: 7376744d-5e82-4ce9-86be-f96778fb1e06
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: 9nmpLy8eAYjITJnMyQHe5mz8qcR0SLWGiJw3DxoU7k4
+id: block_content.field_block_double_image_text_s
+field_name: field_block_double_image_text_s
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

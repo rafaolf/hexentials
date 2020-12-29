@@ -1,0 +1,17 @@
+uuid: 9171f752-971a-4552-b594-fb86a6b502f6
+langcode: pt-br
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_product
+  module:
+    - commerce_product
+    - entity
+_core:
+  default_config_hash: wlvmNEgXVD81RVgOeQJVgSdT5t0RAwWJVyIXdLIONdg
+id: commerce_product_delete_action
+label: 'Excluir produto'
+type: commerce_product
+plugin: 'entity_delete_action:commerce_product'
+configuration: {  }

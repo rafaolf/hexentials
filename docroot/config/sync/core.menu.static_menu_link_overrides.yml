@@ -1,0 +1,10 @@
+definitions:
+  contact__site_page:
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: true
+    enabled: true
+langcode: pt-br
+_core:
+  default_config_hash: sacnyOZZREj1gphMUEXXILdC29D0_EIHXShcU8G2_g0

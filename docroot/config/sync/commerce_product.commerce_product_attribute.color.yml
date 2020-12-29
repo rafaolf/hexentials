@@ -1,0 +1,9 @@
+uuid: 8597869e-8e7f-4b40-89e8-ca92b2edb1ee
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BP4E26b81mD4s_CvrNfBbCs7fhA9fkx0xgS09Kjbj5g
+id: color
+label: Cor
+elementType: select

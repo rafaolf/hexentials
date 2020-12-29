@@ -1,0 +1,40 @@
+uuid: 48180514-d38d-4f75-8b6d-da5c28fada68
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.double_images
+    - field.storage.block_content.field_block_double_image_first
+  module:
+    - image
+_core:
+  default_config_hash: U5SdeP3D_4ufHChgT4glNq-olVEQ16i8kRR4Ci3ruUk
+id: block_content.double_images.field_block_double_image_first
+field_name: field_block_double_image_first
+entity_type: block_content
+bundle: double_images
+label: 'Primeira imagem'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: true
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

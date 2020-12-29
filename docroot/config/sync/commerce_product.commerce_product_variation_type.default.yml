@@ -1,0 +1,12 @@
+uuid: 2bc40c6f-2118-459d-a7fc-b82b1460add9
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3vA4FKQ1Qu8B1R8UdGPnmMfJrYO6Y6uMqeNgDgXxods
+id: default
+label: Padrão
+orderItemType: default
+generateTitle: true
+traits: {  }
+locked: false

@@ -1,0 +1,85 @@
+uuid: 26adbb9d-1e0f-4881-ba48-304c537e0121
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - page_manager.page.front
+  content:
+    - 'block_content:banner:839373e3-89b2-4534-ad34-587a5fbf28c5'
+    - 'block_content:double_images:7f724463-3ad6-4c14-8b1c-cea7a289da33'
+    - 'block_content:text:6e554933-cf64-4057-bb49-f895b5e0686d'
+    - 'block_content:text:9c8669d7-ae91-4f97-b33f-0c6be1050d9b'
+  module:
+    - block_content
+    - panels
+_core:
+  default_config_hash: ernBC7s6DiWwbcFHrcRfs-qnhbSO6O9SDD24w8gXqME
+id: front-panels_variant-1
+label: Home
+variant: panels_variant
+variant_settings:
+  blocks:
+    07d2565b-5298-4791-871c-042fe0738259:
+      id: 'block_content:839373e3-89b2-4534-ad34-587a5fbf28c5'
+      label: 'Exiba uma imagem com título e descrição'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 0
+      uuid: 07d2565b-5298-4791-871c-042fe0738259
+      context_mapping: {  }
+    9868743f-9cea-40c2-95c5-45e2b991e6c7:
+      id: 'block_content:7f724463-3ad6-4c14-8b1c-cea7a289da33'
+      label: 'Exibição de dupla imagem'
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 2
+      uuid: 9868743f-9cea-40c2-95c5-45e2b991e6c7
+      context_mapping: {  }
+    679deffd-e7f0-49c7-ba3b-c4d02b202c52:
+      id: 'block_content:9c8669d7-ae91-4f97-b33f-0c6be1050d9b'
+      label: Pandemia
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: -2
+      uuid: 679deffd-e7f0-49c7-ba3b-c4d02b202c52
+      context_mapping: {  }
+    8b9dbd17-cd7d-4095-a3e5-c91b6f996475:
+      id: 'block_content:6e554933-cf64-4057-bb49-f895b5e0686d'
+      label: Serviços
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: content
+      weight: 1
+      uuid: 8b9dbd17-cd7d-4095-a3e5-c91b6f996475
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 9e61135b-6378-475a-998a-103deaf7a388
+  label: null
+  weight: 0
+  layout: layout_onecol
+  layout_settings:
+    label: ''
+  page_title: ''
+  storage_type: page_manager
+  storage_id: front-panels_variant-1
+  builder: standard
+page: front
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,13 @@
+uuid: 0a748028-878e-473c-91a6-50ebf96052c2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.page
+_core:
+  default_config_hash: iXrSegK2KWSx_gokZgLMApGNwnDR3Di72wIZ45ClG3o
+id: node.page
+target_entity_type_id: node
+target_bundle: page
+default_langcode: site_default
+language_alterable: false

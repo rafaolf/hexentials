@@ -1,0 +1,10 @@
+uuid: ca651e59-8d02-48be-b2f4-758b03206df2
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: S9oMDxC8HXROXFOdXnnJZIJY7zqJTc9QZ46NgsZLKAQ
+id: banner
+label: Banner
+revision: 0
+description: 'Um bloco para exibir o padrão relacionado à determinado conteúdo.'

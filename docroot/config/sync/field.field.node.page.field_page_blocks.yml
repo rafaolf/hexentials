@@ -1,0 +1,33 @@
+uuid: eeffe75f-79f7-4481-9372-8048e1bfcc2f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_blocks
+    - node.type.page
+    - paragraphs.paragraphs_type.blocks
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: BDJQh_Johm5WqgUaLEagwnXuPjQgdXfU_fptPYY4tfA
+id: node.page.field_page_blocks
+field_name: field_page_blocks
+entity_type: node
+bundle: page
+label: Blocos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      blocks: blocks
+    target_bundles_drag_drop:
+      blocks:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

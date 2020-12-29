@@ -1,0 +1,13 @@
+uuid: b5ba8ba3-07bf-4f55-988a-55b8ef6c1e0e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+_core:
+  default_config_hash: kKmjV0lnyUzbhc1uoBMFNbq7L0ZnBHu_rq3O5l17tKY
+id: block_content.banner
+target_entity_type_id: block_content
+target_bundle: banner
+default_langcode: site_default
+language_alterable: false

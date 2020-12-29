@@ -1,0 +1,47 @@
+uuid: fabbb410-5d32-4edb-a58b-b1f5eee0f434
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - image.style.medium
+    - image.style.product_large
+    - image.style.teaser
+  theme:
+    - hex
+_core:
+  default_config_hash: MZpW6lrzMDkMRMRoA8ZkBuO9g61hOuEvIH77gmTns_o
+id: breakpoint_teaser
+label: 'Breakpoint - product - teaser'
+image_style_mappings:
+  -
+    breakpoint_id: hex.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+  -
+    breakpoint_id: hex.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: product_large
+  -
+    breakpoint_id: hex.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+breakpoint_group: hex
+fallback_image_style: medium

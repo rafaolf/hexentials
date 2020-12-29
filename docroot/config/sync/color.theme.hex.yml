@@ -1,0 +1,19 @@
+palette:
+  primary: '#f18e30'
+  active: '#ffffff'
+  shadow: '#f18e30'
+  hover: '#f18e30'
+  hover_background: '#000000'
+  background: '#000000'
+  view: '#ffffff'
+  top_menu_item: '#f18e30'
+  top_menu_item_small_devices: '#f18e30'
+  header_second: '#000000'
+  footer_menu_item: '#ffffff'
+  text: '#ffffff'
+logo: 'public://color/hex-89b26b95/logo.svg'
+stylesheets:
+  - 'public://color/hex-89b26b95/hc.color.css'
+files:
+  - ''
+  - 'public://color/hex-89b26b95/hc.color.css'

@@ -1,0 +1,23 @@
+uuid: 267d4f8c-8390-4b8a-853d-44a17ebe56fb
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.double_images
+    - field.storage.block_content.field_block_double_image_text_f
+  module:
+    - text
+_core:
+  default_config_hash: rOkzl33RnS-xgoMt5hQB3FYzxJrqUO51TPW6WrPqomc
+id: block_content.double_images.field_block_double_image_text_f
+field_name: field_block_double_image_text_f
+entity_type: block_content
+bundle: double_images
+label: 'Primeiro texto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

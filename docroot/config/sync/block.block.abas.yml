@@ -1,0 +1,22 @@
+uuid: a6d17f39-4b98-4125-bf76-891ec5e10d45
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - hex
+_core:
+  default_config_hash: QZw-2gIV52527CMdSEmafNXx9GvD7jLG5QgJPeOa0Rc
+id: abas
+theme: hex
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Abas
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

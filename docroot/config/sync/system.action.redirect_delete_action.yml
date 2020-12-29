@@ -1,0 +1,16 @@
+uuid: e767b873-cb97-4bb0-9f36-91c9cee0bb30
+langcode: pt-br
+status: true
+dependencies:
+  enforced:
+    module:
+      - redirect
+  module:
+    - redirect
+_core:
+  default_config_hash: vcnRZRvBqTbK3nZ2M4_lKPlEGc8GjPzgaqapYUfyX8M
+id: redirect_delete_action
+label: 'Remover um redirecionamento'
+type: redirect
+plugin: redirect_delete_action
+configuration: {  }

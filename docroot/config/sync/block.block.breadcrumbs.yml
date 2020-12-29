@@ -1,0 +1,22 @@
+uuid: e8e92abc-5017-4769-801e-122f50fa20c7
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hex
+_core:
+  default_config_hash: mkU8EaGIoW48wH7t_JVO4yA4I7TelLDqaGQSSBdNwdc
+id: breadcrumbs
+theme: hex
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

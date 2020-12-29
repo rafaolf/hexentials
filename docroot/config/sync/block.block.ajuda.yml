@@ -1,0 +1,22 @@
+uuid: 36a5669d-0da9-4ba3-ab1e-2ee26cb5d231
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - hex
+_core:
+  default_config_hash: mQlorVZkxMmzkycEFAeCwPIpr8bkZ1-m1wPtChg_k_U
+id: ajuda
+theme: hex
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ajuda
+  provider: help
+  label_display: '0'
+visibility: {  }

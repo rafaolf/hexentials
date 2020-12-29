@@ -1,0 +1,12 @@
+uuid: ec3d0d7c-a45c-4129-a49f-d7519b27cfd0
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Mz9qWr1kUYK0mjRAGDsr5XS6PvtZ24en_7ndt-pyWe4
+id: node.teaser
+label: Exibição
+targetEntityType: node
+cache: true

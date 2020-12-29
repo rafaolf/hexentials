@@ -1,0 +1,32 @@
+uuid: b363988b-7115-4cd9-a327-85208037bebe
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+    - image
+_core:
+  default_config_hash: hnI6ncIC27_mbnVnyr2NZ2g-dyAo7c9BXDNuJrQzqhA
+id: commerce_product.field_product_image
+field_name: field_product_image
+entity_type: commerce_product
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

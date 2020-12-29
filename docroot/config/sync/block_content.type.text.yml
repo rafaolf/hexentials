@@ -1,0 +1,10 @@
+uuid: 4a6410f0-456d-418e-a282-1a3f7c5005a6
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: q5D0SBliGOXPcq3fEGqOwX_eIv3XDk9u-TILGezT3cU
+id: text
+label: Texto
+revision: 0
+description: 'Um bloco para exibir conteúdo textual com ou sem link.'

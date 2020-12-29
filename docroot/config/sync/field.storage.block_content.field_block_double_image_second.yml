@@ -1,0 +1,32 @@
+uuid: 47b86c3c-04bc-4a38-a96c-8d1971aeb085
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: sF_piV6Ac6jwmCwGq8DJ8c7Jwdh7dEP2Oznd1V49YCU
+id: block_content.field_block_double_image_second
+field_name: field_block_double_image_second
+entity_type: block_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

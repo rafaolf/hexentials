@@ -1,0 +1,49 @@
+profile_type: brochure
+address: 'Rua Amazonas - 1628 Jardim Planalto - Jaguariúna/SP'
+phone: '(19) 3867-3266'
+phone_whatsapp: '(19) 99797-6056'
+email: atendimento@hzacessorios.com.br
+facebook: 'https://www.facebook.com/hertzsomeacessorios/about/?ref=page'
+twitter: 'https://www.twitter.com/'
+linkedin: 'https://www.linkedin.com/'
+instagram: 'https://www.instagram.com/hertzsomeacessorios/'
+copyrights: '© Copyright 2020 - Todos os direitos reservados.'
+slideshow_display: 1
+slide_title_1: ''
+slide_title_2: 'Who we are'
+slide_title_3: 'Our service'
+slide_title_4: 'Our mission'
+slide_title_5: 'Our vision'
+slide_desc_1: ''
+slide_desc_2: 'This is the second slide description to display who we are'
+slide_desc_3: 'This is the third slide description to display our service'
+slide_desc_4: 'This is the fourth slide description to display our mission'
+slide_desc_5: 'This is the fourth slide description to display our vision'
+slide_button_text_1: ''
+slide_button_text_2: Mais
+slide_button_text_3: Mais
+slide_button_text_4: Mais
+slide_button_text_5: Mais
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://Logo_0.png'
+logo_style: banner_block
+favicon:
+  use_default: 1
+slideshow_show_single: 1
+slide_image_1:
+  - '5'
+slide_url_1: ''
+slide_image_2: {  }
+slide_url_2: ''
+slide_image_3: {  }
+slide_url_3: ''
+slide_image_4: {  }
+slide_url_4: ''
+slide_image_5: {  }
+slide_url_5: ''

@@ -1,0 +1,16 @@
+uuid: 57a02fae-050c-437f-a70a-22af752475d8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.content_editor
+  module:
+    - user
+_core:
+  default_config_hash: _9a_cCP1bG8ydaKTiD6bY5gfo0NVUQ8s4fv7csB0PKs
+id: user_remove_role_action.content_editor
+label: 'Remover o papel Editor de conteúdo dos usuários selecionados'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_editor

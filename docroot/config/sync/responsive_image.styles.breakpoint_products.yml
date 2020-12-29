@@ -1,0 +1,46 @@
+uuid: e407bcd6-b86c-423e-9410-e22d93f6dd5f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - image.style.medium
+    - image.style.teaser
+  theme:
+    - hex
+_core:
+  default_config_hash: lw9aIzUYGq0QMEgER9zLO99oQ34n4uqA0P2X4bcfOsM
+id: breakpoint_products
+label: 'Breakpoint - products'
+image_style_mappings:
+  -
+    breakpoint_id: hex.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+  -
+    breakpoint_id: hex.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+  -
+    breakpoint_id: hex.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+breakpoint_group: hex
+fallback_image_style: medium

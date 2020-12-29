@@ -1,0 +1,26 @@
+uuid: d2e93ac4-5372-4d18-baec-91e5f3e1e31a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_attribute.size
+    - commerce_product.commerce_product_variation_type.default
+    - field.storage.commerce_product_variation.attribute_size
+_core:
+  default_config_hash: yiYM4wNWV4vx3wj7IL7U2tpkJrrSNx8xe3ToWCiyeRA
+id: commerce_product_variation.default.attribute_size
+field_name: attribute_size
+entity_type: commerce_product_variation
+bundle: default
+label: Tamanho
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_attribute_value'
+  handler_settings:
+    target_bundles:
+      - size
+field_type: entity_reference

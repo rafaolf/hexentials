@@ -1,0 +1,34 @@
+uuid: 9ad95b50-63b4-4eb7-bf3c-146923aef16e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_with_images.field_twi_image
+    - field.field.paragraph.text_with_images.field_twi_text
+    - paragraphs.paragraphs_type.text_with_images
+    - responsive_image.styles.breakpoint_single_image
+  module:
+    - single_image_formatter_responsive
+    - text
+id: paragraph.text_with_images.default
+targetEntityType: paragraph
+bundle: text_with_images
+mode: default
+content:
+  field_twi_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: breakpoint_single_image
+      image_link: ''
+    third_party_settings: {  }
+    type: single_responsive_image_formatter
+    region: content
+  field_twi_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

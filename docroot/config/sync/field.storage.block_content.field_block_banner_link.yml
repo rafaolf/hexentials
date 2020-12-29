@@ -1,0 +1,21 @@
+uuid: b3defcb9-6186-4cac-89c4-d10fe31a6e78
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: vqe7cktGmBoWekvxiRtiwCGOyLoSYt9zC7K-NdMvPPo
+id: block_content.field_block_banner_link
+field_name: field_block_banner_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

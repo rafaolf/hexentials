@@ -1,0 +1,75 @@
+uuid: 67b73369-c9ba-4fca-9375-ba42c3e5a017
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - block_content.type.text
+    - field.field.block_content.text.body
+  module:
+    - machine_name_widget
+    - path
+    - text
+_core:
+  default_config_hash: r-fqQ8tZckHz9Q8nke0HKj7dQHSY0M2bQ5bHwE9wU0E
+id: block_content.text.default
+targetEntityType: block_content
+bundle: text
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  machine_name:
+    type: machine_name
+    weight: -4
+    settings:
+      source:
+        - info
+        - widget
+        - 0
+        - value
+      exists: block_content_machine_name_existing_block_content_name
+      size: 60
+      placeholder: ''
+      label: ''
+      replace_pattern: ''
+      replace: ''
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  template_suggestion:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

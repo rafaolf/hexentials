@@ -1,0 +1,25 @@
+uuid: 08fbd32b-9baf-41db-88f7-71f3adb8d5ae
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - ctools
+_core:
+  default_config_hash: v7McEiFmI65ZMG_TWwzaux8f_9EBNV2vaZCqpn3YIpw
+id: product_pattern
+label: 'Product pattern'
+type: 'canonical_entities:commerce_product'
+pattern: 'products/[commerce_product:title]'
+selection_criteria:
+  4907c1e1-fd55-4ab9-809f-559f8c10a63a:
+    id: 'entity_bundle:commerce_product'
+    bundles:
+      default: default
+    negate: false
+    context_mapping:
+      commerce_product: commerce_product
+    uuid: 4907c1e1-fd55-4ab9-809f-559f8c10a63a
+selection_logic: and
+weight: -5
+relationships: {  }

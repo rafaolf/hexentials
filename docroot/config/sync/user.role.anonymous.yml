@@ -1,0 +1,18 @@
+uuid: be47278f-be9e-4c53-94ec-a97dfa33174f
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TMN0y2DedN5WUI3-sVWn2ViqdsAkDa1AtFHUr-O-dZQ
+id: anonymous
+label: 'Usuário anônimo'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access commerce_store overview'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view commerce_product'

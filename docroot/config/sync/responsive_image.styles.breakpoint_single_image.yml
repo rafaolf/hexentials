@@ -1,0 +1,47 @@
+uuid: 7390cd6a-9356-499c-8250-01ba8848b2ee
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - image.style.content_big
+    - image.style.content_medium
+    - image.style.content_regular
+    - image.style.content_small
+    - image.style.thumbnail
+  theme:
+    - hex
+id: breakpoint_single_image
+label: 'Breakpoint - single image'
+image_style_mappings:
+  -
+    breakpoint_id: hex.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: content_big
+  -
+    breakpoint_id: hex.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: content_big
+  -
+    breakpoint_id: hex.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: content_big
+  -
+    breakpoint_id: hex.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: content_regular
+  -
+    breakpoint_id: hex.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: content_medium
+  -
+    breakpoint_id: hex.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: content_small
+breakpoint_group: hex
+fallback_image_style: thumbnail

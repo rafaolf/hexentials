@@ -1,0 +1,32 @@
+uuid: d79841c2-ce9c-416c-922d-d40960f6b471
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gdQN_ZV2u5XlcBh4bS6abWpJyES2wqlPZVI4AGbodLM
+id: live
+label: Live
+description: ''
+folder: config_split/live
+module:
+  advagg: 0
+  advagg_bundler: 0
+  advagg_cdn: 0
+  advagg_css_minify: 0
+  advagg_js_minify: 0
+  advagg_mod: 0
+  big_pipe: 0
+  csp: 0
+  dynamic_page_cache: 0
+  http_cache_control: 0
+  page_cache: 0
+  syslog: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - core.extension
+  - system.logging
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: -5

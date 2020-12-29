@@ -1,0 +1,23 @@
+uuid: c39844e2-7afb-426e-ba8e-433b3071a4c3
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hEcoSIEZ85OhruDemDlBUAlYCQ300G9IB1WT_GMC_l8
+id: dev
+label: Dev
+description: ''
+folder: config_split/dev
+module:
+  dblog: 0
+  devel: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - core.extension
+  - system.logging
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

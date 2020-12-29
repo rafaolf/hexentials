@@ -1,0 +1,48 @@
+uuid: 966af6fa-feb0-4db4-8d27-a4434f8ba2bd
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - image.style.media
+    - image.style.medium
+    - image.style.product_large
+    - image.style.teaser
+  theme:
+    - hex
+_core:
+  default_config_hash: DNdBU2UFHZHICtf-XoBE60goDkoyH7BH5cZSBKV00P4
+id: breakpoint_block_double_images
+label: 'Breakpoint - block - double-images'
+image_style_mappings:
+  -
+    breakpoint_id: hex.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: media
+  -
+    breakpoint_id: hex.xl
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: media
+  -
+    breakpoint_id: hex.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: product_large
+  -
+    breakpoint_id: hex.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaser
+  -
+    breakpoint_id: hex.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: medium
+breakpoint_group: hex
+fallback_image_style: medium

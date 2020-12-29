@@ -1,0 +1,24 @@
+uuid: 8c6a2694-98ca-4206-91b3-603a717e8044
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wbwx54_XKkO3CemucbiGlbMlHunsrUoKf8bFbKSj4vM
+name: product_large
+label: 'Produto - Grande (480×480)'
+effects:
+  ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d:
+    uuid: ddd73aa7-4bd6-4c85-b600-bdf2b1628d1d
+    id: image_scale
+    weight: 0
+    data:
+      width: 480
+      height: 480
+      upscale: false
+  03336d71-38ac-4741-a488-8b0e4b9931b8:
+    uuid: 03336d71-38ac-4741-a488-8b0e4b9931b8
+    id: image_resize
+    weight: 2
+    data:
+      width: 480
+      height: 480

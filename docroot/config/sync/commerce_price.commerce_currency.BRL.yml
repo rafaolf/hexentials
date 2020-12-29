@@ -1,0 +1,11 @@
+uuid: 5981bf81-172e-49d5-afbb-cbf68e8b3a0c
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qu78vzDalJgiNpReRpRexXQsF2rXBAXd7rTCnr5zdvc
+currencyCode: BRL
+name: 'Real brasileiro'
+numericCode: '986'
+symbol: R$
+fractionDigits: 2

@@ -1,0 +1,35 @@
+uuid: ad472fec-4d82-43f8-9916-ed8bde67f227
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IQE1LNO0mgGdDOAb3CAi6ExfmU3ENPnM7Zti3ZBTACk
+id: content_editor
+label: 'Editor de conteúdo'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'bulk generate commerce_promotion_coupon'
+  - 'create article content'
+  - 'create commerce_product_attribute'
+  - 'create commerce_promotion'
+  - 'create default commerce_product'
+  - 'create page content'
+  - 'create terms in tags'
+  - 'delete own article content'
+  - 'delete own default commerce_product'
+  - 'delete own page content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'update own default commerce_product'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view commerce_promotion'
+  - 'view default commerce_product'
+  - 'view own unpublished commerce_product'
+  - 'view own unpublished content'
+  - 'view page revisions'

@@ -1,0 +1,21 @@
+uuid: 40381f5a-4e15-4159-a9fa-0fd64fb7bc54
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_twi_text
+    - paragraphs.paragraphs_type.text_with_images
+  module:
+    - text
+id: paragraph.text_with_images.field_twi_text
+field_name: field_twi_text
+entity_type: paragraph
+bundle: text_with_images
+label: Texto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

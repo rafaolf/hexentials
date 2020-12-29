@@ -1,0 +1,10 @@
+uuid: 2e80d135-077c-4f50-83cb-052cd01a3a7d
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xV9_UUW8mVfXY_zwxbOWiZwW4W08jNvt2UhgiVIy8WM
+id: double_images
+label: 'Dupla imagem'
+revision: 0
+description: 'Um block para exibir duas imagens com link para as mesmas.'

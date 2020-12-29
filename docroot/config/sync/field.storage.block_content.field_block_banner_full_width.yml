@@ -1,0 +1,20 @@
+uuid: f7ab486d-fb2d-4119-b304-d03c5edada50
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: AuAJl6NlONt278FmmVLMFPnE6Ycl6ZdgUnE2PxbENAU
+id: block_content.field_block_banner_full_width
+field_name: field_block_banner_full_width
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

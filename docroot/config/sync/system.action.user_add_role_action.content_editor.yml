@@ -1,0 +1,16 @@
+uuid: 8ee2939f-b122-42f1-94a1-d9017a544118
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - user.role.content_editor
+  module:
+    - user
+_core:
+  default_config_hash: dodwizdGzLTXT5Yr-QkyhWXWaELNHaFIyPRNapB7QEw
+id: user_add_role_action.content_editor
+label: 'Adicionar o papel Editor de conteúdo ao(s) usuário(s) selecionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_editor

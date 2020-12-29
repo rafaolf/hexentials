@@ -1,0 +1,35 @@
+uuid: 1b3172b5-e1cc-4f97-aed9-dbc0670d96d5
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: 4XYfCysvqB08vPvTQV9H-EuZYSIsYD8UKZHwR95E_UE
+id: block_content.field_block_banner_background
+field_name: field_block_banner_background
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: black
+      label: Preto
+    -
+      value: white
+      label: Branco
+    -
+      value: primary
+      label: Primário
+    -
+      value: active
+      label: Ativo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

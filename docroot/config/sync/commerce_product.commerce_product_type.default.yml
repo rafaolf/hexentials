@@ -1,0 +1,14 @@
+uuid: 8c308350-323e-4dd6-9e56-a6616c01e7cb
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: igdv1CXBTq9vh-ONhQ2SFkVhr3bdfRC6nP1Uubdx-L0
+id: default
+label: Padrão
+description: ''
+variationType: default
+multipleVariations: true
+injectVariationFields: true
+traits: {  }
+locked: false

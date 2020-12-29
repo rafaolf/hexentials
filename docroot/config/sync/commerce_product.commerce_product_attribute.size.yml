@@ -1,0 +1,9 @@
+uuid: 80237ce0-a457-4067-a67f-0b7adef2d4b4
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 042VlpaWi7OcDhPooJO7vDjLlioVVokXujIp1Ss8-wk
+id: size
+label: Tamanho
+elementType: select

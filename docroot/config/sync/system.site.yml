@@ -1,0 +1,16 @@
+name: Hertz
+mail: atendimento@hzacessorios.com.br
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /home
+admin_compact_mode: false
+weight_select_max: 100
+langcode: pt-br
+default_langcode: pt-br
+_core:
+  default_config_hash: AKKwuYMsAs7jK4PIjIdYi_-1kBJtcfNxEidvNH_Uats
+uuid: c69c8fdf-644b-4a1b-842d-492cb8b409a0
+logo_image_style_logo_style: banner_block
+logo_image_style_logo_path: Logo_0.png

@@ -1,0 +1,15 @@
+uuid: 4fc2e993-d411-46c0-b29a-df78b3435f7f
+langcode: pt-br
+status: true
+dependencies: {  }
+name: content_medium
+label: 'Conteúdo - Médio (340x340)'
+effects:
+  deede876-fbd1-49ce-8a8f-a6cf242f07ec:
+    uuid: deede876-fbd1-49ce-8a8f-a6cf242f07ec
+    id: image_scale
+    weight: 1
+    data:
+      width: 340
+      height: 340
+      upscale: false
