@@ -235,31 +235,27 @@
     </div>
   {% endif %}
 
-  <div id="main-content" class="clearfix main-content">
-    <div class="container">
-      {% if page.sidebar_first %}
-        <aside class="sidebar-first">
-          <section id="sidebar-first-in" class="sidebar sidebar-first-in clearfix">
-            {{ page.sidebar_first }}
-          </section>
-        </aside>
-      {% endif %}
-      <section class="main-section">
-        <div id="main" class="clearfix main main-area">
-          {% if page.content %}
-            {{ page.content }}
-          {% endif %}
-        </div>
-      </section>
-      {% if page.sidebar_second %}
-        <aside class="sidebar-second">
-          <section id="sidebar-second-in" class="sidebar sidebar-second-in clearfix">
-            {{ page.sidebar_second }}
-          </section>
-        </aside>
+  <section id="main-content" class="clearfix main-content">
+    {% if page.sidebar_first %}
+      <aside class="sidebar-first">
+        <section id="sidebar-first-in" class="sidebar sidebar-first-in clearfix">
+          {{ page.sidebar_first }}
+        </section>
+      </aside>
+    {% endif %}
+    <div class="main-section">
+      {% if page.content %}
+        {{ page.content }}
       {% endif %}
     </div>
-  </div>
+    {% if page.sidebar_second %}
+      <aside class="sidebar-second">
+        <section id="sidebar-second-in" class="sidebar sidebar-second-in clearfix">
+          {{ page.sidebar_second }}
+        </section>
+      </aside>
+    {% endif %}
+  </section>
 
   {% if page.featured_top %}
     <div id="featured-top" class="clearfix featured-top">

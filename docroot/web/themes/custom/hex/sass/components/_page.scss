@@ -1,7 +1,33 @@
 body {
+  .container {
+    padding: 0 1.15em;
+  }
+
   .page {
     flex: auto;
-    min-height: 80vh;
-    margin: $space 0;
+
+    .main-content {
+      margin: 2em 0 4em;
+
+      @include xl {
+        margin: $space 0;
+      }
+    }
+  }
+
+  .slider {
+    @include xl {
+      min-height: 85vh;
+    }
+  }
+
+  section, aside {
+    margin-top: 2em;
+
+    @include xl {
+      min-height: 100vh;
+      // No space needed as the Javascript will handle it at fullscreen.
+      margin-top: 0;
+    }
   }
 }

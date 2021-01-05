@@ -32,27 +32,29 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {% block content %}
-    <div class="block__content--image">
-      {{ content.field_block_banner_image }}
-    </div>
-    <div class="block__content--details">
-      {% if title_prefix %}
-        {{ title_prefix }}
-      {% endif %}
-      {% if content.field_block_banner_title %}
-        <h2{{ title_attributes }}>{{ content.field_block_banner_title }}</h2>
-      {% endif %}
-      {% if title_suffix %}
-        {{ title_suffix }}
-      {% endif %}
-      {% if content.body %}
-        {{ content.body }}
-      {% endif %}
-      {% if content.field_block_banner_link %}
-        {{ content.field_block_banner_link }}
-      {% endif %}
-    </div>
-  {% endblock %}
-</div>
+<section{{ attributes.addClass(classes) }}>
+  <div class="container">
+    {% block content %}
+      <div class="block__content--image">
+        {{ content.field_block_banner_image }}
+      </div>
+      <div class="block__content--details">
+        {% if title_prefix %}
+          {{ title_prefix }}
+        {% endif %}
+        {% if content.field_block_banner_title %}
+          <h2{{ title_attributes }}>{{ content.field_block_banner_title }}</h2>
+        {% endif %}
+        {% if title_suffix %}
+          {{ title_suffix }}
+        {% endif %}
+        {% if content.body %}
+          {{ content.body }}
+        {% endif %}
+        {% if content.field_block_banner_link %}
+          {{ content.field_block_banner_link }}
+        {% endif %}
+      </div>
+    {% endblock %}
+  </div>
+</section>

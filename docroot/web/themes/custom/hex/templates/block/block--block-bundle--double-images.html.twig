@@ -32,30 +32,32 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {% block content %}
-    <div class="block-content__content">
-      <div class="block-content__item block-content__first">
-        {% if content.field_block_double_image_first %}
-          {{ content.field_block_double_image_first }}
-        {% endif %}
-        {% if content.field_block_double_image_text_f %}
-          {{ content.field_block_double_image_text_f }}
-        {% endif %}
+<section{{ attributes.addClass(classes) }}>
+  <div class="container">
+    {% block content %}
+      <div class="block-content__content">
+        <div class="block-content__item block-content__first">
+          {% if content.field_block_double_image_first %}
+            {{ content.field_block_double_image_first }}
+          {% endif %}
+          {% if content.field_block_double_image_text_f %}
+            {{ content.field_block_double_image_text_f }}
+          {% endif %}
+        </div>
+        <div class="block-content__item block-content__second">
+          {% if content.field_block_double_image_second %}
+            {{ content.field_block_double_image_second }}
+          {% endif %}
+          {% if content.field_block_double_image_text_s %}
+            {{ content.field_block_double_image_text_s }}
+          {% endif %}
+        </div>
       </div>
-      <div class="block-content__item block-content__second">
-        {% if content.field_block_double_image_second %}
-          {{ content.field_block_double_image_second }}
-        {% endif %}
-        {% if content.field_block_double_image_text_s %}
-          {{ content.field_block_double_image_text_s }}
-        {% endif %}
-      </div>
-    </div>
-    {% if content.body %}
-      <div class="block-content__body">
-        {{ content.body }}
-      </div>
-    {% endif %}
-  {% endblock %}
-</div>
+      {% if content.body %}
+        <div class="block-content__body">
+          {{ content.body }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
+</section>

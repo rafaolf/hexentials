@@ -1,6 +1,10 @@
 .block-region-content {
   > div {
-    margin-top: $space;
+    margin-top: 2em;
+
+    @include rwd(480) {
+      margin-top: $space;
+    }
 
     &:first-child {
       margin-top: 0;
@@ -148,7 +152,6 @@
 
   .block--type-text {
     text-align: center;
-    margin-top: $space;
 
     .field--name-body {
       width: 65%;
@@ -201,7 +204,7 @@
         }
 
         .field--type-text-long {
-          padding: 1em 2em 0;
+          padding: 1em 0;
         }
       }
     }
