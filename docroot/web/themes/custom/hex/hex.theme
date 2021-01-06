@@ -320,6 +320,7 @@ function hex_prepare_main_variables(&$variables) {
   $variables['profile_type'] = theme_get_setting('profile_type', 'hex');
 
   $variables['company_name'] = \Drupal::config('system.site')->get('name');
+  $variables['slogan'] = \Drupal::config('system.site')->get('slogan');
 
 }
 

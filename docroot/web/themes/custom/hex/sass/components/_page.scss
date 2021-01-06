@@ -1,4 +1,8 @@
 body {
+  header {
+    min-height: 9vh;
+  }
+
   .container {
     padding: 0 1.15em;
   }
@@ -15,9 +19,18 @@ body {
     }
   }
 
-  .slider {
+  .main {
     @include xl {
-      min-height: 85vh;
+      min-height: 91vh;
+    }
+
+    .company-name {
+      display: none;
+    }
+
+    .slogan {
+      text-align: center;
+      min-height: 15vh;
     }
   }
 
