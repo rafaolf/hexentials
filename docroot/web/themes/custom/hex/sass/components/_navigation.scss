@@ -103,11 +103,7 @@
 
       > li.menu-footer__item {
         > a.menu-footer__link:after {
-          @include pseudo-after-border(3%);
-
-          @include xs {
-            margin: 0 auto;
-          }
+          @include pseudo-after-border(5%);
         }
       }
 
