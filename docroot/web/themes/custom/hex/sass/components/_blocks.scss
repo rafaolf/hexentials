@@ -165,6 +165,14 @@
   }
 
   .block--type-double-images {
+    @include xs {
+      height: 100%;
+    }
+
+    @include sm {
+      height: 100%;
+    }
+
     .block-content__content {
       display: block;
 
@@ -205,6 +213,14 @@
 
         .field--type-text-long {
           padding: 1em 0;
+
+          @include lg {
+            padding: 2em 4em;
+          }
+
+          @include xl {
+            padding: 1em 2em;
+          }
         }
       }
     }

@@ -30,6 +30,11 @@
   max-width: 33%;
 }
 
+@mixin height-adjustment {
+  height: 100vh;
+  padding-top: 9vh;
+}
+
 @mixin pseudo-after-border($width) {
   content: "";
   display: block;

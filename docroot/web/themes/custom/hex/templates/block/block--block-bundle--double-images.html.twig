@@ -36,22 +36,22 @@
   <div class="container">
     {% block content %}
       <div class="block-content__content">
-        <div class="block-content__item block-content__first">
+        <section class="block-content__item block-content__first">
           {% if content.field_block_double_image_first %}
             {{ content.field_block_double_image_first }}
           {% endif %}
           {% if content.field_block_double_image_text_f %}
             {{ content.field_block_double_image_text_f }}
           {% endif %}
-        </div>
-        <div class="block-content__item block-content__second">
+        </section>
+        <section class="block-content__item block-content__second">
           {% if content.field_block_double_image_second %}
             {{ content.field_block_double_image_second }}
           {% endif %}
           {% if content.field_block_double_image_text_s %}
             {{ content.field_block_double_image_text_s }}
           {% endif %}
-        </div>
+        </section>
       </div>
       {% if content.body %}
         <div class="block-content__body">

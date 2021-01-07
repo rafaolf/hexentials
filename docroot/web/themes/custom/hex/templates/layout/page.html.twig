@@ -150,52 +150,43 @@
 </header>
 
 {% if is_front %}
-  <div id="banner" class="banner">
-    <div class="container">
-      <div id="banner-inside" class="clearfix banner-inside">
-        {{ page.banner }}
+  <div class="main">
+    {% if slider %}
+      <div class="slider">
+        <ul class="slides">
+          {% for slide in slider %}
+            <li>
+              <img src="{{ slide.src }}" />
+              <div class="slider-caption">
+                {% if slide.title %}
+                  <h2 class="hex-caption">{{ slide.title }}</h2>
+                {% endif %}
+                {% if slide.desc %}
+                  <p class="hex-desc">{{ slide.desc }}</p>
+                {% endif %}
+                {% if slide.button_text %}
+                  <a href="{{ slide.url }}">{{ slide.button_text }}</a>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
-    </div>
+    {% endif %}
+
+    {% if company_name %}
+      <div id="company-name" class="company-name">
+        <h1>{{ company_name }}</h2>
+      </div>
+    {% endif %}
+
+    {% if slogan %}
+      <div id="slogan" class="slogan">
+        <h2>{{ slogan }}</h2>
+      </div>
+    {% endif %}
   </div>
 {% endif %}
-
-<div class="main">
-  {% if slider %}
-    <div class="slider">
-      <ul class="slides">
-        {% for slide in slider %}
-          <li>
-            <img src="{{ slide.src }}" />
-            <div class="slider-caption">
-              {% if slide.title %}
-                <h2 class="hex-caption">{{ slide.title }}</h2>
-              {% endif %}
-              {% if slide.desc %}
-                <p class="hex-desc">{{ slide.desc }}</p>
-              {% endif %}
-              {% if slide.button_text %}
-                <a href="{{ slide.url }}">{{ slide.button_text }}</a>
-              {% endif %}
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-
-  {% if company_name %}
-    <div id="company-name" class="company-name">
-      <h1>{{ company_name }}</h2>
-    </div>
-  {% endif %}
-
-  {% if slogan %}
-    <div id="slogan" class="slogan">
-      <h2>{{ slogan }}</h2>
-    </div>
-  {% endif %}
-
-</div>
 
 <div id="page" class="clearfix page">
   {% if page.breadcrumb %}
@@ -250,7 +241,7 @@
     </div>
   {% endif %}
 
-  <section id="main-content" class="clearfix main-content">
+  <div id="content" class="clearfix content">
     {% if page.sidebar_first %}
       <aside class="sidebar-first">
         <section id="sidebar-first-in" class="sidebar sidebar-first-in clearfix">
@@ -258,11 +249,9 @@
         </section>
       </aside>
     {% endif %}
-    <div class="main-section">
-      {% if page.content %}
-        {{ page.content }}
-      {% endif %}
-    </div>
+    {% if page.content %}
+      {{ page.content }}
+    {% endif %}
     {% if page.sidebar_second %}
       <aside class="sidebar-second">
         <section id="sidebar-second-in" class="sidebar sidebar-second-in clearfix">
@@ -270,7 +259,7 @@
         </section>
       </aside>
     {% endif %}
-  </section>
+  </div>
 
   {% if page.featured_top %}
     <div id="featured-top" class="clearfix featured-top">

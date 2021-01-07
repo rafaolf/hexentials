@@ -1,46 +1,42 @@
 body {
+  height: 100%;
+
   header {
-    min-height: 9vh;
-  }
-
-  .container {
-    padding: 0 1.15em;
-  }
-
-  .page {
-    flex: auto;
-
-    .main-content {
-      margin: 2em 0 4em;
-
-      @include xl {
-        margin: $space 0;
-      }
-    }
+    position: fixed;
+    height: 9vh;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
 
   .main {
-    @include xl {
-      min-height: 91vh;
-    }
+    @include height-adjustment;
 
     .company-name {
       display: none;
     }
 
     .slogan {
+      height: 34vh;
       text-align: center;
-      min-height: 15vh;
+
+      h2 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        font-weight: $lightest;
+      }
     }
   }
 
-  section, aside {
-    margin-top: 2em;
+  // Container, section and aside preparations.
+  .container {
+    padding: 0 1.15em;
+  }
 
-    @include xl {
-      min-height: 100vh;
-      // No space needed as the Javascript will handle it at fullscreen.
-      margin-top: 0;
-    }
+  section, aside {
+    @include height-adjustment;
+    margin-top: 0; // No space needed as the Javascript will handle it.
   }
 }
